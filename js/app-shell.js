@@ -8,24 +8,24 @@
 
   ready(() => {
     const body = document.body;
-    const path = location.pathname.replace(/\/index\.html$/, '/');
+    const path = location.pathname.replace(/\/index\.html$/, '/consolidado/');
     const routeClass =
-      path === '/' ? 'route-home' :
-      path.startsWith('/servicios/') ? 'route-service' :
-      path === '/tecnologia/' || path === '/tecnologia' ? 'route-technology' :
-      path === '/developers/' || path === '/developers' ? 'route-developers' :
-      path === '/recursos/' || path === '/recursos' ? 'route-resources' :
-      path.startsWith('/recursos/') ? 'route-article' :
-      path.startsWith('/operar-en-argentina') ? 'route-journey' : 'route-page';
+      path === '/consolidado/' ? 'route-home' :
+      path.startsWith('/consolidado/servicios/') ? 'route-service' :
+      path === '/consolidado/tecnologia/' || path === '/consolidado/tecnologia' ? 'route-technology' :
+      path === '/consolidado/developers/' || path === '/consolidado/developers' ? 'route-developers' :
+      path === '/consolidado/recursos/' || path === '/consolidado/recursos' ? 'route-resources' :
+      path.startsWith('/consolidado/recursos/') ? 'route-article' :
+      path.startsWith('/consolidado/operar-en-argentina') ? 'route-journey' : 'route-page';
     body.classList.add(routeClass, 'app-shell-ready');
 
     const syncActiveNavigation = () => {
-      const pathname = location.pathname.replace(/\/index\.html$/, '/');
+      const pathname = location.pathname.replace(/\/index\.html$/, '/consolidado/');
       let active = '';
-      if (pathname.startsWith('/tecnologia')) active = 'tecnologia';
-      else if (pathname.startsWith('/recursos')) active = 'recursos';
-      else if (pathname.startsWith('/servicios') || pathname.startsWith('/operar-en-argentina')) active = 'soluciones';
-      else if (pathname === '/') {
+      if (pathname.startsWith('/consolidado/tecnologia')) active = 'tecnologia';
+      else if (pathname.startsWith('/consolidado/recursos')) active = 'recursos';
+      else if (pathname.startsWith('/consolidado/servicios') || pathname.startsWith('/consolidado/operar-en-argentina')) active = 'soluciones';
+      else if (pathname === '/consolidado/') {
         const hash = location.hash.slice(1);
         if (hash === 'mapa') active = 'como';
         else if (hash === 'constructor') active = 'constructor';
@@ -216,7 +216,7 @@
     if (siteFooter && footerGrid && headerBrand && !siteFooter.querySelector('.footer-brand-app')) {
       const footerBrand = headerBrand.cloneNode(true);
       footerBrand.classList.add('footer-brand-app');
-      footerBrand.setAttribute('href', '/');
+      footerBrand.setAttribute('href', '/consolidado/');
       footerGrid.before(footerBrand);
     }
 

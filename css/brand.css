@@ -101,7 +101,7 @@ header.nav.scrolled{box-shadow:0 6px 22px rgba(0,50,70,.08)}
 .flist{list-style:none;padding:0;margin:0;display:grid;gap:10px}
 .flist li{position:relative;padding-left:30px;font-size:15px;color:var(--ink)}
 .flist li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:var(--blue-100);
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008FC3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008FC3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/consolidado/></svg>");
   background-size:12px;background-repeat:no-repeat;background-position:center}
 
 /* fit / no-fit two columns */

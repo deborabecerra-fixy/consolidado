@@ -265,13 +265,13 @@ const NEXT = {
 
 /* URLs de las páginas de servicio (URLs limpias, root-relativas) */
 const SVCURL = {
-  'FixyFull': '/servicios/fixyfull',
-  'Flex': '/servicios/flex',
-  'Same Day': '/servicios/same-day',
-  'Next Day': '/servicios/next-day',
-  'FixyPoints': '/servicios/fixypoints',
-  'FixyPay': '/servicios/fixypay',
-  'Envíos al Interior': '/servicios/interior'
+  'FixyFull': '/consolidado/servicios/fixyfull',
+  'Flex': '/consolidado/servicios/flex',
+  'Same Day': '/consolidado/servicios/same-day',
+  'Next Day': '/consolidado/servicios/next-day',
+  'FixyPoints': '/consolidado/servicios/fixypoints',
+  'FixyPay': '/consolidado/servicios/fixypay',
+  'Envíos al Interior': '/consolidado/servicios/interior'
 };
 
 let last = null;
@@ -365,7 +365,7 @@ function build() {
   /* ----- Diagnóstico completo (colapsado por defecto) ----- */
   let d = '';
   if (sel.esc.includes('exterior')) {
-    d += '<div class="hyp-reframe hyp-ext"><span class="lbl">Marca del exterior</span>Para una marca de afuera el desafío no es un envío puntual: es montar tu operación local completa —fulfillment, entrega, cobro y devoluciones— sin abrir empresa propia. <b>Fixy arranca una vez que tu mercadería está nacionalizada en el país</b> (no hacemos importación ni aduana), y la zona y modalidad las definimos según tu estrategia de entrada.<div style="margin-top:12px"><a href="/operar-en-argentina" class="btn btn-primary" data-ev="hyp_exterior_landing">Ver cómo entra tu marca →</a></div></div>';
+    d += '<div class="hyp-reframe hyp-ext"><span class="lbl">Marca del exterior</span>Para una marca de afuera el desafío no es un envío puntual: es montar tu operación local completa —fulfillment, entrega, cobro y devoluciones— sin abrir empresa propia. <b>Fixy arranca una vez que tu mercadería está nacionalizada en el país</b> (no hacemos importación ni aduana), y la zona y modalidad las definimos según tu estrategia de entrada.<div style="margin-top:12px"><a href="/consolidado/operar-en-argentina" class="btn btn-primary" data-ev="hyp_exterior_landing">Ver cómo entra tu marca →</a></div></div>';
   }
   d += '<details class="hyp-acc"><summary>El punto ciego</summary><div class="hyp-acc-body">' + reframe + '</div></details>';
   d += '<details class="hyp-acc"><summary>Qué etapas de tu venta resuelve</summary><div class="hyp-acc-body"><p class="hyp-stages-count">Resuelve <b>' + cov.length + ' de 10</b> etapas.</p><ul class="hyp-stages">' + covNames.map(n => '<li>' + n + '</li>').join('') + '</ul></div></details>';
