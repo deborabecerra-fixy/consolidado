@@ -1,0 +1,354 @@
+/* Fixy V9 — product-quality mobile composition.
+   This layer intentionally sits last so it can normalize legacy page styles. */
+
+@media (max-width: 900px){
+  html{scroll-padding-top:76px}
+  [id]{scroll-margin-top:76px}
+
+  header.nav{
+    min-height:64px;
+    background:#fff;
+    border-bottom:1px solid rgba(0,111,153,.12);
+    box-shadow:0 8px 24px rgba(16,42,56,.07);
+  }
+
+  /* Continuous product canvas: sections no longer overlap like stacked sheets. */
+  body>section:not(.hero),
+  body>section:not(.hero)+section:not(.hero){
+    margin-top:0;
+    padding-block:52px;
+    border-radius:0;
+  }
+  body>section:not(.hero):nth-of-type(odd){background:#f4f8fa}
+  body>section:not(.hero):nth-of-type(even){background:#fff}
+  body>section:not(.hero)+section:not(.hero){
+    border-top:1px solid rgba(0,111,153,.08);
+  }
+
+  .sec-head{margin-bottom:28px}
+  .sec-head .eyebrow{
+    margin-bottom:10px;
+    color:#007da9;
+    font-size:11px;
+    font-weight:800;
+    line-height:1.25;
+    letter-spacing:.13em;
+  }
+  .sec-head .eyebrow::before{width:24px;height:3px}
+  .sec-head h2,
+  .route-service .sec-head h2{
+    max-width:20ch;
+    margin:0;
+    color:#15313f;
+    font-size:clamp(28px,7.8vw,36px);
+    font-weight:750;
+    line-height:1.12;
+    letter-spacing:-.025em;
+  }
+  .sec-head p{
+    max-width:38rem;
+    margin-top:14px;
+    color:#596f7a;
+    font-size:16px;
+    line-height:1.55;
+  }
+
+  /* Problem selector: every sentence now reads as a real actionable control. */
+  #orientacion .painchips{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  #orientacion .painchips .chip{
+    position:relative;
+    width:100%;
+    min-height:62px;
+    display:flex;
+    align-items:center;
+    margin:0;
+    padding:14px 54px 14px 16px;
+    border:1px solid rgba(0,111,153,.14);
+    border-radius:16px;
+    background:#fff;
+    color:#173541;
+    box-shadow:0 5px 16px rgba(16,42,56,.045);
+    cursor:pointer;
+    font-size:14px;
+    font-style:normal;
+    font-weight:650;
+    line-height:1.35;
+    text-align:left;
+    transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;
+  }
+  #orientacion .painchips .chip::after{
+    content:"→";
+    position:absolute;
+    right:14px;
+    width:30px;
+    height:30px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:#e7f6fc;
+    color:#007da9;
+    font-size:16px;
+    font-style:normal;
+  }
+  #orientacion .painchips .chip:active{transform:scale(.985)}
+  #orientacion .painchips .chip:focus-visible{
+    outline:3px solid #fbbe37;
+    outline-offset:2px;
+  }
+
+  /* Operation map: compact two-column system with one expanded stage at a time. */
+  #mapa .map-rail{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  #mapa .map-node{min-width:0}
+  #mapa .map-node::before{display:none}
+  #mapa .map-node:has(.map-acc[open]){grid-column:1/-1}
+  #mapa .map-acc{
+    height:100%;
+    overflow:hidden;
+    border:1px solid rgba(0,111,153,.14);
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 5px 16px rgba(16,42,56,.04);
+  }
+  #mapa .map-acc summary{
+    min-height:72px;
+    padding:12px;
+    gap:10px;
+    border:0;
+  }
+  #mapa .map-acc summary:focus-visible{
+    outline:0;
+    border-radius:15px;
+    box-shadow:inset 0 0 0 2px #008fc3;
+  }
+  #mapa .map-dot{
+    width:32px;
+    height:32px;
+    border:0;
+    background:#e7f6fc;
+    color:#007da9;
+  }
+  #mapa .map-title{font-size:13px;line-height:1.2}
+  #mapa .map-acc summary::after{right:14px}
+  #mapa .map-q{
+    margin:0;
+    padding:10px 14px 16px 54px;
+    color:#596f7a;
+    font-size:13px;
+    line-height:1.45;
+  }
+
+  /* Pricing steps: three separate, aligned product cards. */
+  #cotizamos{padding-block:52px}
+  #cotizamos .sec-head{margin-bottom:24px}
+  #cotizamos .steps3{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  #cotizamos .stp{
+    position:relative;
+    display:grid;
+    grid-template-columns:42px minmax(0,1fr);
+    grid-template-rows:auto auto;
+    column-gap:14px;
+    padding:16px;
+    border:1px solid rgba(0,111,153,.14);
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 5px 16px rgba(16,42,56,.04);
+  }
+  #cotizamos .stp::before,
+  #cotizamos .stp::after{display:none}
+  #cotizamos .stp .num{
+    position:static;
+    grid-column:1;
+    grid-row:1 / span 2;
+    width:40px;
+    height:40px;
+    margin:0;
+    border-radius:12px;
+    background:#008fc3;
+    box-shadow:none;
+    font-size:14px;
+  }
+  #cotizamos .stp h4{
+    grid-column:2;
+    grid-row:1;
+    align-self:end;
+    margin:0 0 4px;
+    color:#173541;
+    font-size:16px;
+    line-height:1.3;
+  }
+  #cotizamos .stp p{
+    grid-column:2;
+    grid-row:2;
+    max-width:none;
+    margin:0;
+    color:#607580;
+    font-size:13.5px;
+    line-height:1.45;
+  }
+
+  /* Service insight and process comparison. */
+  .route-service #mecanismo .reframe{
+    max-width:none;
+    padding:20px;
+    border:1px solid rgba(0,111,153,.13);
+    border-top:4px solid #fbbe37;
+    border-left-width:1px;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 8px 24px rgba(16,42,56,.055);
+    color:#173541;
+    font-size:18px;
+    font-weight:620;
+    line-height:1.52;
+  }
+  .route-service #mecanismo .reframe .lbl{
+    margin-bottom:10px;
+    color:#9b6700;
+    font-size:10.5px;
+  }
+  .route-service .paths{
+    gap:10px;
+    margin-top:12px;
+  }
+  .route-service .path{
+    padding:16px;
+    border-radius:16px;
+  }
+  .route-service .path-bad{background:#f6f7f7}
+  .route-service .path-good{background:#e7f6fc}
+  .route-service .path .ptag{margin-bottom:12px}
+  .route-service .pchips{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:5px;
+  }
+  .route-service .pchips b{
+    min-height:40px;
+    display:flex;
+    align-items:center;
+    padding:9px 12px;
+    border-color:rgba(0,111,153,.13);
+    border-radius:11px;
+    background:#fff;
+    color:#173541;
+    font-size:13px;
+  }
+  .route-service .pchips .ar{
+    position:relative;
+    width:20px;
+    height:13px;
+    margin-left:18px;
+    overflow:hidden;
+    color:transparent;
+  }
+  .route-service .pchips .ar::before{
+    content:"";
+    position:absolute;
+    left:6px;
+    top:-5px;
+    width:7px;
+    height:14px;
+    border-right:1.5px solid #8aa2ad;
+    border-bottom:1.5px solid #8aa2ad;
+    transform:rotate(45deg);
+  }
+
+  /* Conversion screen: guaranteed accessible contrast and simpler hierarchy. */
+  body.route-service>section.convert{
+    background:
+      radial-gradient(circle at 95% 8%,rgba(0,143,195,.28),transparent 34%),
+      #102f3e!important;
+    color:#fff;
+  }
+  body.route-service>section.convert .sec-head .eyebrow{color:#fbbe37}
+  body.route-service>section.convert .sec-head h2{
+    max-width:18ch;
+    color:#fff!important;
+    font-size:clamp(29px,8vw,36px);
+  }
+  body.route-service>section.convert .sec-head p{color:#d3e3e9!important}
+  body.route-service>section.convert .trust{
+    width:100%;
+    margin:0 0 12px!important;
+    padding:10px 12px;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    white-space:normal;
+  }
+  body.route-service>section.convert .agenda-strip{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    margin-bottom:14px;
+    padding:16px;
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:16px;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+  }
+  body.route-service>section.convert .agenda-strip .btn{width:100%}
+  body.route-service>section.convert .form-card{
+    padding:20px 16px;
+    border:0;
+    border-top:5px solid #fbbe37;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 20px 48px rgba(0,0,0,.2);
+  }
+  body.route-service>section.convert .form-card .field.full:last-child{
+    display:grid!important;
+    grid-template-columns:1fr;
+    gap:10px!important;
+  }
+  body.route-service>section.convert .form-card .field.full:last-child .btn,
+  body.route-service>section.convert .form-card .field.full:last-child .btn-wa{
+    width:100%;
+    margin:0;
+  }
+
+  /* Home contact: remove decorative wash and keep content hierarchy explicit. */
+  body.route-home>section.contact-premium-home{
+    background:#eef7fa!important;
+  }
+  .contact-premium-home::before,
+  .contact-premium-home::after{display:none}
+  .contact-premium-layout{gap:18px}
+  .contact-premium-info .sec-head{margin-bottom:18px}
+  .contact-premium-info .sec-head h2{
+    max-width:18ch;
+    color:#15313f;
+    font-size:clamp(29px,8vw,36px);
+  }
+  .contact-agenda{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    padding:16px;
+    border-radius:16px;
+    background:#fff;
+  }
+  .contact-form-panel{
+    padding:20px 16px;
+    border-radius:20px;
+  }
+}
+
+@media (max-width: 380px){
+  .sec-head h2,
+  .route-service .sec-head h2{font-size:28px}
+  #mapa .map-rail{grid-template-columns:1fr}
+  #mapa .map-node:has(.map-acc[open]){grid-column:auto}
+}

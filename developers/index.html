@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentación de la API | Fixy Developers</title>
+<meta name="description" content="Referencia técnica de la API de Fixy: autenticación por token, versionado, cotización, guías, etiquetas, tracking, retiros, stock y webhooks de cambio de estado. Integrá tu operación de e-commerce con Fixy.">
+<meta name="keywords" content="API Fixy, documentación API logística, webhooks logística, integración e-commerce, REST JSON">
+<link rel="canonical" href="https://www.fixy.com.ar/developers">
+<meta property="og:title" content="Fixy Developers — Documentación de la API"><meta property="og:description" content="Referencia técnica para integrar tu operación con Fixy: API REST/JSON, webhooks y entorno de prueba."><meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta name="theme-color" content="#008FC3">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/footer-shared.css">
+<style>
+  :root{ --code-bg:#0e1b26; --code-line:#24384a; --code-bar:#0a141c; }
+  /* Aviso prototipo */
+  .devnote{background:#FFF7E6;border:1px solid #F5D98B;color:#7a5b12;border-radius:12px;padding:12px 16px;font-size:13.5px;line-height:1.5;margin:0 0 26px}
+  .devnote b{color:#5f4708}
+  /* Layout doc */
+  .doc-wrap{display:grid;grid-template-columns:230px 1fr;gap:38px;align-items:start}
+  .doc-nav{position:sticky;top:90px;font-size:14px;border-left:2px solid var(--line);padding-left:2px}
+  .doc-nav a{display:block;padding:6px 12px;color:var(--ink-soft);border-left:2px solid transparent;margin-left:-2px;text-decoration:none}
+  .doc-nav a:hover{color:var(--blue)}
+  .doc-nav a.grp{font-weight:700;color:var(--ink);margin-top:14px;pointer-events:none}
+  .doc-nav a.grp:first-child{margin-top:0}
+  .doc-main{min-width:0}
+  .doc-main h2{font-size:26px;margin:0 0 6px;scroll-margin-top:90px}
+  .doc-main h3{font-size:15px;margin:22px 0 8px;color:var(--ink)}
+  .doc-main p{color:var(--ink-soft);line-height:1.6}
+  .ep{border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:0 0 22px;background:#fff;scroll-margin-top:90px}
+  .ep-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .verb{font:700 12px/1 "SFMono-Regular",Consolas,Menlo,monospace;letter-spacing:.04em;padding:6px 10px;border-radius:7px;color:#fff}
+  .verb.get{background:#008FC3}.verb.post{background:#2f9e44}.verb.hook{background:#6F43AD}
+  .path{font:600 15px/1.4 "SFMono-Regular",Consolas,Menlo,monospace;color:var(--ink);word-break:break-all}
+  .ep-desc{color:var(--ink-soft);font-size:14.5px;margin:2px 0 14px}
+  /* Code block */
+  .code{background:var(--code-bg);border:1px solid var(--code-line);border-radius:12px;overflow:hidden;margin:10px 0}
+  .code-bar{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:var(--code-bar);border-bottom:1px solid var(--code-line)}
+  .code-bar span{color:#6b8296;font:600 11.5px/1 "SFMono-Regular",Consolas,Menlo,monospace;letter-spacing:.03em;text-transform:uppercase}
+  .copy{background:#16354a;border:1px solid #24384a;color:#9fc3d8;font:600 11.5px/1 inherit;padding:5px 11px;border-radius:7px;cursor:pointer;transition:.15s}
+  .copy:hover{background:#1d4460;color:#cfe3f0}
+  .copy.ok{background:#123a26;border-color:#1f6b3f;color:#5fd08a}
+  .code pre{margin:0;padding:15px 16px;overflow-x:auto;font:12.5px/1.7 "SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;color:#cfe3f0}
+  .code .k{color:#4bb3d6}.code .s{color:#f5b65c}.code .p{color:#5fd08a}.code .c{color:#6b8296}.code .n{color:#e0a3ff}
+  /* Param table */
+  .ptable{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0 4px}
+  .ptable th{text-align:left;font-weight:700;color:var(--ink);padding:8px 10px;border-bottom:2px solid var(--line);font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+  .ptable td{padding:8px 10px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+  .ptable code{font:600 12.5px "SFMono-Regular",Consolas,Menlo,monospace;color:var(--blue-ink,#036);background:#EAF6FB;padding:1px 6px;border-radius:5px}
+  .req{color:#c0392b;font-weight:700;font-size:11px}
+  .opt{color:var(--grey);font-size:11px}
+  /* Estados pipeline */
+  .states{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+  .st{background:#F3F8FB;border:1px solid #cfe6f1;color:#036;border-radius:999px;padding:6px 13px;font:600 12.5px "SFMono-Regular",Consolas,Menlo,monospace}
+  .st.end{background:#EAF7EE;border-color:#bfe6cd;color:#1f6b3f}
+  .intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 6px}
+  .icard{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:#fff}
+  .icard b{display:block;color:var(--ink);font-size:14px;margin-bottom:4px}
+  .icard span{color:var(--ink-soft);font-size:13px;line-height:1.5}
+  @media(max-width:860px){
+    .doc-wrap{grid-template-columns:1fr;gap:0}
+    .doc-nav{position:static;border-left:0;padding:0 0 20px;margin-bottom:8px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:2px}
+    .doc-nav a{padding:6px 10px;border:1px solid var(--line);border-radius:999px}
+    .doc-nav a.grp{display:none}
+    .intro-grid{grid-template-columns:1fr}
+  }
+</style>
+<meta property="og:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fixy — Logística para e-commerce en Argentina">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
+<link rel="stylesheet" href="/css/app-mobile.css?v=11">
+<link rel="stylesheet" href="/css/app-professional-v9.css?v=11">
+<script src="/js/app-shell.js?v=11" defer></script>
+</head>
+<body>
+<a href="#contenido" class="skip">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/img/Logo%20Fixy.png" alt="Fixy Logística" width="606" height="188"></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="/#mapa" data-nav="como">Cómo funciona</a>
+      <a href="/#constructor" data-nav="constructor">Armá tu operación</a>
+      <a href="/tecnologia" data-nav="tecnologia">Tecnología</a>
+      <a href="/recursos" data-nav="recursos">Recursos</a>
+      <a href="/#cobertura" data-nav="cobertura">Cobertura</a>
+      <a href="/#faq" data-nav="faq">Preguntas</a>
+      <div class="dd">
+        <a class="dd-toggle" href="/#soluciones" aria-haspopup="true" data-nav="soluciones">Soluciones ▾</a>
+        <div class="dd-menu">
+          <a href="/servicios/fixyfull">FixyFull</a>
+          <a href="/servicios/flex">Flex</a>
+          <a href="/servicios/same-day">Same Day</a>
+          <a href="/servicios/next-day">Next Day</a>
+          <a href="/servicios/fixypoints">FixyPoints</a>
+          <a href="/servicios/fixypay">FixyPay</a>
+          <a href="/servicios/interior">Envíos al Interior</a>
+          <a href="/operar-en-argentina">Operá en Argentina</a>
+        </div>
+      </div>
+    </nav>
+    <a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<div class="crumb"><div class="wrap crumb-inner"><a href="/">Fixy</a><span class="sep">›</span><a href="/tecnologia">Tecnología</a><span class="sep">›</span><span>Documentación</span></div></div>
+
+<!-- HERO -->
+<section id="contenido" tabindex="-1" class="hero" style="border-top:0;padding-bottom:22px">
+  <div class="wrap">
+    <div class="eyebrow">Fixy Developers</div>
+    <h1 style="max-width:820px">Documentación de la <span class="hl">API de Fixy.</span></h1>
+    <span class="yellowbar"></span>
+    <p class="sub" style="max-width:720px">Una API REST sobre HTTPS, con respuestas en JSON y autenticación por token. Conectá tu tienda o sistema para cotizar, generar guías, imprimir etiquetas, seguir envíos, gestionar stock y recibir cambios de estado por webhook.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+
+    <div class="devnote">⚠️ <b>Referencia en construcción.</b> Los ejemplos, URLs y nombres de campo de esta página son ilustrativos y están sujetos a validación del equipo técnico de Fixy. Para credenciales y la especificación definitiva, <a href="/tecnologia#contacto">solicitá tu acceso</a>.</div>
+
+    <div class="doc-wrap">
+
+      <!-- SIDEBAR -->
+      <nav class="doc-nav" aria-label="Índice de la documentación">
+        <a class="grp">Empezar</a>
+        <a href="#introduccion">Introducción</a>
+        <a href="#autenticacion">Autenticación</a>
+        <a href="#versionado">Versionado</a>
+        <a class="grp">Envíos</a>
+        <a href="#cotizacion">Cotización</a>
+        <a href="#guias">Guías</a>
+        <a href="#etiquetas">Etiquetas</a>
+        <a href="#tracking">Tracking</a>
+        <a class="grp">Operación</a>
+        <a href="#retiros">Retiros</a>
+        <a href="#recepciones">Recepciones (Full)</a>
+        <a href="#stock">Stock por SKU</a>
+        <a class="grp">Eventos</a>
+        <a href="#webhooks">Webhooks</a>
+        <a href="#estados">Estados de envío</a>
+        <a class="grp">Referencia</a>
+        <a href="#errores">Errores</a>
+        <a href="#pruebas">Entorno de prueba</a>
+      </nav>
+
+      <!-- CONTENT -->
+      <main class="doc-main">
+
+        <!-- INTRO -->
+        <div id="introduccion" style="scroll-margin-top:90px">
+          <h2>Introducción</h2>
+          <p>La API de Fixy te permite integrar tu operación de e-commerce de punta a punta: desde cotizar un envío en tu checkout hasta seguir el estado de cada guía en tiempo real, sin planillas ni tareas manuales.</p>
+          <div class="intro-grid">
+            <div class="icard"><b>REST / JSON</b><span>Endpoints sobre HTTPS. Todas las respuestas en JSON, con códigos de estado HTTP estándar.</span></div>
+            <div class="icard"><b>Token de acceso</b><span>Cada integración usa su propio token. Sin sesiones ni contraseñas en el código.</span></div>
+            <div class="icard"><b>Webhooks</b><span>Recibís los cambios de estado apenas ocurren. Sin polling ni consultas repetidas.</span></div>
+          </div>
+          <h3>URL base</h3>
+          <div class="code">
+            <div class="code-bar"><span>Base URL</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code>https://api.fixy.com.ar/v2</code></pre>
+          </div>
+        </div>
+
+        <!-- AUTH -->
+        <div id="autenticacion" class="ep">
+          <div class="ep-h"><span class="path">Autenticación</span></div>
+          <p class="ep-desc">Todas las llamadas requieren tu token de integración. Lo obtenés desde tu ejecutivo de cuenta o el portal de sellers. Podés enviarlo como header <code>Authorization</code> o como parámetro <code>api_token</code>.</p>
+          <div class="code">
+            <div class="code-bar"><span>curl — header</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code><span class="p">$</span> curl https://api.fixy.com.ar/v2/tracking/AR-1842.json \
+  -H <span class="s">"Authorization: Token TU_TOKEN"</span></code></pre>
+          </div>
+          <p class="ep-desc" style="margin-top:10px">Mantené tu token del lado del servidor. No lo expongas en el frontend ni en repositorios públicos.</p>
+        </div>
+
+        <!-- VERSIONADO -->
+        <div id="versionado" class="ep">
+          <div class="ep-h"><span class="path">Versionado</span></div>
+          <p class="ep-desc">La versión va en la ruta (<code>/v1</code>, <code>/v2</code>). Se mantiene la compatibilidad dentro de cada versión mayor; los cambios que rompen compatibilidad se publican bajo una versión nueva con aviso previo. Recomendamos usar siempre <code>/v2</code>.</p>
+        </div>
+
+        <!-- COTIZACION -->
+        <div id="cotizacion" class="ep">
+          <div class="ep-h"><span class="verb post">POST</span><span class="path">/v2/cotizacion.json</span></div>
+          <p class="ep-desc">Devuelve las opciones de envío disponibles y el tiempo estimado para un origen y destino. Ideal para mostrar opciones en el checkout.</p>
+          <h3>Parámetros</h3>
+          <table class="ptable"><thead><tr><th>Campo</th><th>Tipo</th><th>Descripción</th></tr></thead><tbody>
+            <tr><td><code>cp_origen</code> <span class="req">requerido</span></td><td>string</td><td>Código postal de origen.</td></tr>
+            <tr><td><code>cp_destino</code> <span class="req">requerido</span></td><td>string</td><td>Código postal de destino.</td></tr>
+            <tr><td><code>peso</code> <span class="req">requerido</span></td><td>number</td><td>Peso del paquete en kilogramos.</td></tr>
+            <tr><td><code>volumen</code> <span class="opt">opcional</span></td><td>object</td><td>Alto, ancho y largo en cm para peso volumétrico.</td></tr>
+          </tbody></table>
+          <div class="code">
+            <div class="code-bar"><span>Request</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code><span class="p">$</span> curl -X POST https://api.fixy.com.ar/v2/cotizacion.json \
+  -H <span class="s">"Authorization: Token TU_TOKEN"</span> \
+  -d <span class="s">'{ "cp_origen": "1414", "cp_destino": "5000", "peso": 1.2 }'</span></code></pre>
+          </div>
+          <div class="code">
+            <div class="code-bar"><span>Response 200</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code>[
+  { <span class="k">"servicio"</span>: <span class="s">"NEXT_DAY"</span>, <span class="k">"entrega"</span>: <span class="s">"24-48h"</span> },
+  { <span class="k">"servicio"</span>: <span class="s">"SAME_DAY"</span>, <span class="k">"entrega"</span>: <span class="s">"en el día"</span> }
+]</code></pre>
+          </div>
+        </div>
+
+        <!-- GUIAS -->
+        <div id="guias" class="ep">
+          <div class="ep-h"><span class="verb post">POST</span><span class="path">/v2/guias.json</span></div>
+          <p class="ep-desc">Genera una guía de envío. Devuelve el número de guía, su estado inicial y el enlace a la etiqueta.</p>
+          <h3>Parámetros</h3>
+          <table class="ptable"><thead><tr><th>Campo</th><th>Tipo</th><th>Descripción</th></tr></thead><tbody>
+            <tr><td><code>servicio</code> <span class="req">requerido</span></td><td>string</td><td>Servicio a usar: <code>NEXT_DAY</code>, <code>SAME_DAY</code>, <code>INTERIOR</code>, etc.</td></tr>
+            <tr><td><code>destinatario</code> <span class="req">requerido</span></td><td>object</td><td>Nombre, dirección, CP, teléfono y email del comprador.</td></tr>
+            <tr><td><code>bultos</code> <span class="req">requerido</span></td><td>array</td><td>Detalle de los paquetes (peso y dimensiones).</td></tr>
+            <tr><td><code>referencia</code> <span class="opt">opcional</span></td><td>string</td><td>Tu ID de orden interno, para conciliar.</td></tr>
+          </tbody></table>
+          <div class="code">
+            <div class="code-bar"><span>Request</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code><span class="p">$</span> curl -X POST https://api.fixy.com.ar/v2/guias.json \
+  -H <span class="s">"Authorization: Token TU_TOKEN"</span> \
+  -d <span class="s">'{ "servicio": "NEXT_DAY", "cp": "1636", "referencia": "ORD-9021" }'</span></code></pre>
+          </div>
+          <div class="code">
+            <div class="code-bar"><span>Response 201</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code>{
+  <span class="k">"guia"</span>: <span class="s">"AR-1842"</span>,
+  <span class="k">"estado"</span>: <span class="s">"PENDIENTE_ARMADO"</span>,
+  <span class="k">"etiqueta"</span>: <span class="s">"https://api.fixy.com.ar/v2/etiquetas/AR-1842.pdf"</span>,
+  <span class="k">"referencia"</span>: <span class="s">"ORD-9021"</span>
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- ETIQUETAS -->
+        <div id="etiquetas" class="ep">
+          <div class="ep-h"><span class="verb get">GET</span><span class="path">/v2/etiquetas/{guia}.pdf</span></div>
+          <p class="ep-desc">Devuelve la etiqueta lista para imprimir de una guía. Disponible en PDF y en formato para impresoras térmicas (ZPL).</p>
+          <div class="code">
+            <div class="code-bar"><span>Request</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code><span class="p">$</span> curl https://api.fixy.com.ar/v2/etiquetas/AR-1842.pdf \
+  -H <span class="s">"Authorization: Token TU_TOKEN"</span> -o etiqueta.pdf</code></pre>
+          </div>
+        </div>
+
+        <!-- TRACKING -->
+        <div id="tracking" class="ep">
+          <div class="ep-h"><span class="verb get">GET</span><span class="path">/v2/tracking/{guia}.json</span></div>
+          <p class="ep-desc">Devuelve el estado actual de un envío, su historial de eventos y la estimación de entrega.</p>
+          <div class="code">
+            <div class="code-bar"><span>Request</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code><span class="p">$</span> curl https://api.fixy.com.ar/v2/tracking/AR-1842.json \
+  -H <span class="s">"Authorization: Token TU_TOKEN"</span></code></pre>
+          </div>
+          <div class="code">
+            <div class="code-bar"><span>Response 200</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code>{
+  <span class="k">"guia"</span>: <span class="s">"AR-1842"</span>,
+  <span class="k">"estado"</span>: <span class="s">"EN_DISTRIBUCION"</span>,
+  <span class="k">"eta"</span>: <span class="s">"hoy 14-18h"</span>,
+  <span class="k">"historial"</span>: [
+    { <span class="k">"estado"</span>: <span class="s">"EN_CAMINO"</span>, <span class="k">"ts"</span>: <span class="s">"2026-07-20T18:32:00-03:00"</span> }
+  ]
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- RETIROS -->
+        <div id="retiros" class="ep">
+          <div class="ep-h"><span class="verb post">POST</span><span class="path">/v2/retiros.json</span></div>
+          <p class="ep-desc">Solicita el retiro de paquetes en tu domicilio o depósito para una fecha y franja horaria.</p>
+          <div class="code">
+            <div class="code-bar"><span>Request</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code><span class="p">$</span> curl -X POST https://api.fixy.com.ar/v2/retiros.json \
+  -H <span class="s">"Authorization: Token TU_TOKEN"</span> \
+  -d <span class="s">'{ "fecha": "2026-07-21", "franja": "AM", "guias": ["AR-1842"] }'</span></code></pre>
+          </div>
+        </div>
+
+        <!-- RECEPCIONES -->
+        <div id="recepciones" class="ep">
+          <div class="ep-h"><span class="verb post">POST</span><span class="path">/v2/recepciones.json</span></div>
+          <p class="ep-desc">Genera una recepción de mercadería para ingresar stock a Fixy Full (fulfillment). Devuelve el remito y el turno asignado.</p>
+          <div class="code">
+            <div class="code-bar"><span>Request</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code><span class="p">$</span> curl -X POST https://api.fixy.com.ar/v2/recepciones.json \
+  -H <span class="s">"Authorization: Token TU_TOKEN"</span> \
+  -d <span class="s">'{ "items": [ { "sku": "REM-NEG-M", "cantidad": 50 } ] }'</span></code></pre>
+          </div>
+        </div>
+
+        <!-- STOCK -->
+        <div id="stock" class="ep">
+          <div class="ep-h"><span class="verb get">GET</span><span class="path">/v2/stock?sku={sku}</span></div>
+          <p class="ep-desc">Consulta el stock disponible y reservado de un SKU en Fixy Full.</p>
+          <div class="code">
+            <div class="code-bar"><span>Request</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code><span class="p">$</span> curl <span class="s">"https://api.fixy.com.ar/v2/stock?sku=REM-NEG-M"</span> \
+  -H <span class="s">"Authorization: Token TU_TOKEN"</span></code></pre>
+          </div>
+          <div class="code">
+            <div class="code-bar"><span>Response 200</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code>{ <span class="k">"sku"</span>: <span class="s">"REM-NEG-M"</span>, <span class="k">"disponible"</span>: <span class="n">42</span>, <span class="k">"reservado"</span>: <span class="n">3</span> }</code></pre>
+          </div>
+        </div>
+
+        <!-- WEBHOOKS -->
+        <div id="webhooks" class="ep">
+          <div class="ep-h"><span class="verb hook">WEBHOOK</span><span class="path">POST → tu endpoint</span></div>
+          <p class="ep-desc">En lugar de consultar el estado repetidamente (polling), Fixy envía un POST a la URL que configures cada vez que una guía cambia de estado. Respondé con <code>200</code> para confirmar la recepción.</p>
+          <div class="code">
+            <div class="code-bar"><span>Payload que recibís</span><button class="copy" type="button">Copiar</button></div>
+            <pre><code>{
+  <span class="k">"evento"</span>: <span class="s">"cambio_estado"</span>,
+  <span class="k">"guia"</span>: <span class="s">"AR-1842"</span>,
+  <span class="k">"estado"</span>: <span class="s">"ENTREGADO"</span>,
+  <span class="k">"referencia"</span>: <span class="s">"ORD-9021"</span>,
+  <span class="k">"pod"</span>: { <span class="k">"foto"</span>: <span class="s">true</span>, <span class="k">"dni"</span>: <span class="s">true</span>, <span class="k">"geo"</span>: <span class="s">true</span> },
+  <span class="k">"ts"</span>: <span class="s">"2026-07-20T19:07:00-03:00"</span>
+}</code></pre>
+          </div>
+          <p class="ep-desc" style="margin-top:10px">Cada webhook incluye una firma en el header para que verifiques que la llamada proviene de Fixy.</p>
+        </div>
+
+        <!-- ESTADOS -->
+        <div id="estados" class="ep">
+          <div class="ep-h"><span class="path">Estados de envío</span></div>
+          <p class="ep-desc">El ciclo de vida típico de una guía. Los nombres finales de cada estado se confirman con el equipo técnico.</p>
+          <div class="states">
+            <span class="st">PENDIENTE_ARMADO</span>
+            <span class="st">EN_CAMINO</span>
+            <span class="st">EN_DISTRIBUCION</span>
+            <span class="st end">ENTREGADO</span>
+          </div>
+          <div class="states" style="margin-top:8px">
+            <span class="st">NO_ENTREGADO</span>
+            <span class="st">REPROGRAMADO</span>
+            <span class="st">DEVUELTO</span>
+          </div>
+        </div>
+
+        <!-- ERRORES -->
+        <div id="errores" class="ep">
+          <div class="ep-h"><span class="path">Errores</span></div>
+          <p class="ep-desc">La API usa códigos de estado HTTP estándar. El cuerpo incluye un <code>error</code> con un mensaje descriptivo.</p>
+          <table class="ptable"><thead><tr><th>Código</th><th>Significado</th></tr></thead><tbody>
+            <tr><td><code>200 / 201</code></td><td>OK — la operación se completó.</td></tr>
+            <tr><td><code>400</code></td><td>Solicitud inválida — falta un parámetro o el formato es incorrecto.</td></tr>
+            <tr><td><code>401</code></td><td>Token ausente o inválido.</td></tr>
+            <tr><td><code>404</code></td><td>Recurso no encontrado (por ej., guía inexistente).</td></tr>
+            <tr><td><code>422</code></td><td>Datos válidos en forma pero no procesables (por ej., CP sin cobertura).</td></tr>
+            <tr><td><code>429</code></td><td>Demasiadas solicitudes — superaste el límite de tasa.</td></tr>
+            <tr><td><code>500</code></td><td>Error interno — reintentá o contactá a soporte.</td></tr>
+          </tbody></table>
+        </div>
+
+        <!-- PRUEBAS -->
+        <div id="pruebas" class="ep">
+          <div class="ep-h"><span class="path">Entorno de prueba</span></div>
+          <p class="ep-desc">Antes de salir a producción, podés probar toda la integración contra un entorno de prueba con un token de sandbox: generás guías, disparás webhooks y validás tus respuestas sin afectar tu operación real. También publicamos una colección de Postman para acelerar los primeros llamados.</p>
+          <div class="cta-row" style="margin-top:14px">
+            <a href="/tecnologia#contacto" class="btn btn-primary" data-ev="dev_cta_sandbox">Solicitá tu token de prueba →</a>
+            <a href="/tecnologia" class="btn btn-ghost" data-ev="dev_back_tech">Volver a Tecnología</a>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="footer-grid-2026">
+        <div class="footer-items">
+          <h3 class="footer-title">Soluciones</h3>
+          <ul>
+            <li><a href="/servicios/same-day">Same Day</a></li>
+            <li><a href="/servicios/next-day">Next Day</a></li>
+            <li><a href="/servicios/fixyfull">Fulfillment</a></li>
+            <li><a href="/servicios/fixypoints">Pick Up</a></li>
+            <li><a href="/servicios/flex">Flex</a></li>
+            <li><a href="/servicios/fixypay">FixyPay</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Institucional</h3>
+          <ul>
+            <li><a href="/#contacto">Sobre nosotros</a></li>
+            <li><a href="/recursos">Prensa y novedades</a></li>
+            <li><a href="mailto:ventas@fixy.com.ar?subject=Trabajar%20en%20Fixy">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Soporte</h3>
+          <ul>
+            <li><a href="https://fixy.epresis.com/login" target="_blank" rel="noopener">Portal Sellers</a></li>
+            <li><a href="https://fixy.epresis.com/seguimiento" target="_blank" rel="noopener">Seguí tu envío</a></li>
+            <li><a href="/#faq">Centro de Ayuda</a></li>
+            <li><a href="/developers">Documentación API</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Contacto y legal</h3>
+          <ul>
+            <li><a href="https://wa.me/5491150069182" target="_blank" rel="noopener">WhatsApp +54 9 11 5006-9182</a></li>
+            <li><a href="mailto:ventas@fixy.com.ar">ventas@fixy.com.ar</a></li>
+            <li><span>Fernández 1957, Parque Avellaneda, C1407, CABA</span></li>
+            <li><a href="/#contacto">Políticas de Privacidad</a></li>
+          </ul>
+          <div class="social-icons">
+            <a class="facebook" href="https://www.facebook.com/FIXYLOGISTICA/" target="_blank" rel="noopener" aria-label="Facebook de Fixy"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06H297V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+            <a class="instagram" href="https://www.instagram.com/fixylogistica/" target="_blank" rel="noopener" aria-label="Instagram de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+            <a class="linkedin" href="https://www.linkedin.com/company/fixylogistica/" target="_blank" rel="noopener" aria-label="LinkedIn de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8A53.79 53.79 0 0 1 107.58 53.8c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+            <a class="tiktok" href="https://www.tiktok.com/@fixy.logistica" target="_blank" rel="noopener" aria-label="TikTok de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/></svg></a>
+            <a class="youtube" href="https://youtube.com/@fixylogistica?si=OJZd7dg8CW03DOaK" target="_blank" rel="noopener" aria-label="YouTube de Fixy"><svg viewBox="0 0 576 512" aria-hidden="true"><path d="M549.7 124.1c-6.3-23.6-24.8-42.1-48.4-48.4C458.8 64 288 64 288 64S117.2 64 74.7 75.7c-23.6 6.3-42.1 24.8-48.4 48.4C16 167 16 256 16 256s0 89 10.3 131.9c6.3 23.6 24.8 41.3 48.4 47.6C117.2 448 288 448 288 448s170.8 0 213.3-12.5c23.6-6.3 42.1-24 48.4-47.6C560 345 560 256 560 256s0-89-10.3-131.9zM232 336.5v-161l142.7 80.5L232 336.5z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-partners-2026">
+        <a href="https://arlog.org/" target="_blank" rel="noopener" aria-label="ARLOG"><img src="/img/ARLOG2.png" alt="ARLOG"></a>
+        <a href="https://vistage.com.ar/" target="_blank" rel="noopener" aria-label="Vistage"><img src="/img/VISTAGE.png" alt="Vistage"></a>
+        <a href="https://cace.org.ar/" target="_blank" rel="noopener" aria-label="CACE"><img src="/img/CACE.png" alt="CACE"></a>
+        <a href="https://www.enacom.gob.ar" target="_blank" rel="noopener" aria-label="ENACOM"><img src="/img/ENACOM.png" alt="ENACOM"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'developers'}); }
+  document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
+  const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
+  if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded',o); });
+    nl.querySelectorAll('a:not(.dd-toggle)').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+    nl.querySelectorAll('.dd-toggle').forEach(t=>t.addEventListener('click',e=>{ if(window.innerWidth<=860){ e.preventDefault(); t.closest('.dd').classList.toggle('open'); } })); }
+  // Copiar al portapapeles
+  document.querySelectorAll('.copy').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const code=btn.closest('.code').querySelector('code');
+      const text=code.innerText.replace(/^\$ /gm,'');
+      const done=()=>{ const o=btn.textContent; btn.textContent='Copiado ✓'; btn.classList.add('ok'); setTimeout(()=>{ btn.textContent=o; btn.classList.remove('ok'); },1400); };
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done).catch(()=>{}); }
+      else { const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');done();}catch(e){} document.body.removeChild(ta); }
+      track('dev_copy');
+    });
+  });
+  track('page_view');
+</script>
+</body>
+</html>

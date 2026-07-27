@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tecnología: API, portal y trazabilidad | Fixy</title>
+<meta name="description" content="Conectá Fixy con tu tienda por API, plugin o CSV. Portal de autogestión y trazabilidad en tiempo real para tu e-commerce.">
+<meta name="keywords" content="API logística, integraciones e-commerce, portal de autogestión, trazabilidad envíos, web service">
+<link rel="canonical" href="https://www.fixy.com.ar/tecnologia">
+<meta property="og:title" content="Tecnología e integraciones | Fixy"><meta property="og:description" content="Conectá tu operación: API, portal de autogestión y trazabilidad en tiempo real."><meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta name="theme-color" content="#008FC3">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/footer-shared.css">
+<style>
+  .logos{display:flex;flex-wrap:wrap;gap:10px}
+  .logo-chip{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 15px;font-size:13px;color:var(--ink-soft);font-weight:600}
+  /* Terminal animada */
+  .term{background:#0e1b26;border:1px solid #24384a;border-radius:14px;box-shadow:var(--shadow);overflow:hidden;max-width:430px;margin-left:auto;font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace}
+  .term-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#0a141c;border-bottom:1px solid #24384a}
+  .term-bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .term-bar .r{background:#ff5f56}.term-bar .y{background:#ffbd2e}.term-bar .g{background:#27c93f}
+  .term-bar span{margin-left:8px;color:#6b8296;font-size:12px}
+  .term pre{margin:0;padding:16px;font-size:12.5px;line-height:1.75;color:#cfe3f0;white-space:pre-wrap;word-break:break-word;min-height:240px}
+  .term .k{color:#4bb3d6}.term .s{color:#f5b65c}.term .p{color:#27c93f}.term .c{color:#6b8296}.term .h{color:#b98cff}
+  .term .cur{display:inline-block;width:7px;height:14px;background:#4bb3d6;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  @media(prefers-reduced-motion:reduce){.term .cur{animation:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Tecnología e integraciones","provider":{"@type":"Organization","name":"Fixy","url":"https://www.fixy.com.ar"},"areaServed":"AR","description":"Integración por API, plugin o CSV; portal de autogestión y trazabilidad en tiempo real para e-commerce."}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Es obligatorio integrarse por API?", "acceptedAnswer": {"@type": "Answer", "text": "No. Podés integrar por API o plugin, o empezar cargando tus envíos por CSV. Definimos la forma según tu operación."}}, {"@type": "Question", "name": "¿Hay documentación de la API?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Una vez dada de alta la operación, tu equipo técnico accede a la documentación para conectar e informar envíos."}}, {"@type": "Question", "name": "¿Qué información queda disponible?", "acceptedAnswer": {"@type": "Answer", "text": "Estados de la guía, seguimiento, evidencia de entrega (según modalidad), liquidaciones y rendiciones — por portal o API."}}, {"@type": "Question", "name": "¿El comprador puede seguir su pedido?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, con un link de seguimiento y avisos automáticos, sin tener que escribirte."}}, {"@type": "Question", "name": "¿Con qué plataformas se integra?", "acceptedAnswer": {"@type": "Answer", "text": "Con las principales del país: Mercado Libre, Tiendanube, Shopify, WooCommerce, VTEX, PrestaShop, Wix, Magento y más."}}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.fixy.com.ar/"}, {"@type": "ListItem", "position": 2, "name": "Tecnología", "item": "https://www.fixy.com.ar/tecnologia"}]}
+</script>
+<meta property="og:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fixy — Logística para e-commerce en Argentina">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
+<link rel="stylesheet" href="/css/app-mobile.css?v=11">
+<link rel="stylesheet" href="/css/app-professional-v9.css?v=11">
+<script src="/js/app-shell.js?v=11" defer></script>
+</head>
+<body class="has-sticky">
+<a href="#contenido" class="skip">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/img/Logo%20Fixy.png" alt="Fixy Logística" width="606" height="188"></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="/#mapa" data-nav="como">Cómo funciona</a>
+      <a href="/#constructor" data-nav="constructor">Armá tu operación</a>
+      <a href="/tecnologia" data-nav="tecnologia">Tecnología</a>
+      <a href="/recursos" data-nav="recursos">Recursos</a>
+      <a href="/#cobertura" data-nav="cobertura">Cobertura</a>
+      <a href="/#faq" data-nav="faq">Preguntas</a>
+      <div class="dd">
+        <a class="dd-toggle" href="/#soluciones" aria-haspopup="true" data-nav="soluciones">Soluciones ▾</a>
+        <div class="dd-menu">
+          <a href="/servicios/fixyfull">FixyFull</a>
+          <a href="/servicios/flex">Flex</a>
+          <a href="/servicios/same-day">Same Day</a>
+          <a href="/servicios/next-day">Next Day</a>
+          <a href="/servicios/fixypoints">FixyPoints</a>
+          <a href="/servicios/fixypay">FixyPay</a>
+          <a href="/servicios/interior">Envíos al Interior</a>
+          <a href="/operar-en-argentina">Operá en Argentina</a>
+        </div>
+      </div>
+    </nav>
+    <a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<div class="crumb"><div class="wrap crumb-inner"><a href="/">Fixy</a><span class="sep">›</span><span>Tecnología</span></div></div>
+
+<!-- HERO -->
+<section id="contenido" tabindex="-1" class="hero" style="border-top:0">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Tecnología e integraciones</div>
+      <h1>La infraestructura logística <span class="hl">detrás de tu checkout.</span></h1>
+      <span class="yellowbar"></span>
+      <p class="sub">Conectá tu tienda o sistema con una API REST/JSON: cotización, guías, tracking y stock por SKU, automáticos. Y cambios de estado por webhook, sin hacer polling.</p>
+      <div class="cta-row">
+        <a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary">Hablar con el equipo →</a>
+        <a href="/developers" class="btn btn-ghost" data-ev="svc_cta_docs">Ver documentación →</a>
+      </div>
+      <div class="trust"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · +10 integraciones</div>
+      <div class="friction">
+        <span><span class="dotp"></span> API, plugin o CSV</span>
+        <span><span class="dotp"></span> Portal de autogestión</span>
+        <span><span class="dotp"></span> Estados en tiempo real</span>
+      </div>
+    </div>
+    <div>
+      <div class="term">
+        <div class="term-bar"><i class="r"></i><i class="y"></i><i class="g"></i><span>fixy · API</span></div>
+        <pre><code id="term-out"></code></pre>
+      </div>
+      <p class="muted" style="font-size:11.5px;text-align:right;margin:8px 4px 0">Ejemplo ilustrativo · endpoints y estados a validar</p>
+    </div>
+  </div>
+</section>
+
+<!-- REENCUADRE -->
+<section>
+  <div class="wrap">
+    <div class="reframe"><span class="lbl">El punto ciego</span>La tecnología no es un extra que se ve en una demo. Se nota cuando tu operación deja de depender de planillas, mensajes de WhatsApp y llamados para saber qué pasó con un pedido.</div>
+  </div>
+</section>
+
+<!-- INTEGRACIONES -->
+<section id="integraciones" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Integraciones</div><h2>Conectá Fixy con lo que ya usás.</h2>
+    <p>Web services abiertos con las principales plataformas del país. Conectás de la forma que mejor te sirva.</p></div>
+    <div class="grid-3">
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">API</div><h3 style="font-size:18px;margin:8px 0 6px">API REST/JSON</h3><p class="muted" style="font-size:14px">Autenticación por token y versionado (v1/v2). Informá envíos, sincronizá estados y automatizá tu flujo.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Plugin</div><h3 style="font-size:18px;margin:8px 0 6px">Plugins listos</h3><p class="muted" style="font-size:14px">Conectá tu tienda con las integraciones ya disponibles, sin desarrollo desde cero.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">CSV</div><h3 style="font-size:18px;margin:8px 0 6px">Carga por CSV</h3><p class="muted" style="font-size:14px">¿Todavía no integrás por API? Podés empezar cargando tus envíos por archivo.</p></div>
+    </div>
+    <div style="margin-top:26px">
+      <div class="eyebrow">Integraciones listas</div>
+      <div class="logos" style="margin-top:12px">
+        <span class="logo-chip">Mercado Libre</span><span class="logo-chip">Shopify</span><span class="logo-chip">Tiendanube</span><span class="logo-chip">WooCommerce</span><span class="logo-chip">VTEX</span><span class="logo-chip">PrestaShop</span><span class="logo-chip">Wix</span><span class="logo-chip">Magento</span><span class="logo-chip">ML Flex</span>
+      </div>
+      <p class="muted" style="font-size:13px;margin-top:10px">+10 integraciones. ¿No ves tu plataforma? Lo evaluamos.</p>
+    </div>
+    <div class="card" style="margin-top:26px;max-width:860px;background:var(--ink);color:#eaf2f6;border-color:var(--ink)">
+      <div class="eyebrow" style="color:var(--yellow)">Para tu equipo técnico</div>
+      <p style="color:#b9c6cd;font-size:14px;margin:8px 0 14px">Todo lo que tu dev necesita para conectar rápido y sin sorpresas.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#eaf2f6">API REST/JSON</span>
+        <span class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#eaf2f6">Auth por token</span>
+        <span class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#eaf2f6">Versionado v1/v2</span>
+        <span class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#eaf2f6">Webhooks de estado</span>
+        <span class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#eaf2f6">Colección de Postman</span>
+        <span class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#eaf2f6">Endpoint de prueba</span>
+      </div>
+      <a href="/developers" class="btn btn-primary" style="margin-top:16px" data-ev="tech_ver_docs">Ver la documentación completa →</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ PODÉS HACER (cómo opera por servicio) -->
+<section id="automatiza">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Qué podés automatizar</div><h2>Cómo opera Fixy, conectado a tu sistema.</h2>
+    <p>Estas son las operaciones que tu tienda o sistema puede hacer con Fixy, sin trabajo manual.</p></div>
+    <div class="grid-3">
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Antes de vender</div><h3 style="font-size:18px;margin:8px 0 6px">Cobertura y cotización</h3><p class="muted" style="font-size:14px">Consultá servicios disponibles y cotizá por código postal antes de confirmar la venta.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">La venta entra</div><h3 style="font-size:18px;margin:8px 0 6px">Generación de envíos</h3><p class="muted" style="font-size:14px">Creá guías y etiquetas automáticamente cuando entra un pedido.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Colecta</div><h3 style="font-size:18px;margin:8px 0 6px">Solicitud de retiro</h3><p class="muted" style="font-size:14px">Pedí colectas desde tu sistema, sin coordinarlas a mano.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">FixyFull</div><h3 style="font-size:18px;margin:8px 0 6px">Stock por SKU</h3><p class="muted" style="font-size:14px">Informá recepciones y consultá el stock por SKU en tiempo real.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Tiempo real</div><h3 style="font-size:18px;margin:8px 0 6px">Estados por WebHook</h3><p class="muted" style="font-size:14px">Recibí los cambios de estado de cada envío en tu sistema, sin tener que consultarlos.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">El cobro</div><h3 style="font-size:18px;margin:8px 0 6px">Cobro digital</h3><p class="muted" style="font-size:14px">Cobrá contraentrega por QR con FixyPay, integrado al recorrido del pedido.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL -->
+<section id="portal">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Portal de autogestión</div><h2>Toda tu operación, en un panel.</h2>
+    <p>Sin depender de que alguien te pase la información: la gestionás vos, cuando la necesitás.</p></div>
+    <ul class="flist" style="max-width:780px">
+      <li>Creá y seguí tus guías, y consultá el estado de cada envío.</li>
+      <li>Revisá liquidaciones diarias y rendiciones de contraentrega.</li>
+      <li>Planificá colectas y despachos.</li>
+      <li>Gestioná reclamos e incidencias con contexto.</li>
+      <li>Accedé a la información de tu operación para decidir con datos.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TRAZABILIDAD -->
+<section id="trazabilidad" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Trazabilidad y evidencia</div><h2>Sabé qué pasa con cada envío — y con tu operación.</h2></div>
+    <div class="grid-3">
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Tiempo real</div><h3 style="font-size:18px;margin:8px 0 6px">Estados de la guía</h3><p class="muted" style="font-size:14px">Cada estado, disponible por API o en el portal, con su proceso definido.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Comprador</div><h3 style="font-size:18px;margin:8px 0 6px">Aviso automático</h3><p class="muted" style="font-size:14px">Tu cliente sigue su envío con un link de seguimiento, sin escribirte.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Evidencia</div><h3 style="font-size:18px;margin:8px 0 6px">POD digital</h3><p class="muted" style="font-size:14px">Prueba de entrega con foto, DNI y geolocalización, según modalidad.</p></div>
+    </div>
+    <div class="card" style="margin-top:22px;max-width:820px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+      <div><strong>Cobro digital.</strong> <span class="muted">¿Cobrás contraentrega? Con FixyPay podés hacerlo por QR con acreditación inmediata.</span></div>
+      <a href="/servicios/fixypay" class="btn btn-ghost" data-ev="tech_fixypay">Ver FixyPay →</a>
+    </div>
+  </div>
+</section>
+
+<!-- DATOS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head" style="max-width:780px"><div class="eyebrow">Datos e inteligencia operativa</div><h2>Operamos sobre una plataforma de datos centralizada.</h2>
+    <p>La información de tu operación se procesa de forma automatizada en la nube: reporting, control y mejores decisiones. Menos planillas sueltas, más datos confiables para escalar.</p></div>
+    <div class="grid-3">
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Centralización</div><h3 style="font-size:18px;margin:8px 0 6px">Un solo origen de verdad</h3><p class="muted" style="font-size:14px">Los datos de la operación se consolidan y procesan de forma automatizada.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Reporting</div><h3 style="font-size:18px;margin:8px 0 6px">Tableros y métricas</h3><p class="muted" style="font-size:14px">Visibilidad de tu operación para decidir con datos, no con intuición.</p></div>
+      <div class="card"><div class="eyebrow" style="color:var(--blue)">Escala</div><h3 style="font-size:18px;margin:8px 0 6px">Preparado para crecer</h3><p class="muted" style="font-size:14px">Infraestructura en la nube que acompaña el volumen sin rehacer todo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEGURIDAD -->
+<section>
+  <div class="wrap">
+    <div class="sec-head" style="max-width:760px"><div class="eyebrow">Respaldo</div><h2>Datos protegidos y operación con respaldo.</h2>
+    <p>Control de accesos por roles, gestión segura de credenciales y tratamiento de la información según la Ley N.º 25.326 de Protección de Datos Personales. Operamos como prestador con función postal (ENACOM), y la trazabilidad y la evidencia dejan todo registrado.</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Preguntas frecuentes</div><h2>Lo técnico, claro.</h2></div>
+    <div style="max-width:820px">
+      <details><summary>¿Es obligatorio integrarse por API?</summary><p>No. Podés integrar por API o plugin, o empezar cargando tus envíos por CSV. Definimos la forma según tu operación.</p></details>
+      <details><summary>¿Hay documentación de la API?</summary><p>Sí. Una vez dada de alta la operación, tu equipo técnico accede a la documentación para conectar e informar envíos.</p></details>
+      <details><summary>¿Qué información queda disponible?</summary><p>Estados de la guía, seguimiento, evidencia de entrega (según modalidad), liquidaciones y rendiciones — por portal o API.</p></details>
+      <details><summary>¿El comprador puede seguir su pedido?</summary><p>Sí, con un link de seguimiento y avisos automáticos, sin tener que escribirte.</p></details>
+      <details><summary>¿Con qué plataformas se integra?</summary><p>Con las principales del país: Mercado Libre, Tiendanube, Shopify, WooCommerce, VTEX, PrestaShop, Wix, Magento y más.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONVERSIÓN -->
+<section id="contacto" class="convert">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Conectemos tu operación</div><h2>Veamos cómo integrar Fixy con tu tienda.</h2><p>Contanos qué plataforma usás y cómo trabajás hoy; definimos la mejor forma de conectar.</p></div>
+    <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · +10 integraciones</div>
+    <div class="agenda-strip"><div><strong>¿Preferís hablar?</strong> Agendá 15 minutos con el equipo.</div><a class="btn btn-yellow" href="#" data-ev="svc_schedule">Agendar 15 min →</a></div>
+    <div class="form-card">
+      <input type="hidden" id="origen" value="tecnologia">
+      <div class="form-grid">
+        <div class="field"><label for="n">Nombre completo</label><input id="n" placeholder="Tu nombre"></div>
+        <div class="field"><label for="emp">Empresa</label><input id="emp" placeholder="Tu empresa"></div>
+        <div class="field"><label for="e">Correo</label><input id="e" placeholder="tu@email.com"></div>
+        <div class="field"><label for="plat">Plataforma / tienda</label><input id="plat" placeholder="Ej. Tiendanube, Shopify, propia"></div>
+        <div class="field"><label for="v">Envíos por mes</label><select id="v"><option>Seleccioná</option><option>Menos de 100</option><option>100 a 500</option><option>500 a 1.000</option><option>Más de 1.000</option></select></div>
+        <div class="field"><label for="con">¿Cómo querés conectar?</label><select id="con"><option>Seleccioná</option><option>API</option><option>Plugin</option><option>CSV</option><option>No sé, necesito asesoramiento</option></select></div>
+        <div class="field full"><label for="m">Mensaje</label><textarea id="m" rows="3" placeholder="Contanos cómo operás hoy."></textarea></div>
+        <div class="field full" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <button class="btn btn-primary" data-ev="svc_form_submit">Quiero que me contacten →</button>
+          <a class="btn btn-wa" href="https://wa.me/5491150069182?text=Hola%20Fixy%2C%20quiero%20integrar%20mi%20tienda%20con%20su%20tecnolog%C3%ADa." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
+          <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="footer-grid-2026">
+        <div class="footer-items">
+          <h3 class="footer-title">Soluciones</h3>
+          <ul>
+            <li><a href="/servicios/same-day">Same Day</a></li>
+            <li><a href="/servicios/next-day">Next Day</a></li>
+            <li><a href="/servicios/fixyfull">Fulfillment</a></li>
+            <li><a href="/servicios/fixypoints">Pick Up</a></li>
+            <li><a href="/servicios/flex">Flex</a></li>
+            <li><a href="/servicios/fixypay">FixyPay</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Institucional</h3>
+          <ul>
+            <li><a href="/#contacto">Sobre nosotros</a></li>
+            <li><a href="/recursos">Prensa y novedades</a></li>
+            <li><a href="mailto:ventas@fixy.com.ar?subject=Trabajar%20en%20Fixy">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Soporte</h3>
+          <ul>
+            <li><a href="https://fixy.epresis.com/login" target="_blank" rel="noopener">Portal Sellers</a></li>
+            <li><a href="https://fixy.epresis.com/seguimiento" target="_blank" rel="noopener">Seguí tu envío</a></li>
+            <li><a href="/#faq">Centro de Ayuda</a></li>
+            <li><a href="/developers">Documentación API</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Contacto y legal</h3>
+          <ul>
+            <li><a href="https://wa.me/5491150069182" target="_blank" rel="noopener">WhatsApp +54 9 11 5006-9182</a></li>
+            <li><a href="mailto:ventas@fixy.com.ar">ventas@fixy.com.ar</a></li>
+            <li><span>Fernández 1957, Parque Avellaneda, C1407, CABA</span></li>
+            <li><a href="/#contacto">Políticas de Privacidad</a></li>
+          </ul>
+          <div class="social-icons">
+            <a class="facebook" href="https://www.facebook.com/FIXYLOGISTICA/" target="_blank" rel="noopener" aria-label="Facebook de Fixy"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06H297V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+            <a class="instagram" href="https://www.instagram.com/fixylogistica/" target="_blank" rel="noopener" aria-label="Instagram de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+            <a class="linkedin" href="https://www.linkedin.com/company/fixylogistica/" target="_blank" rel="noopener" aria-label="LinkedIn de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8A53.79 53.79 0 0 1 107.58 53.8c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+            <a class="tiktok" href="https://www.tiktok.com/@fixy.logistica" target="_blank" rel="noopener" aria-label="TikTok de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/></svg></a>
+            <a class="youtube" href="https://youtube.com/@fixylogistica?si=OJZd7dg8CW03DOaK" target="_blank" rel="noopener" aria-label="YouTube de Fixy"><svg viewBox="0 0 576 512" aria-hidden="true"><path d="M549.7 124.1c-6.3-23.6-24.8-42.1-48.4-48.4C458.8 64 288 64 288 64S117.2 64 74.7 75.7c-23.6 6.3-42.1 24.8-48.4 48.4C16 167 16 256 16 256s0 89 10.3 131.9c6.3 23.6 24.8 41.3 48.4 47.6C117.2 448 288 448 288 448s170.8 0 213.3-12.5c23.6-6.3 42.1-24 48.4-47.6C560 345 560 256 560 256s0-89-10.3-131.9zM232 336.5v-161l142.7 80.5L232 336.5z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-partners-2026">
+        <a href="https://arlog.org/" target="_blank" rel="noopener" aria-label="ARLOG"><img src="/img/ARLOG2.png" alt="ARLOG"></a>
+        <a href="https://vistage.com.ar/" target="_blank" rel="noopener" aria-label="Vistage"><img src="/img/VISTAGE.png" alt="Vistage"></a>
+        <a href="https://cace.org.ar/" target="_blank" rel="noopener" aria-label="CACE"><img src="/img/CACE.png" alt="CACE"></a>
+        <a href="https://www.enacom.gob.ar" target="_blank" rel="noopener" aria-label="ENACOM"><img src="/img/ENACOM.png" alt="ENACOM"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Hablar con el equipo</a><a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a></div>
+
+<script>
+  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'tecnologia'}); }
+  document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
+  const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
+  if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded',o); });
+    nl.querySelectorAll('a:not(.dd-toggle)').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+    nl.querySelectorAll('.dd-toggle').forEach(t=>t.addEventListener('click',e=>{ if(window.innerWidth<=860){ e.preventDefault(); t.closest('.dd').classList.toggle('open'); } })); }
+  // Terminal animada (API en vivo) — cicla por varias escenas
+  (function(){
+    const el=document.getElementById('term-out'); if(!el) return;
+    const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion:reduce)').matches;
+    const scenes=[
+      { title:'guías + webhook', lines:[
+        `<span class="c"># Creá una guía</span>\n`,
+        `<span class="p">$</span> curl -X POST https://api.fixy.com.ar/v2/guias.json \\\n`,
+        `  -d '{ "servicio": <span class="s">"NEXT_DAY"</span>, "cp": <span class="s">"1636"</span> }'\n`,
+        `\n`,
+        `{ <span class="k">"guia"</span>: <span class="s">"AR-1842"</span>, <span class="k">"estado"</span>: <span class="s">"PENDIENTE_ARMADO"</span> }\n`,
+        `\n`,
+        `<span class="c"># Los cambios llegan por webhook — sin polling</span>\n`,
+        `<span class="h">▸ EN_CAMINO</span>   18:32\n`,
+        `<span class="h">▸ ENTREGADO</span>   19:07  <span class="c">POD: foto + dni + geo</span>\n`
+      ]},
+      { title:'cotización', lines:[
+        `<span class="c"># Cotizá el envío en el checkout</span>\n`,
+        `<span class="p">$</span> curl https://api.fixy.com.ar/v2/cotizacion.json \\\n`,
+        `  -d '{ "cp_origen": <span class="s">"1414"</span>, "cp_destino": <span class="s">"5000"</span>, "peso": <span class="s">1.2</span> }'\n`,
+        `\n`,
+        `[\n`,
+        `  { <span class="k">"servicio"</span>: <span class="s">"NEXT_DAY"</span>, <span class="k">"entrega"</span>: <span class="s">"24-48h"</span> },\n`,
+        `  { <span class="k">"servicio"</span>: <span class="s">"SAME_DAY"</span>, <span class="k">"entrega"</span>: <span class="s">"en el día"</span> }\n`,
+        `]\n`
+      ]},
+      { title:'tracking', lines:[
+        `<span class="c"># Seguí un envío en tiempo real</span>\n`,
+        `<span class="p">$</span> curl https://api.fixy.com.ar/v2/tracking/AR-1842.json\n`,
+        `\n`,
+        `{\n`,
+        `  <span class="k">"guia"</span>: <span class="s">"AR-1842"</span>,\n`,
+        `  <span class="k">"estado"</span>: <span class="s">"EN_DISTRIBUCION"</span>,\n`,
+        `  <span class="k">"eta"</span>: <span class="s">"hoy 14–18h"</span>\n`,
+        `}\n`
+      ]},
+      { title:'stock por SKU', lines:[
+        `<span class="c"># Consultá stock en Fixy Full por SKU</span>\n`,
+        `<span class="p">$</span> curl https://api.fixy.com.ar/v2/stock?sku=REM-NEG-M\n`,
+        `\n`,
+        `{ <span class="k">"sku"</span>: <span class="s">"REM-NEG-M"</span>, <span class="k">"disponible"</span>: <span class="s">42</span>, <span class="k">"reservado"</span>: <span class="s">3</span> }\n`
+      ]},
+      { title:'cobro digital', lines:[
+        `<span class="c"># Generá un cobro digital (FixyPay)</span>\n`,
+        `<span class="p">$</span> curl -X POST https://api.fixy.com.ar/v2/pagos.json \\\n`,
+        `  -d '{ "guia": <span class="s">"AR-1842"</span>, "monto": <span class="s">18990</span> }'\n`,
+        `\n`,
+        `{ <span class="k">"link"</span>: <span class="s">"pay.fixy.com.ar/AR-1842"</span>, <span class="k">"estado"</span>: <span class="s">"PENDIENTE"</span> }\n`
+      ]}
+    ];
+    const bar=document.querySelector('.term-bar span');
+    let si=0;
+    function run(){
+      const sc=scenes[si]; if(bar) bar.textContent='fixy · '+sc.title;
+      let acc='', i=0;
+      (function step(){
+        if(i<sc.lines.length){ acc+=sc.lines[i]; el.innerHTML=acc+'<span class="cur"></span>'; i++; setTimeout(step, reduce?0:(i<=3?380:560)); }
+        else { el.innerHTML=acc+'<span class="cur"></span>'; si=(si+1)%scenes.length; if(!reduce) setTimeout(run,3200); }
+      })();
+    }
+    run();
+  })();
+  track('page_view');
+</script>
+</body>
+</html>

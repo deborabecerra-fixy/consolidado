@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vender en Argentina — Logística local para tu marca | Fixy</title>
+<meta name="description" content="Vendé en Argentina con una operación logística local: fulfillment, entrega, cobro contraentrega y devoluciones, sin construir todo desde cero.">
+<meta name="keywords" content="operación local Argentina, fulfillment Argentina, cross-border logistics, marcas internacionales, vender en Argentina">
+<link rel="canonical" href="https://www.fixy.com.ar/operar-en-argentina">
+<meta property="og:title" content="Expandí tu operación a Argentina | Fixy"><meta property="og:description" content="Vendé en Argentina con una operación logística local, sin construir toda la infraestructura desde cero."><meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta name="theme-color" content="#008FC3">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/footer-shared.css">
+<style>
+  .echips{display:flex;flex-wrap:wrap;gap:10px}
+  .echip{cursor:pointer;border:1.5px solid var(--line);background:#fff;color:var(--ink);padding:11px 15px;border-radius:999px;font-size:13.5px;font-weight:600;user-select:none;transition:.12s}
+  .echip:hover{border-color:var(--blue)}
+  .echip.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .cfg{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px}
+  .cfg .step-label{font-weight:800;font-size:15px;margin:18px 0 12px;display:flex;align-items:center;gap:10px}
+  .cfg .idx{background:var(--blue);color:#fff;width:24px;height:24px;border-radius:6px;display:grid;place-items:center;font-size:13px;flex:0 0 auto}
+  #cfg-out{display:none;margin-top:22px}
+  .cfg-card{background:#fff;border:2px solid var(--blue);border-radius:16px;padding:24px}
+  .steps9{display:grid;grid-template-columns:1fr 1fr;gap:12px;counter-reset:s}
+  .steps9 li{list-style:none;display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px}
+  .steps9 li::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:26px;height:26px;border-radius:7px;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center;font-size:13px}
+  @media(max-width:760px){.steps9{grid-template-columns:1fr}}
+  .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:820px){.cols3{grid-template-columns:1fr}}
+  .reveal-lines p{font-size:clamp(20px,2.6vw,26px);font-weight:800;color:var(--ink);margin:0 0 6px;max-width:760px}
+  .reveal-lines .hl{color:var(--blue)}
+  .sol{transition:.15s}
+  .sol:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+  .sol .tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:800}
+  .sol h3{font-size:19px;font-weight:800;margin:9px 0 6px}
+  .sol p{color:var(--ink-soft);font-size:14px;margin:0}
+  .sol a{color:var(--blue);text-decoration:none;font-weight:700;font-size:13.5px;display:inline-block;margin-top:12px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Expandí tu operación a Argentina","serviceType":"Cross-border logistics y fulfillment local","provider":{"@type":"Organization","name":"Fixy","url":"https://www.fixy.com.ar"},"areaServed":"AR","description":"Operación logística local para marcas internacionales que entran o expanden en Argentina: recepción, fulfillment, distribución, cobro y devoluciones, una vez que la mercadería está disponible en el país."}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Fixy importa o hace la aduana?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nuestro alcance empieza cuando tu mercadería ya está disponible (nacionalizada) en Argentina. Coordinamos con tu importador o depósito de origen, pero la importación y el despacho aduanero quedan fuera de nuestro servicio."}}, {"@type": "Question", "name": "¿Cómo se cobra a los compradores argentinos?", "acceptedAnswer": {"@type": "Answer", "text": "En Argentina conviven el pago anticipado y el cobro contraentrega. Si cobrás al entregar, con FixyPay podés hacerlo mediante QR con acreditación inmediata (sujeto a condiciones)."}}, {"@type": "Question", "name": "¿Necesito una empresa registrada en Argentina?", "acceptedAnswer": {"@type": "Answer", "text": "Las condiciones legales, fiscales y comerciales dependen de cada caso. Te orientamos y coordinamos la operación logística; los aspectos societarios/fiscales corresponden a tu marca."}}, {"@type": "Question", "name": "¿Se integran con mi tienda o plataforma?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, con las principales del país (Mercado Libre, Tiendanube, Shopify, WooCommerce y más) mediante APIs y web services abiertos. Podés conectar por API, plugin o CSV."}}, {"@type": "Question", "name": "¿Y si todavía no tengo stock en Argentina?", "acceptedAnswer": {"@type": "Answer", "text": "Primero identificamos qué actores y responsabilidades hacen falta para el ingreso. Una vez disponible, diseñamos la recepción y toda la operación local."}}, {"@type": "Question", "name": "¿Cómo se cotiza?", "acceptedAnswer": {"@type": "Answer", "text": "Revisamos etapa, volumen, servicios y tu operación antes de proponer una tarifa. No publicamos precios en la web."}}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.fixy.com.ar/"}, {"@type": "ListItem", "position": 2, "name": "Operá en Argentina", "item": "https://www.fixy.com.ar/operar-en-argentina"}]}
+</script>
+<meta property="og:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fixy — Logística para e-commerce en Argentina">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
+<link rel="stylesheet" href="/css/app-mobile.css?v=11">
+<link rel="stylesheet" href="/css/app-professional-v9.css?v=11">
+<script src="/js/app-shell.js?v=11" defer></script>
+</head>
+<body class="has-sticky">
+<a href="#contenido" class="skip">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/img/Logo%20Fixy.png" alt="Fixy Logística" width="606" height="188"></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="/#mapa" data-nav="como">Cómo funciona</a>
+      <a href="/#constructor" data-nav="constructor">Armá tu operación</a>
+      <a href="/tecnologia" data-nav="tecnologia">Tecnología</a>
+      <a href="/recursos" data-nav="recursos">Recursos</a>
+      <a href="/#cobertura" data-nav="cobertura">Cobertura</a>
+      <a href="/#faq" data-nav="faq">Preguntas</a>
+      <div class="dd">
+        <a class="dd-toggle" href="/#soluciones" aria-haspopup="true" data-nav="soluciones">Soluciones ▾</a>
+        <div class="dd-menu">
+          <a href="/servicios/fixyfull">FixyFull</a>
+          <a href="/servicios/flex">Flex</a>
+          <a href="/servicios/same-day">Same Day</a>
+          <a href="/servicios/next-day">Next Day</a>
+          <a href="/servicios/fixypoints">FixyPoints</a>
+          <a href="/servicios/fixypay">FixyPay</a>
+          <a href="/servicios/interior">Envíos al Interior</a>
+          <a href="/operar-en-argentina">Operá en Argentina</a>
+        </div>
+      </div>
+    </nav>
+    <a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<div class="crumb"><div class="wrap crumb-inner"><a href="/">Fixy</a><span class="sep">›</span><span>Expandí tu operación a Argentina</span></div></div>
+
+<!-- HERO -->
+<section id="contenido" tabindex="-1" class="hero" style="border-top:0">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Marcas del exterior · Entrada a Argentina</div>
+      <h1>Vendé en Argentina sin construir una operación local <span class="hl">desde cero.</span></h1>
+      <span class="yellowbar"></span>
+      <p class="sub">Fixy conecta stock, preparación, distribución y gestión operativa para marcas internacionales que quieren empezar o expandir sus ventas en Argentina — con capacidades que ya tenemos.</p>
+      <div class="cta-row">
+        <a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary">Evaluar mi entrada a Argentina →</a>
+        <a href="#configurador" class="btn btn-ghost" data-ev="svc_cta_configurador">Probá el configurador</a>
+      </div>
+      <div class="trust"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · +150 clientes activos</div>
+      <div class="friction">
+        <span><span class="dotp"></span> Desde que tu mercadería está en Argentina</span>
+        <span><span class="dotp"></span> Sin infraestructura propia</span>
+        <span><span class="dotp"></span> Usás el ecosistema Fixy</span>
+      </div>
+    </div>
+    <div>
+      <div class="statuscard">
+        <div class="sc-top"><span>VENTA · BUENOS AIRES</span><span style="color:var(--blue)">ENTREGA LOCAL</span></div>
+        <div class="sc-title">Tu primera venta en Argentina</div>
+        <div class="sc-rows">
+          <div class="sc-row"><span>Mercadería recibida</span><b>✓</b></div>
+          <div class="sc-row"><span>Producto identificado</span><b>✓</b></div>
+          <div class="sc-row"><span>Operación local configurada</span><b>✓</b></div>
+          <div class="sc-row" style="border:0"><span>Marca lista para vender</span><b>✓</b></div>
+        </div>
+        <div class="pillok">● Tu marca, operando como local.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO ENTRA TU MARCA (modelo + ecosistema, fusionados) -->
+<section id="como" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Cómo entra tu marca</div><h2>Una entrada local, construida por etapas.</h2>
+    <p>No una solución cerrada e idéntica para todos: primero entendemos tu marca y qué actores ya existen, después definimos dónde empieza Fixy.</p></div>
+    <ol class="steps9" style="grid-template-columns:1fr">
+      <li>Entendemos cómo vende tu marca y qué actores ya existen (importador o socio local).</li>
+      <li>Definimos dónde empieza Fixy y diseñamos la recepción y el stock.</li>
+      <li>Configuramos la preparación de pedidos y las modalidades de entrega.</li>
+      <li>Conectamos información, seguimiento, devoluciones y excepciones.</li>
+      <li>Iniciamos y ajustamos la operación.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ECOSISTEMA (servicios que se combinan) -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">El ecosistema que combinamos</div><h2>Los servicios que se arman para tu operación local.</h2>
+    <p>Tu operación en Argentina no es un producto único: es la combinación de estas piezas, según lo que tu marca necesite.</p></div>
+    <div class="grid-3">
+      <div class="card sol"><div class="tag">Stock y preparación</div><h3>FixyFull</h3><p>Recepción, almacenamiento, picking y packing de tu mercadería en el país.</p><a href="/servicios/fixyfull">Ver FixyFull →</a></div>
+      <div class="card sol"><div class="tag">La entrega</div><h3>Same Day / Next Day</h3><p>Distribución en el día o al día siguiente en CABA y GBA.</p><a href="/servicios/same-day">Ver entregas →</a></div>
+      <div class="card sol"><div class="tag">Todo el país</div><h3>Envíos al Interior</h3><p>Alcance nacional, a domicilio o sucursal, con seguimiento.</p><a href="/servicios/interior">Ver Interior →</a></div>
+      <div class="card sol"><div class="tag">Retiro</div><h3>FixyPoints</h3><p>Red de puntos de retiro como alternativa al domicilio.</p><a href="/servicios/fixypoints">Ver FixyPoints →</a></div>
+      <div class="card sol"><div class="tag">El cobro</div><h3>FixyPay</h3><p>Cobro contraentrega con QR, si tu operación lo requiere.</p><a href="/servicios/fixypay">Ver FixyPay →</a></div>
+      <div class="card sol"><div class="tag">Mercado Libre + devoluciones</div><h3>Flex e inversa</h3><p>Organización de entregas Mercado Libre Flex, y logística inversa local.</p><a href="/servicios/flex">Ver Flex →</a></div>
+    </div>
+    <p class="muted" style="margin-top:18px;font-size:14px">No los contratás todos: definimos la combinación exacta que tu marca necesita para operar.</p>
+  </div>
+</section>
+
+<!-- TRANSPARENCIA -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Reglas claras</div><h2>Qué opera Fixy — y qué no.</h2>
+    <p>La transparencia es parte de la propuesta: definimos con precisión quién hace qué.</p></div>
+    <div class="cols3">
+      <div class="card">
+        <div class="eyebrow" style="color:var(--blue)">Lo que opera Fixy</div>
+        <ul class="flist" style="margin-top:10px">
+          <li>Recepción de mercadería (ya disponible en el país)</li>
+          <li>Almacenamiento, preparación y despacho</li>
+          <li>Distribución local (CABA, GBA e interior)</li>
+          <li>Cobro contraentrega, si aplica</li>
+          <li>Devoluciones e información/seguimiento</li>
+        </ul>
+      </div>
+      <div class="card" style="background:var(--paper)">
+        <div class="eyebrow" style="color:var(--yellow-d)">Lo que se articula con terceros</div>
+        <ul class="flist" style="margin-top:10px">
+          <li>Contacto con proveedores locales (importador, despachante y otros), según disponibilidad</li>
+          <li>Coordinación con tu importador o depósito de origen</li>
+          <li>Integración con las plataformas de venta del país</li>
+        </ul>
+      </div>
+      <div class="card" style="background:var(--paper)">
+        <div class="eyebrow" style="color:var(--ink-soft)">Lo que corresponde a tu marca</div>
+        <ul class="flist" style="margin-top:10px">
+          <li>Entidad o estructura comercial local</li>
+          <li>Importación, aduana y condiciones fiscales</li>
+          <li>Documentación de producto, catálogo y canales</li>
+          <li>Medios de cobro y política de devoluciones</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">El alcance de Fixy empieza cuando tu mercadería ya está disponible (nacionalizada) en Argentina. No realizamos importación, despacho aduanero ni representación legal del vendedor; coordinamos con los actores que sí lo hacen.</div>
+  </div>
+</section>
+
+<!-- CONFIGURADOR -->
+<section id="configurador" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Configurador de entrada</div><h2>Armá una primera hipótesis de tu operación en Argentina.</h2>
+    <p>No necesitás conocer la terminología logística argentina. Elegí tu etapa y qué necesitás — te devolvemos un punto de partida (no una cotización).</p></div>
+    <div class="cfg">
+      <div class="step-label"><span class="idx">1</span> ¿En qué etapa estás?</div>
+      <div class="echips" data-group="etapa">
+        <span class="echip" data-v="evaluando">Evaluando el mercado</span>
+        <span class="echip" data-v="importador">Ya tengo importador/representante</span>
+        <span class="echip" data-v="ingresar">La mercadería está por ingresar</span>
+        <span class="echip" data-v="stock">Ya tengo stock en Argentina</span>
+        <span class="echip" data-v="vende">Ya vendo, necesito operación logística</span>
+        <span class="echip" data-v="reemplazar">Quiero reemplazar/ampliar mi operación</span>
+      </div>
+      <div class="step-label"><span class="idx">2</span> ¿Qué necesitás resolver?</div>
+      <div class="echips" data-group="serv">
+        <span class="echip" data-v="almacenamiento">Almacenamiento</span>
+        <span class="echip" data-v="preparacion">Preparación de pedidos</span>
+        <span class="echip" data-v="distribucion">Distribución</span>
+        <span class="echip" data-v="puntos">Puntos de retiro</span>
+        <span class="echip" data-v="cobro">Cobro contraentrega</span>
+        <span class="echip" data-v="devoluciones">Devoluciones</span>
+      </div>
+      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="cfgBuild()" data-ev="cfg_build">Construir hipótesis →</button>
+        <button class="btn btn-ghost" onclick="cfgReset()">Empezar de nuevo</button>
+      </div>
+      <div id="cfg-out">
+        <div class="cfg-card">
+          <div class="eyebrow">Tu punto de partida</div>
+          <div id="cfg-body"></div>
+          <p class="muted" style="font-size:12.5px;font-style:italic;margin:14px 0 18px">Es una hipótesis inicial, no una cotización. El diseño y las condiciones se validan con tu operación real.</p>
+          <a class="btn btn-primary" href="#contacto" onclick="cfgToForm()" data-ev="cfg_to_form">Diseñar mi operación →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Preguntas frecuentes</div><h2>Lo que conviene saber antes de empezar.</h2></div>
+    <div style="max-width:820px">
+      <details><summary>¿Fixy importa o hace la aduana?</summary><p>No. Nuestro alcance empieza cuando tu mercadería ya está disponible (nacionalizada) en Argentina. Coordinamos con tu importador o depósito de origen, pero la importación y el despacho aduanero quedan fuera de nuestro servicio.</p></details>
+      <details><summary>¿Cómo se cobra a los compradores argentinos?</summary><p>En Argentina conviven el pago anticipado y el cobro contraentrega. Si cobrás al entregar, con FixyPay podés hacerlo mediante QR con acreditación inmediata (sujeto a condiciones).</p></details>
+      <details><summary>¿Necesito una empresa registrada en Argentina?</summary><p>Las condiciones legales, fiscales y comerciales dependen de cada caso. Te orientamos y coordinamos la operación logística; los aspectos societarios/fiscales corresponden a tu marca.</p></details>
+      <details><summary>¿Se integran con mi tienda o plataforma?</summary><p>Sí, con las principales del país (Mercado Libre, Tiendanube, Shopify, WooCommerce y más) mediante APIs y web services abiertos. Podés conectar por API, plugin o CSV.</p></details>
+      <details><summary>¿Y si todavía no tengo stock en Argentina?</summary><p>Primero identificamos qué actores y responsabilidades hacen falta para el ingreso. Una vez disponible, diseñamos la recepción y toda la operación local.</p></details>
+      <details><summary>¿Cómo se cotiza?</summary><p>Revisamos etapa, volumen, servicios y tu operación antes de proponer una tarifa. No publicamos precios en la web.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONVERSIÓN -->
+<section id="contacto" class="convert">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Entrá al mercado argentino</div><h2>Contanos dónde está hoy tu operación.</h2><p>Empezamos entendiendo qué ya resolviste, qué falta y desde qué punto puede intervenir Fixy.</p></div>
+    <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · +10 integraciones</div>
+    <div class="agenda-strip"><div><strong>¿Preferís hablar?</strong> Agendá 15 minutos con el equipo.</div><a class="btn btn-yellow" href="#" data-ev="svc_schedule">Agendar 15 min →</a></div>
+    <div class="form-card">
+      <input type="hidden" id="origen" value="market-entry">
+      <input type="hidden" id="cfg-lead">
+      <div class="form-grid">
+        <div class="field"><label for="n">Nombre completo</label><input id="n" placeholder="Tu nombre"></div>
+        <div class="field"><label for="emp">Empresa / marca</label><input id="emp" placeholder="Tu marca"></div>
+        <div class="field"><label for="pais">País de origen</label><input id="pais" placeholder="Ej. Chile, España, EE.UU."></div>
+        <div class="field"><label for="web">Sitio web</label><input id="web" placeholder="tumarca.com"></div>
+        <div class="field"><label for="e">Correo</label><input id="e" placeholder="tu@email.com"></div>
+        <div class="field"><label for="canal">Mercado / canal de venta</label><input id="canal" placeholder="Ej. Mercado Libre, tienda propia"></div>
+        <div class="field"><label for="stock">¿Ya tenés stock en Argentina?</label><select id="stock"><option>Seleccioná</option><option>Sí, disponible</option><option>Por ingresar</option><option>Todavía no</option></select></div>
+        <div class="field"><label for="v">Volumen estimado por mes</label><select id="v"><option>Seleccioná</option><option>Menos de 100</option><option>100 a 500</option><option>500 a 1.000</option><option>Más de 1.000</option></select></div>
+        <div class="field"><label for="sku">Cantidad de SKU (aprox.)</label><input id="sku" placeholder="Ej. 150"></div>
+        <div class="field"><label for="etapa">Etapa actual</label><select id="etapa"><option>Seleccioná</option><option>Evaluando el mercado</option><option>Con importador/representante</option><option>Mercadería por ingresar</option><option>Con stock en Argentina</option><option>Ya vendo, necesito operación</option><option>Reemplazar/ampliar operación</option></select></div>
+        <div class="field"><label for="idioma">Idioma de contacto</label><select id="idioma"><option>Español</option><option>Inglés</option><option>Portugués</option></select></div>
+        <div class="field full"><label for="m">Comentario</label><textarea id="m" rows="3" placeholder="Contanos tu plan para Argentina."></textarea></div>
+        <div class="field full" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <button class="btn btn-primary" data-ev="svc_form_submit">Diseñar mi operación en Argentina →</button>
+          <a class="btn btn-wa" href="https://wa.me/5491150069182?text=Hola%20Fixy%2C%20somos%20una%20marca%20del%20exterior%20y%20queremos%20operar%20en%20Argentina." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
+          <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="footer-grid-2026">
+        <div class="footer-items">
+          <h3 class="footer-title">Soluciones</h3>
+          <ul>
+            <li><a href="/servicios/same-day">Same Day</a></li>
+            <li><a href="/servicios/next-day">Next Day</a></li>
+            <li><a href="/servicios/fixyfull">Fulfillment</a></li>
+            <li><a href="/servicios/fixypoints">Pick Up</a></li>
+            <li><a href="/servicios/flex">Flex</a></li>
+            <li><a href="/servicios/fixypay">FixyPay</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Institucional</h3>
+          <ul>
+            <li><a href="/#contacto">Sobre nosotros</a></li>
+            <li><a href="/recursos">Prensa y novedades</a></li>
+            <li><a href="mailto:ventas@fixy.com.ar?subject=Trabajar%20en%20Fixy">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Soporte</h3>
+          <ul>
+            <li><a href="https://fixy.epresis.com/login" target="_blank" rel="noopener">Portal Sellers</a></li>
+            <li><a href="https://fixy.epresis.com/seguimiento" target="_blank" rel="noopener">Seguí tu envío</a></li>
+            <li><a href="/#faq">Centro de Ayuda</a></li>
+            <li><a href="/developers">Documentación API</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <h3 class="footer-title">Contacto y legal</h3>
+          <ul>
+            <li><a href="https://wa.me/5491150069182" target="_blank" rel="noopener">WhatsApp +54 9 11 5006-9182</a></li>
+            <li><a href="mailto:ventas@fixy.com.ar">ventas@fixy.com.ar</a></li>
+            <li><span>Fernández 1957, Parque Avellaneda, C1407, CABA</span></li>
+            <li><a href="/#contacto">Políticas de Privacidad</a></li>
+          </ul>
+          <div class="social-icons">
+            <a class="facebook" href="https://www.facebook.com/FIXYLOGISTICA/" target="_blank" rel="noopener" aria-label="Facebook de Fixy"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06H297V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+            <a class="instagram" href="https://www.instagram.com/fixylogistica/" target="_blank" rel="noopener" aria-label="Instagram de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+            <a class="linkedin" href="https://www.linkedin.com/company/fixylogistica/" target="_blank" rel="noopener" aria-label="LinkedIn de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8A53.79 53.79 0 0 1 107.58 53.8c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+            <a class="tiktok" href="https://www.tiktok.com/@fixy.logistica" target="_blank" rel="noopener" aria-label="TikTok de Fixy"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/></svg></a>
+            <a class="youtube" href="https://youtube.com/@fixylogistica?si=OJZd7dg8CW03DOaK" target="_blank" rel="noopener" aria-label="YouTube de Fixy"><svg viewBox="0 0 576 512" aria-hidden="true"><path d="M549.7 124.1c-6.3-23.6-24.8-42.1-48.4-48.4C458.8 64 288 64 288 64S117.2 64 74.7 75.7c-23.6 6.3-42.1 24.8-48.4 48.4C16 167 16 256 16 256s0 89 10.3 131.9c6.3 23.6 24.8 41.3 48.4 47.6C117.2 448 288 448 288 448s170.8 0 213.3-12.5c23.6-6.3 42.1-24 48.4-47.6C560 345 560 256 560 256s0-89-10.3-131.9zM232 336.5v-161l142.7 80.5L232 336.5z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-partners-2026">
+        <a href="https://arlog.org/" target="_blank" rel="noopener" aria-label="ARLOG"><img src="/img/ARLOG2.png" alt="ARLOG"></a>
+        <a href="https://vistage.com.ar/" target="_blank" rel="noopener" aria-label="Vistage"><img src="/img/VISTAGE.png" alt="Vistage"></a>
+        <a href="https://cace.org.ar/" target="_blank" rel="noopener" aria-label="CACE"><img src="/img/CACE.png" alt="CACE"></a>
+        <a href="https://www.enacom.gob.ar" target="_blank" rel="noopener" aria-label="ENACOM"><img src="/img/ENACOM.png" alt="ENACOM"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Evaluar mi entrada</a><a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a></div>
+
+<script>
+  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'internacional'}); }
+  document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
+  const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
+  if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded',o); });
+    nl.querySelectorAll('a:not(.dd-toggle)').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+    nl.querySelectorAll('.dd-toggle').forEach(t=>t.addEventListener('click',e=>{ if(window.innerWidth<=860){ e.preventDefault(); t.closest('.dd').classList.toggle('open'); } })); }
+
+  // ---- Configurador de entrada ----
+  const sel={etapa:null,serv:[]};
+  document.querySelectorAll('.echips').forEach(g=>{
+    const k=g.dataset.group, single=(k==='etapa');
+    g.querySelectorAll('.echip').forEach(c=>c.addEventListener('click',()=>{
+      if(single){ g.querySelectorAll('.echip').forEach(x=>x.classList.remove('active')); c.classList.add('active'); sel.etapa=c.dataset.v; }
+      else { c.classList.toggle('active'); const v=c.dataset.v,i=sel.serv.indexOf(v); if(i>=0)sel.serv.splice(i,1); else sel.serv.push(v); }
+    }));
+  });
+  const ETAPA={evaluando:'estás evaluando el mercado',importador:'ya tenés importador o representante',ingresar:'la mercadería está por ingresar',stock:'ya tenés stock en Argentina',vende:'ya vendés y necesitás operación logística',reemplazar:'querés reemplazar o ampliar tu operación'};
+  const ETAPA_FORM={evaluando:'Evaluando el mercado',importador:'Con importador/representante',ingresar:'Mercadería por ingresar',stock:'Con stock en Argentina',vende:'Ya vendo, necesito operación',reemplazar:'Reemplazar/ampliar operación'};
+  const STOCK_FORM={stock:'Sí, disponible',vende:'Sí, disponible',reemplazar:'Sí, disponible',ingresar:'Por ingresar',importador:'Por ingresar',evaluando:'Todavía no'};
+  const SVC={almacenamiento:'FixyFull',preparacion:'FixyFull',distribucion:'Same Day / Next Day',puntos:'FixyPoints',cobro:'FixyPay',devoluciones:'Logística inversa'};
+  const PREREQ={
+    evaluando:['Definir si vas a importar y con qué estructura (entidad o representante local)','Elegir tus canales de venta objetivo (Mercado Libre, tienda propia)'],
+    importador:['Confirmar el flujo de ingreso con tu importador','Estimar cuándo estará disponible el stock en el país'],
+    ingresar:['Coordinar la recepción con tu importador o depósito de origen','Definir catálogo, SKUs e identificación de producto'],
+    stock:['Definir canales de venta e integración con tu tienda','Definir política de devoluciones y atención al cliente'],
+    vende:['Mapear tu operación actual y su volumen','Detectar qué está fallando hoy para priorizarlo'],
+    reemplazar:['Mapear tu operación actual y qué querés mejorar','Definir volumen y zonas a cubrir']
+  };
+  const BENEFIT='No montás depósito, equipo ni red logística propia: usás la infraestructura de Fixy y empezás a vender más rápido.';
+  function cfgBuild(){
+    if(!sel.etapa){ alert('Elegí en qué etapa estás (paso 1).'); return; }
+    const disponible = ['stock','vende','reemplazar'].includes(sel.etapa);
+    let ruta=[]; if(sel.serv.length){ sel.serv.forEach(s=>{ const n=SVC[s]; if(n && !ruta.includes(n)) ruta.push(n); }); }
+    if(!ruta.length) ruta=['recepción local + FixyFull'];
+    else ruta.unshift('recepción local');
+    const rutaTxt='<span style="font-weight:700;color:var(--blue)">'+[...new Set(ruta)].join(' + ')+'</span>';
+    let h='<p style="font-size:14px;color:var(--ink-soft);margin:0 0 12px">Etapa: <b style="color:var(--ink)">'+ETAPA[sel.etapa]+'</b>.</p>';
+    if(disponible){
+      h+='<p style="font-size:15px;margin:0 0 8px"><b>Ruta sugerida:</b> '+rutaTxt+'.</p>';
+      h+='<p style="font-size:13.5px;color:var(--ink-soft);margin:0">A validar: stock, cobertura, volumen y condiciones comerciales.</p>';
+    } else {
+      h+='<p style="font-size:15px;margin:0 0 8px">Primero identificamos qué actores hacen falta para que tu mercadería esté disponible en Argentina — la importación y la aduana quedan fuera de Fixy; te orientamos y te conectamos con proveedores locales.</p>';
+      h+='<p style="font-size:15px;margin:0"><b>Una vez disponible, diseñamos:</b> '+rutaTxt+'.</p>';
+    }
+    // valor agregado: prerequisitos por etapa
+    if(PREREQ[sel.etapa]) h+='<div style="margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)"><div style="font-weight:800;font-size:13.5px;margin-bottom:8px">Qué conviene tener resuelto en tu etapa</div><ul class="flist" style="gap:6px">'+PREREQ[sel.etapa].map(x=>'<li>'+x+'</li>').join('')+'</ul></div>';
+    // qué te sacás de encima
+    h+='<div style="margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)"><div style="font-weight:800;font-size:13.5px;margin-bottom:4px">Qué te sacás de encima</div><p style="margin:0;color:var(--ink-soft);font-size:14px">'+BENEFIT+'</p></div>';
+    // conexión con proveedores locales
+    h+='<div style="margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)"><div style="font-weight:800;font-size:13.5px;margin-bottom:4px">¿Necesitás algo que no operamos?</div><p style="margin:0;color:var(--ink-soft);font-size:14px">Para lo que queda fuera de Fixy (importador, despachante, otros servicios), te ponemos en contacto con <b style="color:var(--ink)">proveedores locales</b>, según disponibilidad.</p></div>';
+    document.getElementById('cfg-body').innerHTML=h;
+    const lead=document.getElementById('cfg-lead'); if(lead) lead.value='Etapa: '+ETAPA[sel.etapa]+' | Servicios: '+(sel.serv.join(', ')||'a definir');
+    track('cfg_hypothesis', sel.etapa);
+    document.getElementById('cfg-out').style.display='block';
+    document.getElementById('cfg-out').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  function cfgToForm(){
+    if(!sel.etapa) return;
+    const ef=document.getElementById('etapa'); if(ef){ [...ef.options].forEach(o=>{ if(o.text===ETAPA_FORM[sel.etapa]) ef.value=o.value; }); ef.classList.add('prefill'); }
+    const sf=document.getElementById('stock'); if(sf){ [...sf.options].forEach(o=>{ if(o.text===STOCK_FORM[sel.etapa]) sf.value=o.value; }); sf.classList.add('prefill'); }
+    track('cfg_to_form', sel.etapa);
+  }
+  function cfgReset(){ document.querySelectorAll('.echip').forEach(c=>c.classList.remove('active')); sel.etapa=null; sel.serv=[]; document.getElementById('cfg-out').style.display='none'; }
+  track('page_view');
+</script>
+</body>
+</html>

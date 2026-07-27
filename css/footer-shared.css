@@ -1,0 +1,170 @@
+/* Footer canónico de Fixy.
+   Se carga después de brand.css para conservar la versión responsive
+   validada en todas las páginas del sitio. */
+.site-footer {
+  background: #0c2234;
+  border: 0;
+  color: rgba(255, 255, 255, .75);
+  padding: 0;
+  font-size: 16px;
+}
+.site-footer .footer-top { padding: 100px 0; }
+.site-footer .footer-grid-2026 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 34px;
+}
+.site-footer .footer-items {
+  margin: 0;
+  text-align: left;
+}
+.site-footer .footer-title {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.site-footer ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-footer ul li {
+  padding: 6px 0;
+  color: rgba(255, 255, 255, .7);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+.site-footer ul li a,
+.site-footer ul li span {
+  display: inline;
+  margin: 0;
+  color: rgba(255, 255, 255, .7);
+  font-size: inherit;
+  text-decoration: none;
+}
+.site-footer ul li a:hover,
+.site-footer ul li a:focus {
+  color: #FBBE37;
+  text-decoration: none;
+}
+.site-footer .footer-partners-2026 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}
+.site-footer .footer-partners-2026 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 54px;
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .08);
+}
+.site-footer .footer-partners-2026 img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90px;
+  max-height: 34px;
+  object-fit: contain;
+  opacity: .9;
+  filter: brightness(0) invert(1);
+}
+.site-footer .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  margin-top: 14px;
+}
+.site-footer .social-icons > a {
+  display: flex;
+  flex: 0 0 40px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 3px;
+  color: #fff;
+}
+.site-footer .social-icons > a.facebook { background: #3b5999; }
+.site-footer .social-icons > a.instagram {
+  background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.site-footer .social-icons > a.linkedin { background: #0077b5; }
+.site-footer .social-icons > a.tiktok { background: #000; }
+.site-footer .social-icons > a.youtube { background: #f00; }
+.site-footer .social-icons svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (max-width: 991px) {
+  .site-footer .footer-grid-2026 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .site-footer .footer-items { margin-bottom: 30px; }
+}
+
+@media (max-width: 575px) {
+  .site-footer { padding-bottom: 16px; }
+  .site-footer .footer-top { padding: 100px 0; }
+  .site-footer .footer-grid-2026 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 28px;
+  }
+  .site-footer .footer-items { margin-bottom: 0; }
+  .site-footer .footer-items:nth-child(1) { order: 1; }
+  .site-footer .footer-items:nth-child(4) { order: 2; }
+  .site-footer .footer-items:nth-child(2) { order: 3; }
+  .site-footer .footer-items:nth-child(3) { order: 4; }
+  .site-footer .footer-partners-2026 {
+    gap: 10px;
+    margin-top: 32px;
+    padding-top: 20px;
+  }
+  .site-footer .footer-partners-2026 a {
+    flex: 0 0 auto;
+    min-width: 0;
+    min-height: 34px;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+  .site-footer .footer-partners-2026 img {
+    max-width: 62px;
+    max-height: 20px;
+  }
+  .site-footer .social-icons {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6px;
+  }
+  .site-footer .social-icons > a {
+    flex: 0 1 30px;
+    min-width: 0;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+  .site-footer .social-icons svg {
+    width: 15px;
+    height: 15px;
+  }
+}
