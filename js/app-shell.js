@@ -8,31 +8,31 @@
 
   ready(() => {
     const body = document.body;
-    const path = location.pathname.replace(/\/index\.html$/, '/consolidado/');
+    const normalizePath = () => {
+      const clean = location.pathname.replace(/\/index\.html$/, '/');
+      const withoutProject = clean.replace(/^\/consolidado(?=\/|$)/, '');
+      return withoutProject || '/';
+    };
+    const path = normalizePath();
     const routeClass =
-      path === '/consolidado/' ? 'route-home' :
-      path.startsWith('/consolidado/servicios/') ? 'route-service' :
-      path === '/consolidado/tecnologia/' || path === '/consolidado/tecnologia' ? 'route-technology' :
-      path === '/consolidado/developers/' || path === '/consolidado/developers' ? 'route-developers' :
-      path === '/consolidado/recursos/' || path === '/consolidado/recursos' ? 'route-resources' :
-      path.startsWith('/consolidado/recursos/') ? 'route-article' :
-      path.startsWith('/consolidado/operar-en-argentina') ? 'route-journey' : 'route-page';
+      path === '/' ? 'route-home' :
+      path.startsWith('/servicios/') ? 'route-service' :
+      path === '/tecnologia/' || path === '/tecnologia' ? 'route-technology' :
+      path === '/developers/' || path === '/developers' ? 'route-developers' :
+      path === '/recursos/' || path === '/recursos' ? 'route-resources' :
+      path.startsWith('/recursos/') ? 'route-article' :
+      path.startsWith('/operar-en-argentina') ? 'route-journey' : 'route-page';
     body.classList.add(routeClass, 'app-shell-ready');
 
     const syncActiveNavigation = () => {
-      const pathname = location.pathname.replace(/\/index\.html$/, '/consolidado/');
+      const pathname = normalizePath();
+      const hash = location.hash.slice(1);
       let active = '';
-      if (pathname.startsWith('/consolidado/tecnologia')) active = 'tecnologia';
-      else if (pathname.startsWith('/consolidado/recursos')) active = 'recursos';
-      else if (pathname.startsWith('/consolidado/servicios') || pathname.startsWith('/consolidado/operar-en-argentina')) active = 'soluciones';
-      else if (pathname === '/consolidado/') {
-        const hash = location.hash.slice(1);
-        if (hash === 'mapa') active = 'como';
-        else if (hash === 'constructor') active = 'constructor';
-        else if (hash === 'cobertura') active = 'cobertura';
-        else if (hash === 'faq') active = 'faq';
-        else if (hash === 'soluciones') active = 'soluciones';
-      }
+      if (hash === 'contacto') active = 'contacto';
+      else if (pathname === '/') active = 'inicio';
+      else if (pathname.startsWith('/tecnologia')) active = 'tecnologia';
+      else if (pathname.startsWith('/recursos')) active = 'recursos';
+      else if (pathname.startsWith('/servicios') || pathname.startsWith('/operar-en-argentina')) active = 'soluciones';
       document.querySelectorAll('[data-nav]').forEach((link) => {
         const current = link.dataset.nav === active;
         link.classList.toggle('active', current);
@@ -137,7 +137,6 @@
       }, true);
 
       dropdownToggle?.addEventListener('click', (event) => {
-        if (innerWidth > 900) return;
         event.preventDefault();
         event.stopImmediatePropagation();
         const open = !dropdown.classList.contains('open');
@@ -150,8 +149,20 @@
         if (link && innerWidth <= 900) setMenu(false);
       }, true);
       scrim.addEventListener('click', () => setMenu(false));
+      document.addEventListener('pointerdown', (event) => {
+        if (innerWidth <= 900 || !dropdown?.classList.contains('open') || dropdown.contains(event.target)) return;
+        dropdown.classList.remove('open');
+        dropdownToggle?.setAttribute('aria-expanded', 'false');
+      });
 
       document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && dropdown?.classList.contains('open') && !body.classList.contains('app-menu-open')) {
+          event.preventDefault();
+          dropdown.classList.remove('open');
+          dropdownToggle?.setAttribute('aria-expanded', 'false');
+          dropdownToggle?.focus();
+          return;
+        }
         if (!body.classList.contains('app-menu-open')) return;
         if (event.key === 'Escape') {
           event.preventDefault();
@@ -211,14 +222,7 @@
     });
 
     const siteFooter = document.querySelector('.site-footer');
-    const footerGrid = siteFooter?.querySelector('.footer-grid-2026');
-    const headerBrand = document.querySelector('header.nav .brand');
-    if (siteFooter && footerGrid && headerBrand && !siteFooter.querySelector('.footer-brand-app')) {
-      const footerBrand = headerBrand.cloneNode(true);
-      footerBrand.classList.add('footer-brand-app');
-      footerBrand.setAttribute('href', '/consolidado/');
-      footerGrid.before(footerBrand);
-    }
+    if (!document.querySelector('#contacto') && siteFooter) siteFooter.id = 'contacto';
 
     document.querySelectorAll('input,select,textarea').forEach((field) => {
       if (field.tagName === 'INPUT' && !field.getAttribute('type')) field.setAttribute('type', 'text');

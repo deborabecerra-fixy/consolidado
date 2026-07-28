@@ -44,16 +44,16 @@ header.nav.scrolled{box-shadow:0 6px 22px rgba(0,50,70,.08)}
 .brand img{height:34px;width:auto;display:block}
 .brand .wm{font-weight:800;font-size:24px;color:var(--blue);letter-spacing:-.02em}
 .nav-links{display:flex;align-items:center;gap:4px;margin-left:auto;font-size:14px;font-weight:600}
-.nav-links>a,.dd-toggle{display:inline-flex;align-items:center;gap:5px;color:var(--ink-soft);text-decoration:none;padding:8px 12px;border-radius:10px;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}
+.nav-links>a,.dd-toggle{display:inline-flex;align-items:center;gap:5px;color:var(--ink-soft);text-decoration:none;padding:8px 12px;border:0;border-radius:10px;background:transparent;font:inherit;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}
 .nav-links>a:hover,.dd-toggle:hover,.dd:hover .dd-toggle,.dd:focus-within .dd-toggle{background:var(--blue-100);color:var(--blue)}
-.nav-links>a.active,.dd-toggle.active{color:var(--blue);background:var(--blue-100)}
+.nav-links>a.active,.dd-toggle.active{color:#006f96;background:var(--blue-100)}
 .nav .btn-wa{flex:0 0 auto;margin-left:6px}
 
 /* Dropdown (escritorio): se abre con hover o con foco de teclado, sin depender de JS */
 .dd{position:relative}
 .dd-menu{position:absolute;top:calc(100% + 12px);right:0;min-width:236px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:8px;display:flex;flex-direction:column;gap:2px;z-index:70;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease,visibility .16s}
 .dd-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}/* puente invisible: mantiene el hover al pasar del toggle al menú */
-.dd:hover .dd-menu,.dd:focus-within .dd-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.dd:hover .dd-menu,.dd.open>.dd-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .dd-menu a{padding:10px 12px;border-radius:9px;font-size:13.5px;font-weight:600;color:var(--ink-soft);text-decoration:none;white-space:nowrap;transition:background .12s,color .12s}
 .dd-menu a:hover{background:var(--blue-100);color:var(--blue)}
 @media(max-width:860px){.nav-links{display:none}}
@@ -101,7 +101,7 @@ header.nav.scrolled{box-shadow:0 6px 22px rgba(0,50,70,.08)}
 .flist{list-style:none;padding:0;margin:0;display:grid;gap:10px}
 .flist li{position:relative;padding-left:30px;font-size:15px;color:var(--ink)}
 .flist li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:var(--blue-100);
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008FC3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/consolidado/></svg>");
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008FC3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
   background-size:12px;background-repeat:no-repeat;background-position:center}
 
 /* fit / no-fit two columns */

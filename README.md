@@ -31,3 +31,9 @@ Subí el **contenido** de esta carpeta (no la carpeta en sí) a la raíz del rep
 - Logo vectorial de FixyPay (el actual es raster).
 - Conectar "Agendar 15 min" a Calendly y los formularios/medición a Kommo (los `data-ev` ya están listos).
 - Reemplazar testimonios de ejemplo por reales.
+
+## Navegación global
+
+Todas las páginas cargan `css/navigation.css` y `js/navigation.js`. Desktop conserva la barra superior y mobile usa un topbar mínimo más un dock inferior hasta 1023 px. Ambas variantes comparten la arquitectura `Inicio · Tecnología · Soluciones · Recursos · Contacto`; Soluciones abre el menú de productos y Contacto lleva a la sección local o al footer de la página. Los iconos locales están en `img/navigation-icons.svg`; esta versión no incorpora controles de sonido.
+
+Las rutas se calculan desde la ubicación relativa de `js/navigation.js`, por lo que funcionan tanto en la raíz local como dentro de la carpeta de GitHub Pages. Las capturas de validación se guardan en `test-results/navigation/`.
