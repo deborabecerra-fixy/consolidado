@@ -8,7 +8,7 @@
   padding: 0;
   font-size: 16px;
 }
-.site-footer .footer-top { padding: 100px 0; }
+.site-footer .footer-top { padding: 72px 0 48px; }
 .site-footer .footer-grid-2026 {
   display: grid;
   grid-template-columns: 1.05fr 1.05fr 1fr 1.25fr;
@@ -16,10 +16,15 @@
 }
 .site-footer .footer-items {
   margin: 0;
+  padding: 0 !important;
+  border: 0 !important;
   text-align: left;
 }
 .site-footer .footer-title {
   margin: 0 0 8px;
+  padding: 0 !important;
+  min-height: 0 !important;
+  border: 0 !important;
   color: #fff;
   font-size: .875rem;
   font-weight: 700;
@@ -117,6 +122,7 @@
   min-width: 40px !important;
   min-height: 40px !important;
   margin: 5px;
+  border: 0 !important;
   border-radius: 9px;
   color: #fff;
   box-shadow: 0 5px 14px rgba(0, 0, 0, .16);
@@ -160,7 +166,7 @@
 }
 .site-footer .social-icons > a:hover svg,
 .site-footer .social-icons > a:focus-visible svg {
-  transform: scale(1.16) rotate(-5deg);
+  animation: fixy-social-roll .5s cubic-bezier(.2, .75, .3, 1);
 }
 .site-footer .social-icons > a:focus-visible,
 .site-footer .footer-partners-2026 a:focus-visible {
@@ -176,12 +182,12 @@
 }
 
 @media (max-width: 575px) {
-  .site-footer { padding-bottom: 16px; }
-  .site-footer .footer-top { padding: 64px 0 38px; }
+  .site-footer { padding-bottom: 10px !important; }
+  .site-footer .footer-top { padding: 44px 0 26px; }
   .site-footer .footer-grid-2026 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 20px;
-    row-gap: 28px;
+    row-gap: 38px;
   }
   .site-footer .footer-items {
     grid-column: auto;
@@ -197,7 +203,7 @@
   }
   .site-footer .footer-partners-2026 {
     gap: 10px;
-    margin-top: 32px;
+    margin-top: 26px;
     padding-top: 20px;
   }
   .site-footer .footer-partners-2026 a {
@@ -232,6 +238,13 @@
   }
 }
 
+@keyframes fixy-social-roll {
+  0% { transform: translateY(0) scale(1); }
+  42% { transform: translateY(-150%) scale(.92); }
+  43% { transform: translateY(150%) scale(.92); }
+  100% { transform: translateY(0) scale(1.08); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .site-footer .social-icons > a,
   .site-footer .social-icons > a::after,
@@ -239,5 +252,9 @@
   .site-footer .footer-partners-2026 a,
   .site-footer .footer-partners-2026 img {
     transition: none;
+  }
+  .site-footer .social-icons > a:hover svg,
+  .site-footer .social-icons > a:focus-visible svg {
+    animation: none;
   }
 }

@@ -197,7 +197,7 @@
     const mapStages = [...document.querySelectorAll('.map-rail details')];
     mapStages.forEach((detail) => {
       detail.addEventListener('toggle', () => {
-        if (!detail.open) return;
+        if (!detail.open || !matchMedia('(max-width:900px)').matches) return;
         mapStages.forEach((other) => {
           if (other !== detail) other.open = false;
         });
