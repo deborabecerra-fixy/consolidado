@@ -15,6 +15,57 @@
 }
 .fixy-sheet-layer[hidden]{display:none!important}
 
+/* Menú de soluciones para escritorio: compacto, escaneable y en dos columnas. */
+@media(min-width:1024px){
+  .nav-links .dd-menu{
+    top:calc(100% + 14px);right:-10px;width:536px;min-width:536px;padding:12px;
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:repeat(4,minmax(54px,auto));grid-auto-flow:column;
+    gap:4px 17px;border-radius:20px;
+    background:
+      linear-gradient(to right,transparent calc(50% - .5px),var(--line) calc(50% - .5px),var(--line) calc(50% + .5px),transparent calc(50% + .5px)),
+      rgba(255,255,255,.985);
+    box-shadow:0 20px 50px rgba(15,40,55,.16);z-index:90
+  }
+  .nav-links .dd-menu::before{top:-14px;height:14px}
+  .nav-links .dd-menu a{
+    min-height:54px;padding:9px 12px;display:grid;grid-template-columns:28px minmax(0,1fr);
+    align-items:center;gap:10px;border-radius:12px;color:var(--ink-soft);
+    font-size:13.5px;font-weight:700;line-height:1.2;white-space:normal
+  }
+  .nav-links .dd-menu a::before{
+    content:"";width:22px;height:22px;display:block;background:var(--blue);
+    -webkit-mask:var(--solution-icon) center/contain no-repeat;
+    mask:var(--solution-icon) center/contain no-repeat;
+    opacity:.9;transition:transform .16s ease,opacity .16s ease
+  }
+  .nav-links .dd-menu a:hover::before{transform:translateY(-1px);opacity:1}
+  .nav-links .dd-menu a[href*="fixyfull"]{
+    --solution-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z'/%3E%3C/g%3E%3C/svg%3E")
+  }
+  .nav-links .dd-menu a[href*="/flex/"]{
+    --solution-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 6h8a4 4 0 0 1 4 4v8M13 3l3 3-3 3M20 15l-3 3-3-3'/%3E%3C/g%3E%3C/svg%3E")
+  }
+  .nav-links .dd-menu a[href*="same-day"]{
+    --solution-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/g%3E%3C/svg%3E")
+  }
+  .nav-links .dd-menu a[href*="next-day"]{
+    --solution-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='5' width='16' height='15' rx='2'/%3E%3Cpath d='M8 3v4M16 3v4M4 10h16M9 15h6'/%3E%3C/g%3E%3C/svg%3E")
+  }
+  .nav-links .dd-menu a[href*="fixypoints"]{
+    --solution-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/g%3E%3C/svg%3E")
+  }
+  .nav-links .dd-menu a[href*="fixypay"]{
+    --solution-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM15 14h2v2h-2zM19 14h1v3M14 19h3M20 20h-1'/%3E%3C/g%3E%3C/svg%3E")
+  }
+  .nav-links .dd-menu a[href*="/interior/"]{
+    --solution-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 7h11v9H3zM14 10h4l3 3v3h-7zM6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'/%3E%3C/g%3E%3C/svg%3E")
+  }
+  .nav-links .dd-menu a[href*="operar-en-argentina"]{
+    --solution-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18'/%3E%3C/g%3E%3C/svg%3E")
+  }
+}
+
 @media(max-width:1023px){
   html{scroll-padding-top:calc(66px + env(safe-area-inset-top))}
   body{padding-bottom:calc(var(--fixy-dock-height) + env(safe-area-inset-bottom) + 32px)}
