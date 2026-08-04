@@ -207,6 +207,8 @@
 .fixypoints-page .pu-map-count { margin: 10px 0 0; color: var(--fp-blue-deep); font-size: .78rem; font-weight: 750; }
 .fixypoints-page .pu-map-canvas-wrap {
   position: relative;
+  isolation: isolate; /* Leaflet mete z-index:1000 en sus controles; sin esto
+    se escapaba de este contenedor y tapaba el navbar sticky (z-index:60). */
   min-width: 0;
   overflow: hidden;
   border: 1px solid var(--fp-line);
