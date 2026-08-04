@@ -191,12 +191,19 @@
   // como un link de ancla clásico: por eso salta directo a la sección en vez
   // de animarse con el scroll-behavior:smooth global (que en páginas largas
   // deja ver de refilón el final de la sección anterior mientras se desliza).
+  // El offset se mide en el momento del clic contra la barra superior real
+  // (en vez de confiar en scroll-padding-top, que en este sitio tiene más de
+  // una regla compitiendo entre sí y no siempre queda preciso), así el título
+  // de la sección queda pegado justo debajo, sin hueco de más.
   const contactoTab = document.querySelector('[data-fixy-nav="contacto"]');
   const contactoTarget = document.querySelector("#contacto");
   if (contactoTab && contactoTarget) {
     contactoTab.addEventListener("click", (event) => {
       event.preventDefault();
-      contactoTarget.scrollIntoView({ behavior: "instant", block: "start" });
+      const topbar = document.querySelector(".fixy-mobile-topbar");
+      const offset = topbar && mobileQuery.matches ? topbar.getBoundingClientRect().height : 0;
+      const targetTop = contactoTarget.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: Math.max(0, targetTop), left: 0, behavior: "instant" });
       history.replaceState(null, "", "#contacto");
       setActive();
     });
