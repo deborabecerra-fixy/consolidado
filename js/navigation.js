@@ -186,4 +186,19 @@
   };
   setActive();
   addEventListener("hashchange", setActive);
+
+  // El tab "Contacto" del dock inferior se presenta como un tab de app, no
+  // como un link de ancla clásico: por eso salta directo a la sección en vez
+  // de animarse con el scroll-behavior:smooth global (que en páginas largas
+  // deja ver de refilón el final de la sección anterior mientras se desliza).
+  const contactoTab = document.querySelector('[data-fixy-nav="contacto"]');
+  const contactoTarget = document.querySelector("#contacto");
+  if (contactoTab && contactoTarget) {
+    contactoTab.addEventListener("click", (event) => {
+      event.preventDefault();
+      contactoTarget.scrollIntoView({ behavior: "instant", block: "start" });
+      history.replaceState(null, "", "#contacto");
+      setActive();
+    });
+  }
 }());
