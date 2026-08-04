@@ -67,7 +67,17 @@
     </a>`;
   };
 
-  const whatsappUrl = `https://wa.me/5491150069182?text=${encodeURIComponent(whatsappMessages[pageKey])}`;
+  const whatsappUrl = `https://wa.me/5491125426386?text=${encodeURIComponent(whatsappMessages[pageKey])}`;
+
+  // El footer y la barra CTA fija (desktop) tienen su propio link de
+  // WhatsApp escrito a mano en cada página, sin mensaje prearmado. Acá se
+  // personalizan con el mismo mensaje por página que ya usa el botón mobile,
+  // para no repetir el texto en cada archivo por separado.
+  const footerWhatsapp = document.querySelector('.site-footer a[href*="wa.me"]');
+  if (footerWhatsapp) footerWhatsapp.href = whatsappUrl;
+  const stickyWhatsapp = document.querySelector(".sticky-cta .btn-wa");
+  if (stickyWhatsapp) stickyWhatsapp.href = whatsappUrl;
+
   const servicesCurrent = isSolutions ? ' aria-current="page"' : "";
   const mobileMarkup = `<div class="fixy-mobile-navigation">
     <header class="fixy-mobile-topbar">

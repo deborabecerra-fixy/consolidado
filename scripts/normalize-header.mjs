@@ -29,7 +29,7 @@ const header = `<header class="nav">
         </div>
       </div>
     </nav>
-    <a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://wa.me/5491125426386" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </header>`;
 

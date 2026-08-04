@@ -389,7 +389,7 @@ function build() {
   // CRM (oculto) + WhatsApp con contexto
   const hidden = document.getElementById('lead-class'); if (hidden) hidden.value = last.cls;
   const msg = 'Hola Fixy, vengo del constructor. Mi caso: ' + last.primary.join(' + ') + (last.zona ? (' — zona ' + last.zona) : '') + '.';
-  document.getElementById('wa').href = 'https://wa.me/5491150069182?text=' + encodeURIComponent(msg);
+  document.getElementById('wa').href = 'https://wa.me/5491125426386?text=' + encodeURIComponent(msg);
   track('hypothesis_built', last.sol);
   const hypEl = document.getElementById('hyp');
   hypEl.style.display = 'block';
