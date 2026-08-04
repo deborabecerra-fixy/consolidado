@@ -380,7 +380,6 @@
 
 <div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Evaluar mi entrada</a><a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a></div>
 
-<script src="../js/home-kommo.js?v=1" defer></script>
 <script>
   function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'internacional'}); }
   document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
@@ -447,5 +446,6 @@
   function cfgReset(){ document.querySelectorAll('.echip').forEach(c=>c.classList.remove('active')); sel.etapa=null; sel.serv=[]; document.getElementById('cfg-out').style.display='none'; }
   track('page_view');
 </script>
+<script src="../js/home-kommo.js?v=1" defer></script>
 </body>
 </html>

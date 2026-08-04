@@ -362,7 +362,6 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="../../js/firebase-config.js"></script>
 <script src="../../js/pickup-map-public.js"></script>
-<script src="../../js/home-kommo.js?v=1" defer></script>
 <script>
   function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'fixypoints'}); }
   document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
@@ -371,5 +370,6 @@
   nl.querySelectorAll('.dd-toggle').forEach(t=>t.addEventListener('click',e=>{ if(window.innerWidth<=860){ e.preventDefault(); t.closest('.dd').classList.toggle('open'); } })); }
   track('page_view');
 </script>
+<script src="../../js/home-kommo.js?v=1" defer></script>
 </body>
 </html>
