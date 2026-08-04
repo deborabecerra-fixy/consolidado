@@ -12,24 +12,28 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "14968.0",
-    "calle": "29 de septiembre de 1992",
+    "calle": "29 DE septiembre 1992",
     "localidad": "LANUS",
     "partido": "Lanús",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1826",
     "horarios": "L A V 8:00 a 21:00",
-    "direccionCompleta": "29 de septiembre de 1992, LANUS, BUENOS AIRES, Argentina",
+    "direccionCompleta": "29 DE septiembre 1992, LANUS, BUENOS AIRES, Argentina",
     "zonaSugerida": "z1",
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7061,
     "lngAprox": -58.3944,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -46,24 +50,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.403,
     "lngAprox": -58.618,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "39772.0",
-    "calle": "JULIAN ALVAREZ 2432",
-    "localidad": "MORENO",
-    "partido": "Moreno",
-    "provincia": "BUENOS AIRES",
-    "codigoPostal": "1744",
-    "horarios": "Lunes a Virenes 09:00 16:00",
-    "direccionCompleta": "JULIAN ALVAREZ 2432, MORENO, BUENOS AIRES, Argentina",
-    "zonaSugerida": "z2",
-    "zonaEtiqueta": "Segundo Cordón",
-    "latAprox": -34.6516,
-    "lngAprox": -58.7899,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -80,7 +69,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.644,
     "lngAprox": -58.766,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -97,7 +88,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -114,7 +107,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7761,
     "lngAprox": -58.3939,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -131,7 +126,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.6668,
     "lngAprox": -58.728,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -148,24 +145,28 @@
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.2136,
     "lngAprox": -59.1868,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "99088.0",
-    "calle": "Gral. Alvear 2563  ES UNA FERRETERIA",
+    "calle": "Gral. Alvear 2563 ES UNA FERRETERIA",
     "localidad": "DON TORCUATO",
     "partido": "Tigre",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1611",
     "horarios": "LUNES A VIERNES 09:00 a 20:00",
-    "direccionCompleta": "Gral. Alvear 2563  ES UNA FERRETERIA, DON TORCUATO, BUENOS AIRES, Argentina",
+    "direccionCompleta": "Gral. Alvear 2563 ES UNA FERRETERIA, DON TORCUATO, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.4795,
     "lngAprox": -58.6212,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -182,7 +183,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.4536,
     "lngAprox": -58.6301,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -199,7 +202,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -216,7 +221,9 @@
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.9932,
     "lngAprox": -58.4046,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -233,7 +240,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.6534,
     "lngAprox": -58.6198,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -250,7 +259,9 @@
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -35.0524,
     "lngAprox": -58.7622,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -261,13 +272,15 @@
     "partido": "CABA",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1702",
-    "horarios": "LUNES A VIERNES 09:00 13:00 15:00 18:00 / SABADO 10:00 13:00",
+    "horarios": "LUNES A VIERNES 09:00 13:00 15:00 18:00 SABADO 10:00 13:00",
     "direccionCompleta": "DIAG MALDONADO 264, CIUDAD AUTONOMA BUENOS AIRES, BUENOS AIRES, Argentina",
     "zonaSugerida": "caba",
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -284,7 +297,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -295,13 +310,15 @@
     "partido": "Tres de Febrero",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1702",
-    "horarios": "LUNES A VIERNES 09:30 19:00 / SABADO Y FERIADOS 09:30 13:00",
+    "horarios": "LUNES A VIERNES 09:30 19:00 SABADO Y FERIADOS 09:30 13:00",
     "direccionCompleta": "PRES GRAL JULIO ARGENTINO ROCA 3207, CIUDADELA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z1",
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.627,
     "lngAprox": -58.5389,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -312,13 +329,15 @@
     "partido": "Ezeiza",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1804",
-    "horarios": "LUNES A VIERNES 08:00 13:00 17:00 19:00 / SABADOS 10:00 13:00",
+    "horarios": "LUNES A VIERNES 08:00 13:00 17:00 19:00 SABADOS 10:00 13:00",
     "direccionCompleta": "Echeverria 57, EZEIZA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.8215,
     "lngAprox": -58.5299,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -335,24 +354,28 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.8215,
     "lngAprox": -58.5299,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "14383.0",
-    "calle": "AVDA GRAL JOSE DE SAN MARTIN 2278",
+    "calle": "SAN MARTIN 2278",
     "localidad": "CIUDAD AUTONOMA BUENOS AIRES",
     "partido": "CABA",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1416",
     "horarios": "LUNES A VIERNES 08:00 21:00",
-    "direccionCompleta": "AVDA GRAL JOSE DE SAN MARTIN 2278, CIUDAD AUTONOMA BUENOS AIRES, BUENOS AIRES, Argentina",
+    "direccionCompleta": "SAN MARTIN 2278, CIUDAD AUTONOMA BUENOS AIRES, BUENOS AIRES, Argentina",
     "zonaSugerida": "caba",
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -369,24 +392,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "99027.0",
-    "calle": "COLECTORA OESTE 1733",
-    "localidad": "GARIN",
-    "partido": "Escobar",
-    "provincia": "BUENOS AIRES",
-    "codigoPostal": "1619",
-    "horarios": "LUNES A VIERNES 09:00 18:00 / SABADOS 09:00 13:00",
-    "direccionCompleta": "COLECTORA OESTE 1733, GARIN, BUENOS AIRES, Argentina",
-    "zonaSugerida": "z2",
-    "zonaEtiqueta": "Segundo Cordón",
-    "latAprox": -34.4085,
-    "lngAprox": -58.7305,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -403,7 +411,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.628,
     "lngAprox": -58.4633,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -420,7 +430,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.5885,
     "lngAprox": -58.4306,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -437,7 +449,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -448,13 +462,15 @@
     "partido": "CABA",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1291",
-    "horarios": "LUNES A VIERNES 08:00 19:30 / SABADOS 10:00 14:00",
+    "horarios": "LUNES A VIERNES 08:00 19:30 SABADOS 10:00 14:00",
     "direccionCompleta": "AVDA GRAL IRIARTE 2462, CIUDAD AUTONOMA BUENOS AIRES, BUENOS AIRES, Argentina",
     "zonaSugerida": "caba",
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -465,13 +481,15 @@
     "partido": "General Rodríguez",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1748",
-    "horarios": "LUNES A VIERNES 08:30 18:00 / SABADOS 08:30 13:00",
+    "horarios": "LUNES A VIERNES 08:30 18:00 SABADOS 08:30 13:00",
     "direccionCompleta": "2 de Abril 819, GENERAL RODRIGUEZ, BUENOS AIRES, Argentina",
     "zonaSugerida": "z3",
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.6449,
     "lngAprox": -58.949,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -482,30 +500,15 @@
     "partido": "CABA",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1674",
-    "horarios": "LUNES A VIERNES 09:00 18:00 / SABADOS 09:00 14:00",
+    "horarios": "LUNES A VIERNES 09:00 18:00 SABADOS 09:00 14:00",
     "direccionCompleta": "Doctor Alfredo E. Springolo 427, CIUDAD AUTONOMA BUENOS AIRES, BUENOS AIRES, Argentina",
     "zonaSugerida": "caba",
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "18581.0",
-    "calle": "AVDA LURO 4392",
-    "localidad": "LAFERRERE",
-    "partido": "La Matanza",
-    "provincia": "BUENOS AIRES",
-    "codigoPostal": "1757",
-    "horarios": "LUNES A VIERNES 09:00 20:00",
-    "direccionCompleta": "AVDA LURO 4392, LAFERRERE, BUENOS AIRES, Argentina",
-    "zonaSugerida": "z1",
-    "zonaEtiqueta": "Primer Cordón",
-    "latAprox": -34.728,
-    "lngAprox": -58.599,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -516,13 +519,15 @@
     "partido": "Morón",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1712",
-    "horarios": "LUNES A VIERNES 09:00 19:00 / SABADOS 09:00 13:00",
+    "horarios": "LUNES A VIERNES 09:00 19:00 SABADOS 09:00 13:00",
     "direccionCompleta": "TUCUMAN 2601, CASTELAR, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.6497,
     "lngAprox": -58.6752,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -539,7 +544,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.8248,
     "lngAprox": -58.2758,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -550,30 +557,34 @@
     "partido": "CABA",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1001",
-    "horarios": "LUNES A VIERNES 08:30 13:00 15:30 19:15 / SABADOS 10:00 13:00",
+    "horarios": "LUNES A VIERNES 08:30 13:00 14:30 18:30 SABADOS 10:00 13:00",
     "direccionCompleta": "CAÑADA DE GOMEZ 5240, CIUDAD AUTONOMA BUENOS AIRES, BUENOS AIRES, Argentina",
     "zonaSugerida": "caba",
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "43878.0",
-    "calle": "Tte. Antonio Jukic  420",
+    "calle": "Tte. Antonio Jukic 420",
     "localidad": "MANZANARES",
     "partido": "Tigre",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1632",
-    "horarios": "LUNES A VIERNES 08:00 11:30 13:00 17:30 / SABADOS 09:00 14:00",
-    "direccionCompleta": "Tte. Antonio Jukic  420, MANZANARES, BUENOS AIRES, Argentina",
+    "horarios": "LUNES A VIERNES 08:00 11:30 13:00 17:30 SABADOS 09:00 14:00",
+    "direccionCompleta": "Tte. Antonio Jukic 420, MANZANARES, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.398,
     "lngAprox": -58.61,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -584,30 +595,15 @@
     "partido": "Pilar",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1629",
-    "horarios": "LUNES A VIERNES 08:00 11:30 13:00 17:30 / SABADOS 09:00 14:00",
+    "horarios": "LUNES A VIERNES 08:00 11:30 13:00 17:30 SABADOS 09:00 14:00",
     "direccionCompleta": "AVDA SAN JORGE 375, PILAR, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.4586,
     "lngAprox": -58.9139,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "17482.0",
-    "calle": "SAYOS 5590",
-    "localidad": "CIUDAD AUTONOMA BUENOS AIRES",
-    "partido": "CABA",
-    "provincia": "BUENOS AIRES",
-    "codigoPostal": "1439",
-    "horarios": "LUNES A VIERNES 09.30 18:00",
-    "direccionCompleta": "SAYOS 5590, CIUDAD AUTONOMA BUENOS AIRES, BUENOS AIRES, Argentina",
-    "zonaSugerida": "caba",
-    "zonaEtiqueta": "CABA",
-    "latAprox": -34.6037,
-    "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -624,7 +620,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -641,7 +639,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.7079,
     "lngAprox": -58.2965,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -652,13 +652,15 @@
     "partido": "Quilmes",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1843",
-    "horarios": "LUNES A VIERNES 08:30 19:00 / SABADOS 08:30 14:00",
+    "horarios": "LUNES A VIERNES 08:30 19:00 SABADOS 08:30 14:00",
     "direccionCompleta": "Av. Juan Domingo Perón 715, San Francisco Solano, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.781,
     "lngAprox": -58.265,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -669,30 +671,15 @@
     "partido": "Quilmes",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1881",
-    "horarios": "LUNES A VIERNES 08:30 20:00 / SABADOS 09:00 21:00",
+    "horarios": "LUNES A VIERNES 08:30 20:00 SABADOS 09:00 21:00",
     "direccionCompleta": "CALLE 850 2530, San Francisco Solano, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.781,
     "lngAprox": -58.265,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "12734.0",
-    "calle": "Chango más",
-    "localidad": "SAN VICENTE",
-    "partido": "San Vicente",
-    "provincia": "Buenos Aires",
-    "codigoPostal": "1865",
-    "horarios": "LUNES A VIERNES 08:00 21:00",
-    "direccionCompleta": "Chango más, SAN VICENTE, Buenos Aires, Argentina",
-    "zonaSugerida": "z3",
-    "zonaEtiqueta": "Tercer Cordón",
-    "latAprox": -35.0206,
-    "lngAprox": -58.4239,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -709,7 +696,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.7206,
     "lngAprox": -58.2653,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -726,7 +715,9 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6037,
     "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -737,13 +728,15 @@
     "partido": "San Martín",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1653",
-    "horarios": "LUNES A VIERNES 09:30 19:00 / SABADOS 09:30 13:00",
+    "horarios": "LUNES A VIERNES 09:30 19:00 SABADOS 09:30 13:00",
     "direccionCompleta": "Alvear 2765, VILLA BALLESTER, BUENOS AIRES, Argentina",
     "zonaSugerida": "z1",
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.5416,
     "lngAprox": -58.559,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -754,30 +747,34 @@
     "partido": "San Isidro",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1643",
-    "horarios": "LUNES A VIERNES 10:30 13:00 16:00 19:00 / SABADOS 11:00 13:00",
+    "horarios": "LUNES A VIERNES 10:30 13:00 16:00 19:00 SABADOS 11:00 13:00",
     "direccionCompleta": "Av. Centenario 2069, BECCAR, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.4675,
     "lngAprox": -58.5426,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "39289.0",
-    "calle": "428552",
+    "calle": "1 de mayo 3073",
     "localidad": "REMEDIOS DE ESCALADA",
     "partido": "Lanús",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1826",
     "horarios": "LUNES A VIERNES 09:30 a 13:00 14:30 17:30",
-    "direccionCompleta": "428552, REMEDIOS DE ESCALADA, BUENOS AIRES, Argentina",
+    "direccionCompleta": "1 de mayo 3073, REMEDIOS DE ESCALADA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z1",
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7134,
     "lngAprox": -58.3853,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -794,7 +791,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7061,
     "lngAprox": -58.3944,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -811,7 +810,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7061,
     "lngAprox": -58.3944,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -828,7 +829,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7605,
     "lngAprox": -58.3945,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -845,7 +848,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7605,
     "lngAprox": -58.3945,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -862,7 +867,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7605,
     "lngAprox": -58.3945,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -879,7 +886,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.5416,
     "lngAprox": -58.559,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -896,7 +905,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.5093,
     "lngAprox": -58.4863,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -913,24 +924,9 @@
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.9215,
     "lngAprox": -57.9545,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "22021.0",
-    "calle": "Chassaing 6626",
-    "localidad": "González Catán",
-    "partido": "La Matanza",
-    "provincia": "BUENOS AIRES",
-    "codigoPostal": "1758",
-    "horarios": "LUNES A VIERNES 08:00 19:00",
-    "direccionCompleta": "Chassaing 6626, González Catán, BUENOS AIRES, Argentina",
-    "zonaSugerida": "z1",
-    "zonaEtiqueta": "Primer Cordón",
-    "latAprox": -34.7659,
-    "lngAprox": -58.6335,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -947,24 +943,9 @@
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.9215,
     "lngAprox": -57.9545,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "99023.0",
-    "calle": "Gral. Belgrano 441",
-    "localidad": "CAMPANA",
-    "partido": "Campana",
-    "provincia": "BUENOS AIRES",
-    "codigoPostal": "2804",
-    "horarios": "LUNES A SABADOS 10:00 12:30 17:00 20:00",
-    "direccionCompleta": "Gral. Belgrano 441, CAMPANA, BUENOS AIRES, Argentina",
-    "zonaSugerida": "z3",
-    "zonaEtiqueta": "Tercer Cordón",
-    "latAprox": -34.1633,
-    "lngAprox": -58.9594,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -975,13 +956,15 @@
     "partido": "Ensenada",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1925",
-    "horarios": "LUNES A VIERNES 08:00 16:00 / SABADOS 09:00 13:00",
+    "horarios": "LUNES A VIERNES 08:00 16:00 SABADOS 09:00 13:00",
     "direccionCompleta": "De la Paz 313, ENSENADA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z3",
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.8578,
     "lngAprox": -57.9083,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -998,7 +981,9 @@
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.8759,
     "lngAprox": -57.8842,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1015,7 +1000,9 @@
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.0964,
     "lngAprox": -59.0273,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1032,7 +1019,9 @@
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.5703,
     "lngAprox": -59.1051,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1043,13 +1032,15 @@
     "partido": "La Plata",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1900",
-    "horarios": "LUNES A VIERNES 09:30 18:00 / SABADOS 09:00 13:00",
+    "horarios": "LUNES A VIERNES 09:30 18:00 SABADOS 09:00 13:00",
     "direccionCompleta": "CALLE 56 980, LA PLATA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z3",
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.9215,
     "lngAprox": -57.9545,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1066,24 +1057,28 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.5804,
     "lngAprox": -58.5389,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "33447.0",
-    "calle": "Av. Díaz Vélez 544   Entre san Martín y nolting",
+    "calle": "Av. Díaz Vélez 544 Entre san Martín y nolting",
     "localidad": "CIUDADELA",
     "partido": "Tres de Febrero",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1702",
-    "horarios": "LUNES A VIERNES 09:00 13:00 15:00 18:00 / SABADOS 09:00 13:00",
-    "direccionCompleta": "Av. Díaz Vélez 544   Entre san Martín y nolting, CIUDADELA, BUENOS AIRES, Argentina",
+    "horarios": "LUNES A VIERNES 09:00 13:00 15:00 18:00 SABADOS 09:00 13:00",
+    "direccionCompleta": "Av. Díaz Vélez 544 Entre san Martín y nolting, CIUDADELA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z1",
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.627,
     "lngAprox": -58.5389,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1094,13 +1089,15 @@
     "partido": "Lanús",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1825",
-    "horarios": "LUNES A VIERNES 10:00 18:00 / SABADOS 10:00 16:00 / DOMINGOS 10:00 13:00",
+    "horarios": "LUNES A VIERNES 10:00 18:00 SABADOS 10:00 16:00 DOMINGOS 10:00 13:00",
     "direccionCompleta": "Eva Perón 2593, LANUS, BUENOS AIRES, Argentina",
     "zonaSugerida": "z1",
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7061,
     "lngAprox": -58.3944,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1117,24 +1114,28 @@
     "zonaEtiqueta": "CABA",
     "latAprox": -34.6265,
     "lngAprox": -58.4816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "99153.0",
-    "calle": "JOSE GARIBALDI  1223",
+    "calle": "JOSE GARIBALDI 1223",
     "localidad": "LOMAS DE ZAMORA",
     "partido": "Lomas de Zamora",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1832",
-    "horarios": "LUNES A VIERNES 08:00 13:00 17:00 20:00 / SABADOS 10:30 13:00",
-    "direccionCompleta": "JOSE GARIBALDI  1223, LOMAS DE ZAMORA, BUENOS AIRES, Argentina",
+    "horarios": "LUNES A VIERNES 08:00 13:00 17:00 20:00 SABADOS 10:300 13:00",
+    "direccionCompleta": "JOSE GARIBALDI 1223, LOMAS DE ZAMORA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z1",
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7605,
     "lngAprox": -58.3945,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1151,7 +1152,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.708,
     "lngAprox": -58.339,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1162,13 +1165,15 @@
     "partido": "San Miguel",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1663",
-    "horarios": "LUNES 10:00 13:00 / MARTES A VIERNES 09:30 13:00 15:00 18:00 / SABADOS 09:30 13:00",
+    "horarios": "LUNES 10:00 13:00 MARTES A VIERNES 09:30 13:00 15:00 18:00 SABADOS 09:30 13:00",
     "direccionCompleta": "Domingo Faustino Sarmiento 1697 LOCAL 10, SAN MIGUEL, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.5427,
     "lngAprox": -58.7118,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1185,7 +1190,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.5586,
     "lngAprox": -58.6739,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1202,7 +1209,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.6626,
     "lngAprox": -58.3647,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1219,7 +1228,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.4635,
     "lngAprox": -58.639,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1236,7 +1247,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.8163,
     "lngAprox": -58.4557,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1253,7 +1266,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.781,
     "lngAprox": -58.265,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1270,24 +1285,28 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.4586,
     "lngAprox": -58.9139,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "53386.0",
-    "calle": "Av. 25 de Mayo  816",
+    "calle": "Av. 25 de Mayo 816",
     "localidad": "LANUS",
     "partido": "Lanús",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1824",
     "horarios": "LUNES A SABADOS 08:00 20:00",
-    "direccionCompleta": "Av. 25 de Mayo  816, LANUS, BUENOS AIRES, Argentina",
+    "direccionCompleta": "Av. 25 de Mayo 816, LANUS, BUENOS AIRES, Argentina",
     "zonaSugerida": "z1",
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.7061,
     "lngAprox": -58.3944,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1298,13 +1317,15 @@
     "partido": "Zárate",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "2800",
-    "horarios": "LUNES A SABADOS 08:00 23:00 / DOMINGOS Y FERIADOS 18:00 23:00",
+    "horarios": "LUNES A SABADOS 08:00 23:00 DOMINGOS Y FERIADOS 18:00 23:00",
     "direccionCompleta": "19 de marzo 345, ZARATE, BUENOS AIRES, Argentina",
     "zonaSugerida": "z3",
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.0964,
     "lngAprox": -59.0273,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1321,7 +1342,9 @@
     "zonaEtiqueta": "Primer Cordón",
     "latAprox": -34.5804,
     "lngAprox": -58.5389,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1338,24 +1361,28 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.6027,
     "lngAprox": -58.5943,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "21377.0",
-    "calle": "Calle 895  4205",
+    "calle": "Calle 895 4205",
     "localidad": "SAN FRANCISCO SOLANO",
     "partido": "Quilmes",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1881",
     "horarios": "LUNES A VIERNES 08:00 13:00 15:30 18:30",
-    "direccionCompleta": "Calle 895  4205, SAN FRANCISCO SOLANO, BUENOS AIRES, Argentina",
+    "direccionCompleta": "Calle 895 4205, SAN FRANCISCO SOLANO, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.781,
     "lngAprox": -58.265,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1372,24 +1399,9 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.6021,
     "lngAprox": -58.6435,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "48466.0",
-    "calle": "PEDRO DOMINGO MURILLO 763",
-    "localidad": "CABA",
-    "partido": "CABA",
-    "provincia": "BUENOS AIRES",
-    "codigoPostal": "1414",
-    "horarios": "LUNES A VIERNES 09:00 21:00",
-    "direccionCompleta": "PEDRO DOMINGO MURILLO 763, CABA, BUENOS AIRES, Argentina",
-    "zonaSugerida": "caba",
-    "zonaEtiqueta": "CABA",
-    "latAprox": -34.6037,
-    "lngAprox": -58.3816,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1400,30 +1412,15 @@
     "partido": "Florencio Varela",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1889",
-    "horarios": "LUNES A VIERNES 08:00 19:00 / SABADOS 08:00 17:00",
+    "horarios": "LUNES A VIERNES 08:00 19:00 SABADOS 08:00 17:00",
     "direccionCompleta": "RUTA PROVINCIAL 36 4878, BOSQUES, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.8027,
     "lngAprox": -58.2465,
-    "servicios": ["Pick Up"],
-    "estado": "activo",
-    "geocodificado": false
-  },
-  {
-    "idOrigen": "33997.0",
-    "calle": "AMENABAR 3986",
-    "localidad": "SAAVEDRA",
-    "partido": "CABA",
-    "provincia": "BUENOS AIRES",
-    "codigoPostal": "1429",
-    "horarios": "LUNES A VIERNES 09:00 18:00 / SABADOS 09:00 16:00",
-    "direccionCompleta": "AMENABAR 3986, SAAVEDRA, BUENOS AIRES, Argentina",
-    "zonaSugerida": "caba",
-    "zonaEtiqueta": "CABA",
-    "latAprox": -34.558,
-    "lngAprox": -58.478,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1440,24 +1437,28 @@
     "zonaEtiqueta": "Segundo Cordón",
     "latAprox": -34.793,
     "lngAprox": -58.455,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
     "idOrigen": "13824.0",
-    "calle": "Calle 66  3244",
+    "calle": "Calle 66 3244",
     "localidad": "LA PLATA",
     "partido": "La Plata",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1910",
     "horarios": "LUNES A VIERNES 08:00 20:00",
-    "direccionCompleta": "Calle 66  3244, LA PLATA, BUENOS AIRES, Argentina",
+    "direccionCompleta": "Calle 66 3244, LA PLATA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z3",
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -34.9215,
     "lngAprox": -57.9545,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
@@ -1468,30 +1469,281 @@
     "partido": "Presidente Perón",
     "provincia": "BUENOS AIRES",
     "codigoPostal": "1862",
-    "horarios": "LUNES A VIERNES 08:30 13:30 16:30 19:30 / SABADOS 09:00 14:00",
+    "horarios": "LUNES A VIERNES 08:30 13:30 16:30 19:30 SABADOS 09:00 14:00",
     "direccionCompleta": "Calle 30 403, Guernica, BUENOS AIRES, Argentina",
     "zonaSugerida": "z3",
     "zonaEtiqueta": "Tercer Cordón",
     "latAprox": -35.0202,
     "lngAprox": -58.398,
-    "servicios": ["Pick Up"],
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   },
   {
-    "idOrigen": "32791.0",
-    "calle": "España 103",
-    "localidad": "MORENO",
-    "partido": "Moreno",
+    "idOrigen": "53314.0",
+    "calle": "25 de May 0886",
+    "localidad": "CAMPANA",
+    "partido": "Campana",
     "provincia": "BUENOS AIRES",
-    "codigoPostal": "1744",
-    "horarios": "LUNES A VIERNES 08:00 19:00",
-    "direccionCompleta": "España 103, MORENO, BUENOS AIRES, Argentina",
+    "codigoPostal": "2804",
+    "horarios": "LUNES A VIERNES DE 08:30 a 13:00",
+    "direccionCompleta": "25 de May 0886, CAMPANA, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z3",
+    "zonaEtiqueta": "Tercer Cordón",
+    "latAprox": -34.1633,
+    "lngAprox": -58.9594,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "15224.0",
+    "calle": "Evaristo Iglesias 714",
+    "localidad": "EZPELETA",
+    "partido": "Quilmes",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1878",
+    "horarios": "LUNES A VIERNES 09:00 19:00",
+    "direccionCompleta": "Evaristo Iglesias 714, EZPELETA, BUENOS AIRES, Argentina",
     "zonaSugerida": "z2",
     "zonaEtiqueta": "Segundo Cordón",
-    "latAprox": -34.6516,
-    "lngAprox": -58.7899,
-    "servicios": ["Pick Up"],
+    "latAprox": -34.55,
+    "lngAprox": -58.65,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "18317.0",
+    "calle": "Av. Jujuy 279",
+    "localidad": "BALVANERA",
+    "partido": "CABA",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1083",
+    "horarios": "LUNES A VIERNES 08:30 16:30",
+    "direccionCompleta": "Av. Jujuy 279, BALVANERA, BUENOS AIRES, Argentina",
+    "zonaSugerida": "caba",
+    "zonaEtiqueta": "CABA",
+    "latAprox": -34.6037,
+    "lngAprox": -58.3816,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "36181.0",
+    "calle": "C. 131 5067",
+    "localidad": "Guillermo Enrique Hudson",
+    "partido": "Berazategui",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1885",
+    "horarios": "LUNES A VIERNES 10:30 a 13 16 a 19",
+    "direccionCompleta": "C. 131 5067, Guillermo Enrique Hudson, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z2",
+    "zonaEtiqueta": "Segundo Cordón",
+    "latAprox": -34.55,
+    "lngAprox": -58.65,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "99214.0",
+    "calle": "Eva Peron 493",
+    "localidad": "Presidente Derqui",
+    "partido": "Pilar",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1635",
+    "horarios": "LUNES A VIERNES 09:00 18:00",
+    "direccionCompleta": "Eva Peron 493, Presidente Derqui, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z2",
+    "zonaEtiqueta": "Segundo Cordón",
+    "latAprox": -34.55,
+    "lngAprox": -58.65,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "37813.0",
+    "calle": "Calle 50 620",
+    "localidad": "LA PLATA",
+    "partido": "La Plata",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "B1900DHN",
+    "horarios": "L A V 08:00 A 19:00 SA. 09:00 A 13:00",
+    "direccionCompleta": "Calle 50 620, LA PLATA, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z3",
+    "zonaEtiqueta": "Tercer Cordón",
+    "latAprox": -34.9215,
+    "lngAprox": -57.9545,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "38584.0",
+    "calle": "ITALIA 459",
+    "localidad": "LOMAS DE ZAMORA",
+    "partido": "Lomas de Zamora",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "B1832DGI",
+    "horarios": "L A V 09:00 A 21:00 SA.,DO. y FE. 10:00 A 19:00",
+    "direccionCompleta": "ITALIA 459, LOMAS DE ZAMORA, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z1",
+    "zonaEtiqueta": "Primer Cordón",
+    "latAprox": -34.7605,
+    "lngAprox": -58.3945,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "45165.0",
+    "calle": "AMENEDO 302",
+    "localidad": "ADROGUE",
+    "partido": "Almirante Brown",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "B1846DGH",
+    "horarios": "L A V 09:00 A 18:00 SA. 10:00 A 13:00",
+    "direccionCompleta": "AMENEDO 302, ADROGUE, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z2",
+    "zonaEtiqueta": "Segundo Cordón",
+    "latAprox": -34.55,
+    "lngAprox": -58.65,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "54340.0",
+    "calle": "BOULOGNE SUR MER 1275 (Centro Comercial Novo Pacheco Planta Baja)",
+    "localidad": "GENERAL PACHECO",
+    "partido": "Tigre",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1617",
+    "horarios": "L A V 09:00 A 13:30 Y 14:30 A 18:00 SA. 10:00 A 13:00",
+    "direccionCompleta": "BOULOGNE SUR MER 1275 (Centro Comercial Novo Pacheco Planta Baja), GENERAL PACHECO, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z2",
+    "zonaEtiqueta": "Segundo Cordón",
+    "latAprox": -34.4635,
+    "lngAprox": -58.639,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "41008.0",
+    "calle": "Av Triunvirato 2394",
+    "localidad": "CIUDAD AUTONOMA BUENOS AIRES",
+    "partido": "CABA",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "C1001EWO",
+    "horarios": "L A V 09:00 A 13:30 Y 14:30 A 18:00 SA. 09:00 A 12:00",
+    "direccionCompleta": "Av Triunvirato 2394, CIUDAD AUTONOMA BUENOS AIRES, BUENOS AIRES, Argentina",
+    "zonaSugerida": "caba",
+    "zonaEtiqueta": "CABA",
+    "latAprox": -34.6037,
+    "lngAprox": -58.3816,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "57293.0",
+    "calle": "Av. Raúl Scalabrini Ortiz 333",
+    "localidad": "VILLA CRESPO",
+    "partido": "CABA",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1414",
+    "horarios": "LUNES A VIERNES: 09:00-19:00. SABADO: 09:00-16:00.",
+    "direccionCompleta": "Av. Raúl Scalabrini Ortiz 333, VILLA CRESPO, BUENOS AIRES, Argentina",
+    "zonaSugerida": "caba",
+    "zonaEtiqueta": "CABA",
+    "latAprox": -34.6037,
+    "lngAprox": -58.3816,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "52723.0",
+    "calle": "De la Tradición 439",
+    "localidad": "Villa Udaondo",
+    "partido": "Ituzaingó",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1713",
+    "horarios": "Lunes a Viernes 8 a 13hs y de 16:30 a 19 hs",
+    "direccionCompleta": "De la Tradición 439, Villa Udaondo, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z2",
+    "zonaEtiqueta": "Segundo Cordón",
+    "latAprox": -34.55,
+    "lngAprox": -58.65,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "99062.0",
+    "calle": "LAVALLE 1978",
+    "localidad": "MARCOS PAZ",
+    "partido": "Marcos Paz",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1938",
+    "horarios": "Lunes a viernes de 8 a 17",
+    "direccionCompleta": "LAVALLE 1978, MARCOS PAZ, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z3",
+    "zonaEtiqueta": "Tercer Cordón",
+    "latAprox": -34.85,
+    "lngAprox": -58.9,
+    "servicios": [
+      "Pick Up"
+    ],
+    "estado": "activo",
+    "geocodificado": false
+  },
+  {
+    "idOrigen": "99491.0",
+    "calle": "Avenida Doctor Ricardo Balbín 4279",
+    "localidad": "VILLA BALLESTER",
+    "partido": "San Martín",
+    "provincia": "BUENOS AIRES",
+    "codigoPostal": "1653",
+    "horarios": "L A V 10:00 A 13:00 Y 14:00 A 17:00",
+    "direccionCompleta": "Avenida Doctor Ricardo Balbín 4279, VILLA BALLESTER, BUENOS AIRES, Argentina",
+    "zonaSugerida": "z1",
+    "zonaEtiqueta": "Primer Cordón",
+    "latAprox": -34.5416,
+    "lngAprox": -58.559,
+    "servicios": [
+      "Pick Up"
+    ],
     "estado": "activo",
     "geocodificado": false
   }
