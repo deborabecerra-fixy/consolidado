@@ -7,13 +7,13 @@
 <meta name="description" content="FixyPoints de Fixy: red de puntos de retiro (Pick Up & Drop Off). El comprador retira su pedido donde y cuando le queda cómodo. Reduce costos y ausencias.">
 <link rel="canonical" href="https://www.fixy.com.ar/servicios/fixypoints">
 <meta property="og:title" content="FixyPoints — Pick Up & Drop Off | Fixy"><meta property="og:description" content="El domicilio no es la única respuesta: el comprador elige dónde retirar."><meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta name="theme-color" content="#008FC3">
-<link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+<link rel="icon" type="image/png" href="../../img/isologo-azul.png">
 <link rel="stylesheet" href="../../css/brand.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"FixyPoints","serviceType":"Pick Up & Drop Off","provider":{"@type":"Organization","name":"Fixy","url":"https://www.fixy.com.ar"},"areaServed":"CABA y GBA","description":"Red de puntos de retiro para e-commerce."}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿En cuánto tiempo llega al punto?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 24 y 72 horas, según la operación y la zona."}}, {"@type": "Question", "name": "¿Cuánto tiempo tiene el comprador para retirar?", "acceptedAnswer": {"@type": "Answer", "text": "7 días hábiles, presentando DNI o una autorización si retira otra persona."}}, {"@type": "Question", "name": "¿Es compatible con contraentrega?", "acceptedAnswer": {"@type": "Answer", "text": "No. FixyPoints no es compatible con el cobro contrareembolso."}}, {"@type": "Question", "name": "¿Necesito algo más para usarlo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: tener la tienda integrada con Fixy y usar el servicio de envíos en 24 h. Mínimo de 10 paquetes combinados."}}, {"@type": "Question", "name": "¿Cómo se cotiza?", "acceptedAnswer": {"@type": "Answer", "text": "Revisamos volumen, zonas e integración antes de proponer una tarifa. No publicamos precios en la web."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo elige el comprador un FixyPoint?","acceptedAnswer":{"@type":"Answer","text":"Ingresa su código postal y elige entre los puntos habilitados para su operación y cobertura."}},{"@type":"Question","name":"¿En qué zonas está disponible?","acceptedAnswer":{"@type":"Answer","text":"La red pública actual incluye puntos en CABA y GBA. La disponibilidad final depende de los puntos activos y de las condiciones de cada operación."}},{"@type":"Question","name":"¿Cuánto tarda el pedido en llegar al punto?","acceptedAnswer":{"@type":"Answer","text":"Entre 24 y 72 horas, según la operación y la zona."}},{"@type":"Question","name":"¿Cuánto tiempo queda disponible para retiro?","acceptedAnswer":{"@type":"Answer","text":"7 días hábiles."}},{"@type":"Question","name":"¿Qué documentación necesita el comprador?","acceptedAnswer":{"@type":"Answer","text":"Debe presentar DNI o una autorización si retira otra persona."}},{"@type":"Question","name":"¿Es compatible con cobro contraentrega?","acceptedAnswer":{"@type":"Answer","text":"No. FixyPoints no es compatible con el cobro contrareembolso."}}]}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.fixy.com.ar/"}, {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://www.fixy.com.ar/#soluciones"}, {"@type": "ListItem", "position": 3, "name": "FixyPoints", "item": "https://www.fixy.com.ar/servicios/fixypoints"}]}
@@ -25,13 +25,18 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
 <link rel="stylesheet" href="../../css/app-mobile.css?v=11">
-<link rel="stylesheet" href="../../css/app-professional-v9.css?v=11">
-<link rel="stylesheet" href="../../css/navigation.css?v=20260728-4">
+<link rel="stylesheet" href="../../css/app-professional-v9.css?v=12">
+<link rel="stylesheet" href="../../css/navigation.css?v=20260731-1">
 <script src="../../js/navigation.js?v=20260728-4" defer></script>
-<script src="../../js/app-shell.js?v=12" defer></script>
-<link rel="stylesheet" href="../../css/footer-shared.css?v=20260728-4">
+<script src="../../js/app-shell.js?v=13" defer></script>
+<link rel="stylesheet" href="../../css/contact-premium-shared.css?v=1">
+<link rel="stylesheet" href="../../css/footer-shared.css?v=20260728-5">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<link rel="stylesheet" href="../../css/fixypoints.css?v=20260802-1">
 </head>
-<body class="has-sticky">
+<body class="has-sticky fixypoints-page">
 <a href="#contenido" class="skip">Saltar al contenido</a>
 
 <header class="nav">
@@ -61,7 +66,6 @@
   </div>
 </header>
 
-<div class="crumb"><div class="wrap crumb-inner"><a href="../../">Fixy</a><span class="sep">›</span><span>FixyPoints</span></div></div>
 
 
 <section id="contenido" tabindex="-1" class="hero" style="border-top:0">
@@ -98,97 +102,198 @@
   </div>
 </section>
 
-<section id="mecanismo">
+<main class="fp-main">
+<section id="coincidencia" class="fp-section fp-coincidence">
   <div class="wrap">
-    <div class="reframe"><span class="lbl">El punto ciego</span>Muchas veces no entregás mal: es que el domicilio es el único destino posible, y ahí aparece la fricción — nadie recibe, se reprograma, sube el costo. Darle al comprador dónde retirar cambia la ecuación.</div>
-  </div>
-</section>
-
-<section style="background:var(--paper)">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Qué es FixyPoints</div><h2>Puntos de retiro Pick Up & Drop Off para tu e-commerce: cómodos y económicos.</h2>
-    <p>Permite a los compradores retirar sus pedidos en puntos habilitados, como alternativa a la entrega tradicional. Pensado para mejorar la experiencia de compra y optimizar la operación.</p></div>
-    <ul class="flist" style="max-width:760px">
-      <li>Reducción de costos frente a la entrega puerta a puerta.</li>
-      <li>Mayor flexibilidad: retiro en horarios amplios y ubicaciones convenientes.</li>
-      <li>Notificación en tiempo real cuando el pedido está listo.</li>
-      <li>Retiro con DNI o autorización; 7 días hábiles de plazo.</li>
-      <li>Más sustentable: menos emisiones de CO2.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="como">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Cómo funciona</div><h2>Del checkout al retiro, en cinco pasos.</h2></div>
-    <div class="steps">
-      <div class="stp"><div class="num">1</div><h4>Integración</h4><p>Se activa la opción Pick Up en tu tienda.</p></div>
-      <div class="stp"><div class="num">2</div><h4>Elección del punto</h4><p>El cliente ingresa su CP y elige el más cercano.</p></div>
-      <div class="stp"><div class="num">3</div><h4>Procesamiento</h4><p>Fixy lleva los paquetes al punto en 24–72 h.</p></div>
-      <div class="stp"><div class="num">4</div><h4>Notificación</h4><p>El comprador recibe el aviso de disponible.</p></div>
-      <div class="stp"><div class="num">5</div><h4>Retiro</h4><p>Con DNI o autorización, hasta 7 días hábiles.</p></div>
+    <div class="fp-intro">
+      <div class="eyebrow">La entrega también es un encuentro</div>
+      <h2>La distancia no siempre es el problema. A veces, es la coincidencia.</h2>
+      <p>Una entrega domiciliaria depende de que el pedido, la dirección, la persona y el momento coincidan. Un FixyPoint convierte ese momento obligatorio en una ventana que el comprador puede incorporar a su rutina.</p>
+    </div>
+    <div class="fp-journeys" aria-label="Comparación entre entrega domiciliaria y Fixy Pick Up">
+      <div class="fp-origin"><span>Pedido</span></div>
+      <div class="fp-branch fp-branch-home">
+        <p class="fp-route-label">Entrega domiciliaria</p>
+        <ol><li>Domicilio</li><li>Comprador ausente</li><li>Consulta</li><li>Reintento</li></ol>
+      </div>
+      <div class="fp-branch fp-branch-pickup">
+        <p class="fp-route-label">Fixy Pick Up</p>
+        <ol><li>Punto elegido</li><li>Notificación</li><li>Retiro dentro de la ventana</li></ol>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="encaje" style="background:var(--paper)">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Encaje operativo</div><h2>FixyPoints tiene condiciones claras.</h2></div>
-    <div class="fit-grid">
-      <div class="fit fit-yes"><h4>Puede tener sentido si…</h4><ul>
-        <li>Querés ofrecer retiro como alternativa al domicilio.</li>
-        <li>Tenés muchas entregas fallidas por ausencias.</li>
-        <li>Buscás reducir costos de última milla.</li>
-        <li>Tu tienda está integrada con Fixy.</li>
-      </ul></div>
-      <div class="fit fit-no"><h4>Puede no ser compatible si…</h4><ul>
-        <li>Necesitás cobrar contraentrega (no es compatible con FixyPoints).</li>
-        <li>No usás el servicio de envíos 24 h.</li>
-        <li>No llegás al mínimo de 10 paquetes (combinados).</li>
-        <li>Tu tienda no está integrada.</li>
-      </ul></div>
+<section id="rutina" class="fp-section fp-routine">
+  <div class="wrap fp-routine-grid">
+    <div class="fp-intro">
+      <div class="eyebrow">Conveniencia cotidiana</div>
+      <h2>Comprar no debería obligar a reorganizar el día.</h2>
+      <p>El punto más cercano no siempre es el más conveniente. El mejor es el que encaja en el recorrido real del comprador y en un horario compatible con su jornada.</p>
     </div>
-    <div class="legal">Exclusivo para tiendas integradas con Fixy. Requiere también el servicio de envíos en 24 horas. Cantidad mínima para colecta: 10 paquetes (combinados entre Pick Up y entregas en 24 h). No compatible con contrareembolso.</div>
+    <ol class="fp-daily-route" aria-label="Un FixyPoint dentro de un recorrido cotidiano">
+      <li><span>08:00</span><strong>Casa</strong></li>
+      <li><span>09:00</span><strong>Trabajo</strong></li>
+      <li><span>18:00</span><strong>Actividad</strong></li>
+      <li class="is-point"><span>18:40</span><strong>FixyPoint</strong><small>El pedido entra en la rutina.</small></li>
+      <li><span>19:15</span><strong>Regreso</strong></li>
+    </ol>
   </div>
 </section>
 
-<section id="faq">
+<section id="red" class="fp-section fp-network">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Preguntas frecuentes</div><h2>Lo que conviene saber antes de activar.</h2></div>
-    <div style="max-width:820px">
-      <details><summary>¿En cuánto tiempo llega al punto?</summary><p>Entre 24 y 72 horas, según la operación y la zona.</p></details>
-      <details><summary>¿Cuánto tiempo tiene el comprador para retirar?</summary><p>7 días hábiles, presentando DNI o una autorización si retira otra persona.</p></details>
-      <details><summary>¿Es compatible con contraentrega?</summary><p>No. FixyPoints no es compatible con el cobro contrareembolso.</p></details>
-      <details><summary>¿Necesito algo más para usarlo?</summary><p>Sí: tener la tienda integrada con Fixy y usar el servicio de envíos en 24 h. Mínimo de 10 paquetes combinados.</p></details>
-      <details><summary>¿Cómo se cotiza?</summary><p>Revisamos volumen, zonas e integración antes de proponer una tarifa. No publicamos precios en la web.</p></details>
+    <div class="fp-intro fp-intro-wide">
+      <div class="eyebrow">La red en el recorrido</div>
+      <h2>Encontrá el punto que mejor encaja en tu recorrido.</h2>
+      <p>Buscá una dirección o explorá la red activa por zona. Cada punto muestra su ubicación, horarios y los servicios habilitados.</p>
     </div>
-  </div>
-</section>
-
-<section id="contacto" class="convert">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Revisemos tu caso</div><h2>Sumá puntos de retiro a tu operación.</h2><p>Revisamos volumen, integración y zonas antes de recomendar una modalidad.</p></div>
-    <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · Red Pick Up & Drop Off</div>
-    <div class="agenda-strip"><div><strong>¿Preferís hablar?</strong> Agendá 15 minutos con el equipo.</div><a class="btn btn-yellow" href="#" data-ev="svc_schedule">Agendar 15 min →</a></div>
-    <div class="form-card">
-      <input type="hidden" id="origen" value="fixypoints">
-      <div class="form-grid">
-        <div class="field"><label for="n">Nombre completo</label><input id="n" placeholder="Tu nombre"></div>
-        <div class="field"><label for="t">Teléfono</label><input id="t" placeholder="+54 9 11 ..."></div>
-        <div class="field"><label for="e">Correo</label><input id="e" placeholder="tu@email.com"></div>
-        <div class="field"><label for="s">Solución</label><select id="s"><option selected>FixyPoints</option><option>Combinar con Next Day</option><option>Quiero asesoramiento</option></select></div>
-        <div class="field"><label for="v">Envíos por mes</label><select id="v"><option>Seleccioná</option><option>Menos de 100</option><option>100 a 500</option><option>500 a 1.000</option><option>Más de 1.000</option></select></div>
-        <div class="field"><label for="z">¿Tu tienda está integrada?</label><select id="z"><option>Seleccioná</option><option>Sí</option><option>Todavía no</option></select></div>
-        <div class="field full"><label for="m">Mensaje</label><textarea id="m" rows="3" placeholder="Contanos tu volumen y plataforma."></textarea></div>
-        <div class="field full" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-          <button class="btn btn-primary" data-ev="svc_form_submit">Quiero que me contacten →</button>
-          <a class="btn btn-wa" href="https://wa.me/5491150069182?text=Hola%20Fixy%2C%20quiero%20evaluar%20FixyPoints%20(puntos%20de%20retiro)." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
-          <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
+    <div class="fp-map-shell">
+      <div class="fp-map-tools">
+        <form class="pu-map-search" id="puMapSearchForm">
+          <span class="fp-search-mark" aria-hidden="true">⌖</span>
+          <input type="text" id="puMapSearch" placeholder="Calle, número y localidad" aria-label="Ingresá tu dirección para ver los puntos más cercanos" autocomplete="off">
+          <button type="submit" class="pu-map-search-btn" id="puMapSearchGeo"><span class="pu-map-search-btn-text">Buscar cercanos</span><span aria-hidden="true">→</span></button>
+        </form>
+        <div class="pu-search-results" id="puMapSearchResults"></div>
+        <div class="pu-map-filters" role="group" aria-label="Filtrar puntos por zona">
+          <button type="button" class="pu-map-filter" data-zone="caba">CABA</button>
+          <button type="button" class="pu-map-filter" data-zone="z1">Primer Cordón</button>
+          <button type="button" class="pu-map-filter" data-zone="z2">Segundo Cordón</button>
+          <button type="button" class="pu-map-filter" data-zone="z3">Tercer Cordón</button>
+        </div>
+        <p class="fp-map-help">Acercá el mapa para separar los puntos agrupados. Tocá un marcador para consultar dirección, horario y servicio.</p>
+        <p class="pu-map-count" id="puMapCount" aria-live="polite">Cargando puntos activos…</p>
+      </div>
+      <div class="pu-map-canvas-wrap">
+        <div id="puLeafletMap" class="pu-leaflet-map" role="region" aria-label="Mapa de la red de puntos Pick Up de Fixy en AMBA"></div>
+        <div class="pu-map-legend" aria-hidden="true">
+          <span><i style="background:#66D7DD"></i>CABA</span><span><i style="background:#FBBE37"></i>1er Cordón</span><span><i style="background:#008FC3"></i>2do Cordón</span><span><i style="background:#06587C"></i>3er Cordón</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<section id="como" class="fp-section fp-how">
+  <div class="wrap">
+    <div class="fp-intro"><div class="eyebrow">Cómo funciona</div><h2>Del checkout al retiro.</h2></div>
+    <ol class="fp-flow">
+      <li><span>01</span><h3>El comprador elige</h3><p>Selecciona un punto disponible según la integración y la cobertura.</p></li>
+      <li><span>02</span><h3>El pedido entra al circuito</h3><p>Fixy organiza su traslado hacia el punto correspondiente.</p></li>
+      <li><span>03</span><h3>El punto lo recibe</h3><p>El pedido queda disponible bajo las condiciones definidas.</p></li>
+      <li><span>04</span><h3>El comprador recibe el aviso</h3><p>Sabe que ya puede retirarlo.</p></li>
+      <li><span>05</span><h3>Retira dentro de la ventana</h3><p>Presenta la documentación requerida y completa el retiro.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="dropoff" class="fp-section fp-dropoff">
+  <div class="wrap fp-dropoff-grid">
+    <div class="fp-intro">
+      <div class="eyebrow">Capacidad adicional</div>
+      <h2>La misma red también puede abrir otra puerta de entrada.</h2>
+      <p>Según la modalidad acordada, algunos FixyPoints pueden funcionar como puntos Drop Off para incorporar paquetes preparados al circuito logístico.</p>
+      <p class="fp-validation"><strong>A validar comercialmente:</strong> los datos públicos actuales sólo identifican puntos con servicio Pick Up. No todos los puntos ofrecen necesariamente Drop Off.</p>
+    </div>
+    <ol class="fp-dropoff-flow" aria-label="Recorrido posible de Drop Off"><li>Preparás</li><li>Acercás</li><li>El punto recibe</li><li>Fixy continúa</li></ol>
+  </div>
+</section>
+
+<section id="encaje" class="fp-section fp-fit">
+  <div class="wrap">
+    <div class="fp-intro"><div class="eyebrow">Encaje operativo</div><h2>Una alternativa útil cuando coincide con tu operación.</h2></div>
+    <div class="fp-fit-grid">
+      <div><h3>Puede tener sentido si…</h3><ul><li>Querés ofrecer una alternativa a la entrega domiciliaria.</li><li>Tus compradores no siempre pueden recibir en casa.</li><li>Buscás reducir reintentos y coordinación.</li><li>Tenés compradores dentro de la cobertura activa.</li><li>Querés combinar domicilio y puntos de retiro.</li></ul></div>
+      <div><h3>Conviene evaluar otra modalidad si…</h3><ul><li>El producto requiere condiciones especiales.</li><li>No hay puntos activos cerca del comprador.</li><li>La operación necesita una entrega urgente.</li><li>Necesitás cobro contraentrega.</li><li>La integración o el volumen no cumplen las condiciones actuales.</li></ul></div>
+    </div>
+    <p class="fp-conditions">Exclusivo para tiendas integradas con Fixy. Requiere el servicio de envíos en 24 horas y una colecta mínima de 10 paquetes combinados. No es compatible con contrareembolso.</p>
+  </div>
+</section>
+
+<section id="contacto" class="contact-premium-home">
+  <div class="wrap contact-premium-layout">
+    <div class="contact-premium-info">
+      <div class="sec-head">
+        <div class="eyebrow">Revisemos tu caso</div>
+        <h2>Quiero saber si Pick Up encaja.</h2>
+        <p>Revisamos volumen, integración y zonas antes de recomendar una modalidad.</p>
+      </div>
+      <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · Modalidad Pick Up</div>
+      <div class="card contact-agenda" id="agenda">
+        <div><strong>¿Preferís hablar?</strong> <span>Agendá 15 minutos con el equipo.</span></div>
+        <a class="btn btn-yellow" href="#" data-ev="svc_schedule">Agendar 15 min →</a>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/5491150069182?text=Hola%20Fixy%2C%20quiero%20evaluar%20FixyPoints%20(puntos%20de%20retiro)." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
+        <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
+      </div>
+    </div>
+    <div class="card contact-form-panel is-kommo-loading">
+      <div id="home-kommo-form" class="home-kommo-form" aria-live="polite">
+        <p class="home-kommo-loading" role="status">Cargando formulario seguro…</p>
+        <script>
+        !function(a,m,o,c,r,m){
+          a[o+c]=a[o+c]||{
+            setMeta:function(p){
+              this.params=(this.params||[]).concat([p])
+            }
+          },
+          a[o+r]=a[o+r]||function(f){
+            a[o+r].f=(a[o+r].f||[]).concat([f])
+          },
+          a[o+r]({
+            id:"1722124",
+            hash:"bac0460089f9a11281de3ccda3fde8c7",
+            locale:"es"
+          }),
+          a[o+m]=a[o+m]||function(f,k){
+            a[o+m].f=(a[o+m].f||[]).concat([[f,k]])
+          }
+        }(window,0,"amo_forms_","params","load","loaded");
+
+        window.amo_forms_loaded(function(params){
+          if (Number(params && params.form_id) !== 1722124 ||
+              !window.amo_forms_params ||
+              typeof window.amo_forms_params.onFormSubmit !== "function") {
+            return;
+          }
+
+          window.amo_forms_params.onFormSubmit(function(result){
+            console.log("[Kommo form submission]", JSON.stringify({
+              form_id: result && result.form_id,
+              status: result && result.status,
+              timestamp: new Date().toISOString()
+            }));
+          }, 1722124);
+        }, 1722124);
+        </script>
+
+        <script
+          id="amoforms_script_1722124"
+          async="async"
+          charset="utf-8"
+          src="https://forms.kommo.com/forms/assets/js/amoforms.js?1785802851">
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="fp-section fp-faq">
+  <div class="wrap">
+    <div class="fp-intro"><div class="eyebrow">Preguntas frecuentes</div><h2>Lo que conviene resolver antes de avanzar.</h2></div>
+    <div class="fp-faq-list">
+      <details><summary>¿Cómo elige el comprador un FixyPoint?</summary><p>Ingresa su código postal y elige entre los puntos habilitados para su operación y cobertura.</p></details>
+      <details><summary>¿En qué zonas está disponible?</summary><p>La red pública actual incluye puntos en CABA y GBA. La disponibilidad final depende de los puntos activos y de las condiciones de cada operación.</p></details>
+      <details><summary>¿Cuánto tarda el pedido en llegar al punto?</summary><p>Entre 24 y 72 horas, según la operación y la zona.</p></details>
+      <details><summary>¿Cuánto tiempo queda disponible para retiro?</summary><p>7 días hábiles.</p></details>
+      <details><summary>¿Qué documentación necesita el comprador?</summary><p>Debe presentar DNI o una autorización si retira otra persona.</p></details>
+      <details><summary>¿Es compatible con cobro contraentrega?</summary><p>No. FixyPoints no es compatible con el cobro contrareembolso.</p></details>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer class="site-footer">
   <div class="footer-top">
@@ -251,6 +356,13 @@
 
 <div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Evaluar mi operación</a><a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a></div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="../../js/firebase-config.js"></script>
+<script src="../../js/pickup-map-public.js"></script>
+<script src="../../js/home-kommo.js?v=1" defer></script>
 <script>
   function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'fixypoints'}); }
   document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });

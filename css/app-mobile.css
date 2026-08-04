@@ -910,6 +910,14 @@ body>section.convert{background:var(--app-dark)}
 }
 .grid-2>.card:nth-child(2n)::before,.grid-3>.card:nth-child(2n)::before,.grid-4>.card:nth-child(2n)::before{background:var(--app-yellow)}
 .card h3{font-size:clamp(20px,2.2vw,27px)}
+
+/* La grilla de cards "conectadas" (borde izquierdo, sin padding en la primera)
+   es un patrón anterior a este diseño de card en caja individual; restauramos
+   el padding uniforme para que la primera y última card no queden corridas. */
+@media(min-width:901px){
+  .grid-2>.card:first-child,.grid-3>.card:first-child,.grid-4>.card:first-child{padding-left:26px;border-left:0}
+  .grid-2>.card:last-child,.grid-3>.card:last-child,.grid-4>.card:last-child{padding-right:26px}
+}
 .steps,.steps.s3{gap:12px}
 .stp{
   padding:24px 22px 26px 66px;

@@ -7,13 +7,13 @@
 <meta name="description" content="Flex de Fixy: organizamos tus entregas Flex por volumen, zonas y ventanas para sostener la promesa de tu publicación cuando sube el volumen.">
 <link rel="canonical" href="https://www.fixy.com.ar/servicios/flex">
 <meta property="og:title" content="Flex | Fixy"><meta property="og:description" content="Sostené la promesa de tu venta Flex cuando sube el volumen."><meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta name="theme-color" content="#008FC3">
-<link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+<link rel="icon" type="image/png" href="../../img/isologo-azul.png">
 <link rel="stylesheet" href="../../css/brand.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Flex","serviceType":"Organización de entregas Flex","provider":{"@type":"Organization","name":"Fixy","url":"https://www.fixy.com.ar"},"areaServed":"CABA y GBA","description":"Organización de entregas Flex por volumen, zonas y ventanas."}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Necesito usar FixyFull para Flex?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La operación Flex se apoya en la preparación de FixyFull para cumplir el corte y la ventana."}}, {"@type": "Question", "name": "¿Cuál es el corte de preparación?", "acceptedAnswer": {"@type": "Answer", "text": "12:00 h. Los pedidos preparados hasta ese horario salen el mismo día."}}, {"@type": "Question", "name": "¿En qué zonas opera?", "acceptedAnswer": {"@type": "Answer", "text": "CABA y GBA según modalidad; cada operación se valida por volumen, zonas y condiciones."}}, {"@type": "Question", "name": "¿Cómo se cotiza?", "acceptedAnswer": {"@type": "Answer", "text": "Revisamos volumen, preparación y zonas. La tarifa de FixyFull se cotiza por separado. No publicamos precios en la web."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Necesito usar FixyFull para operar con FixyFlex?","acceptedAnswer":{"@type":"Answer","text":"Sí. La operación Flex se apoya en la preparación de FixyFull para cumplir el corte y la ventana."}},{"@type":"Question","name":"¿Cuál es el horario de corte?","acceptedAnswer":{"@type":"Answer","text":"El corte de preparación es a las 12:00 h. Los pedidos preparados hasta ese horario salen el mismo día."}},{"@type":"Question","name":"¿En qué zonas está disponible?","acceptedAnswer":{"@type":"Answer","text":"CABA y GBA según modalidad; cada operación se valida por volumen, zonas y condiciones."}},{"@type":"Question","name":"¿Cómo se calcula la operación?","acceptedAnswer":{"@type":"Answer","text":"Revisamos volumen, preparación y zonas. La tarifa de FixyFull se cotiza por separado. No publicamos precios en la web."}},{"@type":"Question","name":"¿Fixy pertenece a Mercado Libre?","acceptedAnswer":{"@type":"Answer","text":"No. Fixy presta servicios logísticos de forma independiente y no implica pertenencia a la plataforma de venta."}}]}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.fixy.com.ar/"}, {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://www.fixy.com.ar/#soluciones"}, {"@type": "ListItem", "position": 3, "name": "Flex", "item": "https://www.fixy.com.ar/servicios/flex"}]}
@@ -25,13 +25,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
 <link rel="stylesheet" href="../../css/app-mobile.css?v=11">
-<link rel="stylesheet" href="../../css/app-professional-v9.css?v=11">
-<link rel="stylesheet" href="../../css/navigation.css?v=20260728-4">
+<link rel="stylesheet" href="../../css/app-professional-v9.css?v=12">
+<link rel="stylesheet" href="../../css/navigation.css?v=20260731-1">
 <script src="../../js/navigation.js?v=20260728-4" defer></script>
-<script src="../../js/app-shell.js?v=12" defer></script>
-<link rel="stylesheet" href="../../css/footer-shared.css?v=20260728-4">
+<script src="../../js/app-shell.js?v=13" defer></script>
+<link rel="stylesheet" href="../../css/contact-premium-shared.css?v=1">
+<link rel="stylesheet" href="../../css/footer-shared.css?v=20260728-5">
+<link rel="stylesheet" href="../../css/flex.css?v=20260802-2">
 </head>
-<body class="has-sticky">
+<body class="has-sticky flex-page">
 <a href="#contenido" class="skip">Saltar al contenido</a>
 
 <header class="nav">
@@ -61,7 +63,6 @@
   </div>
 </header>
 
-<div class="crumb"><div class="wrap crumb-inner"><a href="../../">Fixy</a><span class="sep">›</span><span>Flex</span></div></div>
 
 
 <section id="contenido" tabindex="-1" class="hero" style="border-top:0">
@@ -98,89 +99,181 @@
   </div>
 </section>
 
-<section id="mecanismo">
-  <div class="wrap">
-    <div class="reframe"><span class="lbl">El punto ciego</span>Una operación puede sostener Flex con coordinación manual. Cuando aumenta el volumen, esa misma lógica se vuelve frágil: la promesa de la publicación depende de que la preparación y la organización acompañen, no solo de que salga el vehículo.</div>
+<section id="promesa-flex" class="flex-section flex-promise">
+  <div class="wrap flex-promise-layout">
+    <div class="flex-section-intro">
+      <div class="flex-eyebrow">La promesa visible</div>
+      <h2>Mercado Libre muestra la promesa. <span>Tu operación tiene que cumplirla.</span></h2>
+      <p>Para el comprador, “llega hoy” parece simple. Detrás, cada pedido necesita estar preparado, organizado y listo para salir dentro de una ventana concreta.</p>
+    </div>
+    <ol class="flex-promise-flow" aria-label="De la publicación a la experiencia del comprador">
+      <li><span class="flex-flow-number">01</span><div><small>Publicación</small><strong>“Llega hoy”</strong></div></li>
+      <li><span class="flex-flow-number">02</span><div><small>Operación</small><strong>Preparación · organización · entrega</strong></div></li>
+      <li><span class="flex-flow-number">03</span><div><small>Experiencia del comprador</small><strong>La promesa se cumple</strong></div></li>
+    </ol>
   </div>
 </section>
 
-<section style="background:var(--paper)">
+<section id="aporte-fixy" class="flex-section flex-contribution">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Qué es Flex</div><h2>Logística Flex para Mercado Libre: organizamos tus entregas por volumen, zonas y ventanas.</h2>
-    <p>Preparamos y organizamos tus envíos Flex para que la promesa de tu venta se sostenga a medida que crecés, apoyándonos en la preparación de FixyFull.</p></div>
-    <ul class="flist" style="max-width:760px">
-      <li>Preparación y despacho con corte a las 12:00 h.</li>
-      <li>Organización por volumen, zonas y ventanas de entrega.</li>
-      <li>Opera sobre Fulfillment Fixy (<a href="../../servicios/fixyfull" style="color:var(--blue);font-weight:700">FixyFull</a>) para preparar a tiempo.</li>
-      <li>Menos errores, despachos más rápidos y control del stock en un solo lugar.</li>
+    <div class="flex-section-intro flex-section-intro-wide">
+      <div class="flex-eyebrow">El aporte de Fixy</div>
+      <h2>Flex no empieza cuando el pedido sale a la calle.</h2>
+      <p>Empieza antes: cuando la operación se prepara para responder a la promesa publicada sin improvisar cada salida.</p>
+    </div>
+    <ol class="flex-contribution-flow">
+      <li><span>01</span><div><h3>Preparar a tiempo</h3><p>El pedido llega a la ventana operativa listo para avanzar.</p></div></li>
+      <li><span>02</span><div><h3>Organizar antes de salir</h3><p>Volumen, zonas y capacidad de salida se ordenan antes del reparto.</p></div></li>
+      <li><span>03</span><div><h3>Entregar dentro de la promesa</h3><p>La ejecución acompaña lo que el comprador vio en la publicación.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="como" class="flex-section flex-how">
+  <div class="wrap">
+    <div class="flex-section-intro flex-section-intro-wide">
+      <div class="flex-eyebrow">Cómo funciona</div>
+      <h2>Tres momentos conectados por una misma promesa.</h2>
+    </div>
+    <ol class="flex-operation-flow" aria-label="Flujo operativo de FixyFlex">
+      <li><span class="flex-operation-label">Pedido listo</span><strong>Preparación completa</strong><p>El pedido queda en condiciones de entrar en la ventana operativa.</p></li>
+      <li><span class="flex-operation-label">Agrupación por zona y ventana</span><strong>Salida organizada</strong><p>Los pedidos se ordenan antes de iniciar el recorrido.</p></li>
+      <li><span class="flex-operation-label">Salida a reparto</span><strong>Promesa en curso</strong><p>La entrega avanza dentro de la ventana prevista.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="senales-flex" class="flex-section flex-signals">
+  <div class="wrap">
+    <div class="flex-section-intro flex-section-intro-wide">
+      <div class="flex-eyebrow">Señales operativas</div>
+      <h2>Cuando Flex empieza a exigir más organización.</h2>
+      <p>Hay un punto en el que coordinar entrega por entrega deja de acompañar el crecimiento.</p>
+    </div>
+    <ul class="flex-signal-list">
+      <li><span>01</span><p>Cada salida requiere demasiada coordinación manual.</p></li>
+      <li><span>02</span><p>El corte empieza a ordenar todo el día del equipo.</p></li>
+      <li><span>03</span><p>Las zonas se resuelven sobre la marcha.</p></li>
+      <li><span>04</span><p>Un pico de pedidos desordena la preparación.</p></li>
+      <li><span>05</span><p>Vender más empieza a sumar tensión operativa.</p></li>
     </ul>
   </div>
 </section>
 
-<section id="como">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Cómo funciona</div><h2>De la venta Flex a la entrega, organizado.</h2></div>
-    <div class="steps s3">
-      <div class="stp"><div class="num">1</div><h4>Preparación</h4><p>Los pedidos se arman con FixyFull antes del corte de las 12:00.</p></div>
-      <div class="stp"><div class="num">2</div><h4>Organización</h4><p>Se agrupan por zona y ventana para optimizar el reparto.</p></div>
-      <div class="stp"><div class="num">3</div><h4>Entrega</h4><p>Salen a reparto sosteniendo la promesa de tu publicación.</p></div>
+<section id="reputacion-flex" class="flex-section flex-reputation">
+  <div class="wrap flex-reputation-layout">
+    <div class="flex-section-intro">
+      <div class="flex-eyebrow">Impacto visible</div>
+      <h2>Cada entrega también habla de tu reputación.</h2>
+    </div>
+    <div class="flex-reputation-copy">
+      <p>Para el comprador, la experiencia no termina en la publicación. La forma en que recibe su pedido también construye la percepción de tu negocio.</p>
+      <p class="flex-scope"><strong>Alcance de Fixy:</strong> organizamos la ejecución logística, pero no controlamos las métricas ni las decisiones de Mercado Libre.</p>
     </div>
   </div>
 </section>
 
-<section id="encaje" style="background:var(--paper)">
+<section id="encaje" class="flex-section flex-fit">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Encaje operativo</div><h2>Flex tiene que tener sentido para tu operación.</h2></div>
-    <div class="fit-grid">
-      <div class="fit fit-yes"><h4>Puede tener sentido si…</h4><ul>
-        <li>Vendés con Flex y el volumen empezó a complicarte.</li>
-        <li>Querés dejar de coordinar cada entrega a mano.</li>
-        <li>Necesitás preparar a tiempo para cumplir la ventana.</li>
-        <li>Buscás sostener tu reputación en la plataforma.</li>
+    <div class="flex-section-intro flex-section-intro-wide">
+      <div class="flex-eyebrow">Encaje operativo</div>
+      <h2>Flex tiene que tener sentido para tu operación.</h2>
+    </div>
+    <div class="flex-fit-groups">
+      <div><h3>Puede tener sentido si…</h3><ul>
+        <li>Vendés con Mercado Envíos Flex.</li>
+        <li>Preparás pedidos dentro de una ventana clara.</li>
+        <li>Tu volumen necesita más organización.</li>
+        <li>Querés sostener la promesa sin coordinar cada entrega manualmente.</li>
       </ul></div>
-      <div class="fit fit-no"><h4>Puede requerir otro diseño si…</h4><ul>
-        <li>No podés preparar dentro de la ventana necesaria.</li>
-        <li>El producto requiere condiciones no compatibles.</li>
-        <li>Preferís otra modalidad de entrega.</li>
+      <div><h3>Conviene evaluar otra modalidad si…</h3><ul>
+        <li>Tus productos requieren condiciones especiales.</li>
+        <li>La preparación no coincide con la ventana operativa.</li>
+        <li>Los destinos quedan fuera de la cobertura disponible.</li>
       </ul></div>
     </div>
     <div class="legal">Operación sujeta al uso de Fulfillment Fixy (FixyFull), que se cotiza por separado. Fixy presta servicios logísticos de forma independiente y no implica pertenencia a la plataforma de venta.</div>
   </div>
 </section>
 
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Preguntas frecuentes</div><h2>Lo que conviene definir antes de empezar.</h2></div>
-    <div style="max-width:820px">
-      <details><summary>¿Necesito usar FixyFull para Flex?</summary><p>Sí. La operación Flex se apoya en la preparación de FixyFull para cumplir el corte y la ventana.</p></details>
-      <details><summary>¿Cuál es el corte de preparación?</summary><p>12:00 h. Los pedidos preparados hasta ese horario salen el mismo día.</p></details>
-      <details><summary>¿En qué zonas opera?</summary><p>CABA y GBA según modalidad; cada operación se valida por volumen, zonas y condiciones.</p></details>
-      <details><summary>¿Cómo se cotiza?</summary><p>Revisamos volumen, preparación y zonas. La tarifa de FixyFull se cotiza por separado. No publicamos precios en la web.</p></details>
+<section id="contacto" class="contact-premium-home">
+  <div class="wrap contact-premium-layout">
+    <div class="contact-premium-info">
+      <div class="sec-head">
+        <div class="eyebrow">Revisemos tu caso</div>
+        <h2>Sostengamos tu promesa Flex mientras crecés.</h2>
+        <p>Revisamos volumen, preparación y zonas antes de recomendar una modalidad.</p>
+      </div>
+      <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · Opera sobre FixyFull</div>
+      <div class="card contact-agenda" id="agenda">
+        <div><strong>¿Preferís hablar?</strong> <span>Agendá 15 minutos con el equipo.</span></div>
+        <a class="btn btn-yellow" href="#" data-ev="svc_schedule">Agendar 15 min →</a>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/5491150069182?text=Hola%20Fixy%2C%20quiero%20evaluar%20Flex." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
+        <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
+      </div>
+    </div>
+    <div class="card contact-form-panel is-kommo-loading">
+      <div id="home-kommo-form" class="home-kommo-form" aria-live="polite">
+        <p class="home-kommo-loading" role="status">Cargando formulario seguro…</p>
+        <script>
+        !function(a,m,o,c,r,m){
+          a[o+c]=a[o+c]||{
+            setMeta:function(p){
+              this.params=(this.params||[]).concat([p])
+            }
+          },
+          a[o+r]=a[o+r]||function(f){
+            a[o+r].f=(a[o+r].f||[]).concat([f])
+          },
+          a[o+r]({
+            id:"1722124",
+            hash:"bac0460089f9a11281de3ccda3fde8c7",
+            locale:"es"
+          }),
+          a[o+m]=a[o+m]||function(f,k){
+            a[o+m].f=(a[o+m].f||[]).concat([[f,k]])
+          }
+        }(window,0,"amo_forms_","params","load","loaded");
+
+        window.amo_forms_loaded(function(params){
+          if (Number(params && params.form_id) !== 1722124 ||
+              !window.amo_forms_params ||
+              typeof window.amo_forms_params.onFormSubmit !== "function") {
+            return;
+          }
+
+          window.amo_forms_params.onFormSubmit(function(result){
+            console.log("[Kommo form submission]", JSON.stringify({
+              form_id: result && result.form_id,
+              status: result && result.status,
+              timestamp: new Date().toISOString()
+            }));
+          }, 1722124);
+        }, 1722124);
+        </script>
+
+        <script
+          id="amoforms_script_1722124"
+          async="async"
+          charset="utf-8"
+          src="https://forms.kommo.com/forms/assets/js/amoforms.js?1785802851">
+        </script>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contacto" class="convert">
+<section id="faq" class="flex-faq">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Revisemos tu caso</div><h2>Sostengamos tu promesa Flex mientras crecés.</h2><p>Revisamos volumen, preparación y zonas antes de recomendar una modalidad.</p></div>
-    <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · Opera sobre FixyFull</div>
-    <div class="agenda-strip"><div><strong>¿Preferís hablar?</strong> Agendá 15 minutos con el equipo.</div><a class="btn btn-yellow" href="#" data-ev="svc_schedule">Agendar 15 min →</a></div>
-    <div class="form-card">
-      <input type="hidden" id="origen" value="flex">
-      <div class="form-grid">
-        <div class="field"><label for="n">Nombre completo</label><input id="n" placeholder="Tu nombre"></div>
-        <div class="field"><label for="t">Teléfono</label><input id="t" placeholder="+54 9 11 ..."></div>
-        <div class="field"><label for="e">Correo</label><input id="e" placeholder="tu@email.com"></div>
-        <div class="field"><label for="s">Solución</label><select id="s"><option selected>Flex</option><option>Combinar con FixyFull</option><option>Quiero asesoramiento</option></select></div>
-        <div class="field"><label for="v">Envíos Flex por mes</label><select id="v"><option>Seleccioná</option><option>Menos de 100</option><option>100 a 500</option><option>500 a 1.000</option><option>Más de 1.000</option></select></div>
-        <div class="field"><label for="z">Zona</label><select id="z"><option>Seleccioná</option><option>CABA</option><option>GBA</option><option>AMBA</option></select></div>
-        <div class="field full"><label for="m">Mensaje</label><textarea id="m" rows="3" placeholder="Contanos tu volumen y cómo preparás hoy."></textarea></div>
-        <div class="field full" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-          <button class="btn btn-primary" data-ev="svc_form_submit">Quiero que me contacten →</button>
-          <a class="btn btn-wa" href="https://wa.me/5491150069182?text=Hola%20Fixy%2C%20quiero%20evaluar%20Flex." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
-          <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
-        </div>
-      </div>
+    <div class="sec-head"><div class="eyebrow">Preguntas frecuentes</div><h2>Lo que conviene definir antes de empezar.</h2></div>
+    <div style="max-width:820px">
+      <details><summary>¿Necesito usar FixyFull para operar con FixyFlex?</summary><p>Sí. La operación Flex se apoya en la preparación de FixyFull para cumplir el corte y la ventana.</p></details>
+      <details><summary>¿Cuál es el horario de corte?</summary><p>El corte de preparación es a las 12:00 h. Los pedidos preparados hasta ese horario salen el mismo día.</p></details>
+      <details><summary>¿En qué zonas está disponible?</summary><p>CABA y GBA según modalidad; cada operación se valida por volumen, zonas y condiciones.</p></details>
+      <details><summary>¿Cómo se calcula la operación?</summary><p>Revisamos volumen, preparación y zonas. La tarifa de FixyFull se cotiza por separado. No publicamos precios en la web.</p></details>
+      <details><summary>¿Fixy pertenece a Mercado Libre?</summary><p>No. Fixy presta servicios logísticos de forma independiente y no implica pertenencia a la plataforma de venta.</p></details>
     </div>
   </div>
 </section>
@@ -246,6 +339,7 @@
 
 <div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Evaluar mi operación</a><a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a></div>
 
+<script src="../../js/home-kommo.js?v=1" defer></script>
 <script>
   function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'flex'}); }
   document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });

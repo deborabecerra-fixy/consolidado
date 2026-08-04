@@ -444,6 +444,14 @@ function toForm() {
   dismissHypSheet(false);
   document.getElementById('hyp').style.display = 'none';
   const s = document.getElementById('f-sol'), z = document.getElementById('f-zona'), m = document.getElementById('f-msg');
+  /* El formulario real de Kommo vive en un iframe de otro dominio. No intentamos
+     escribir dentro de él: conservamos el acceso desde el constructor sin romper
+     la navegación ni la analítica cuando el formulario visual anterior no existe. */
+  if (!s || !z || !m) {
+    track('form_open', last.sol);
+    document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
   [...s.options].forEach(o => { if (o.text === last.sol) s.value = o.value; });
   if (last.zona) [...z.options].forEach(o => { if (o.text === last.zona) z.value = o.value; });
   m.value = 'Vengo del constructor. Hipótesis: ' + last.primary.join(' + ') + (last.zona ? (' — zona ' + last.zona) : '') + '.';

@@ -9,13 +9,13 @@
 <meta property="og:title" content="Same Day en CABA | Fixy">
 <meta property="og:description" content="Entregas prioritarias en el día en CABA. Entrega, cobro y evidencia en un solo recorrido.">
 <meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta name="theme-color" content="#008FC3">
-<link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+<link rel="icon" type="image/png" href="../../img/isologo-azul.png">
 <link rel="stylesheet" href="../../css/brand.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Same Day","serviceType":"Entrega en el día","provider":{"@type":"Organization","name":"Fixy","url":"https://www.fixy.com.ar"},"areaServed":"CABA","description":"Entregas prioritarias en el día en CABA con seguimiento, POD y cobro contraentrega."}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué significa Same Day?", "acceptedAnswer": {"@type": "Answer", "text": "Es una modalidad para que un pedido se entregue dentro del mismo día, sujeta a cobertura, preparación y condiciones operativas."}}, {"@type": "Question", "name": "¿En qué zona está disponible?", "acceptedAnswer": {"@type": "Answer", "text": "Same Day opera en CABA. Cada operación se valida según origen, destino, volumen y condiciones."}}, {"@type": "Question", "name": "¿Hay un horario de corte?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, 12:30 h. Los pedidos posteriores pasan automáticamente a Next Day."}}, {"@type": "Question", "name": "¿Puedo cobrar contraentrega?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, en operaciones habilitadas con FixyPay podés cobrar mediante QR al entregar."}}, {"@type": "Question", "name": "¿Qué comprobantes quedan disponibles?", "acceptedAnswer": {"@type": "Answer", "text": "Según la modalidad: estado, fecha y hora, foto, DNI, geolocalización y confirmación de cobro."}}, {"@type": "Question", "name": "¿Cómo se cotiza?", "acceptedAnswer": {"@type": "Answer", "text": "Revisamos cobertura, volumen, preparación y necesidad de cobro antes de proponer una tarifa. No publicamos precios en la web."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿En qué zonas opera Same Day?","acceptedAnswer":{"@type":"Answer","text":"Same Day opera en CABA. Cada operación se valida según origen, destino, volumen y condiciones."}},{"@type":"Question","name":"¿Cuál es el horario de corte?","acceptedAnswer":{"@type":"Answer","text":"El horario de corte informado actualmente es 12:30 h, sujeto a la validación de las condiciones de cada operación."}},{"@type":"Question","name":"¿Qué sucede con los pedidos posteriores al corte?","acceptedAnswer":{"@type":"Answer","text":"Los pedidos posteriores al corte pasan automáticamente a Next Day."}},{"@type":"Question","name":"¿Se puede cobrar al momento de la entrega?","acceptedAnswer":{"@type":"Answer","text":"Sí, en operaciones habilitadas con FixyPay se puede cobrar mediante QR al entregar."}},{"@type":"Question","name":"¿Qué evidencia queda disponible?","acceptedAnswer":{"@type":"Answer","text":"Según la modalidad y configuración acordada: estado, fecha y hora, foto, DNI, geolocalización y confirmación de cobro."}},{"@type":"Question","name":"¿Necesito operar con FixyFull?","acceptedAnswer":{"@type":"Answer","text":"La configuración actual del servicio en este proyecto requiere que los pedidos se preparen con FixyFull para cumplir la ventana operativa de Same Day."}}]}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.fixy.com.ar/"}, {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://www.fixy.com.ar/#soluciones"}, {"@type": "ListItem", "position": 3, "name": "Same Day", "item": "https://www.fixy.com.ar/servicios/same-day"}]}
@@ -27,13 +27,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
 <link rel="stylesheet" href="../../css/app-mobile.css?v=11">
-<link rel="stylesheet" href="../../css/app-professional-v9.css?v=11">
-<link rel="stylesheet" href="../../css/navigation.css?v=20260728-4">
+<link rel="stylesheet" href="../../css/app-professional-v9.css?v=12">
+<link rel="stylesheet" href="../../css/navigation.css?v=20260731-1">
+<link rel="stylesheet" href="../../css/same-day.css?v=20260802-2">
 <script src="../../js/navigation.js?v=20260728-4" defer></script>
-<script src="../../js/app-shell.js?v=12" defer></script>
-<link rel="stylesheet" href="../../css/footer-shared.css?v=20260728-4">
+<script src="../../js/app-shell.js?v=13" defer></script>
+<link rel="stylesheet" href="../../css/contact-premium-shared.css?v=1">
+<link rel="stylesheet" href="../../css/footer-shared.css?v=20260728-5">
 </head>
-<body class="has-sticky">
+<body class="has-sticky same-day-page">
 <a href="#contenido" class="skip">Saltar al contenido</a>
 
 <header class="nav">
@@ -63,7 +65,6 @@
   </div>
 </header>
 
-<div class="crumb"><div class="wrap crumb-inner"><a href="../../">Fixy</a><span class="sep">›</span><span>Same Day</span></div></div>
 
 
 <section id="contenido" tabindex="-1" class="hero" style="border-top:0">
@@ -100,102 +101,237 @@
   </div>
 </section>
 
-<section id="mecanismo">
-  <div class="wrap">
-    <div class="reframe"><span class="lbl">El punto ciego</span>El reclamo aparece en la entrega, pero la demora —y el trabajo pendiente— suelen empezar antes: en la preparación, el corte horario y en tener entrega, cobro y evidencia viviendo separados.</div>
-    <div class="paths">
-      <div class="path path-bad"><span class="ptag">Entrega rápida, operación abierta</span><div class="pchips"><b>Entrega</b><span class="ar">→</span><b>Confirmar</b><span class="ar">→</span><b>Verificar cobro</b><span class="ar">→</span><b>Pedir evidencia</b></div></div>
-      <div class="path path-good"><span class="ptag">Same Day: un solo recorrido</span><div class="pchips"><b>Ruteo</b><span class="ar">→</span><b>Entrega</b><span class="ar">→</span><b>Cobro QR</b><span class="ar">→</span><b>Evidencia</b><span class="ar">→</span><b>Cierre</b></div></div>
-    </div>
-  </div>
-</section>
-
-<section style="background:var(--paper)">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Qué es Same Day</div><h2>Envíos en el día en CABA para tus ventas prioritarias (Same Day).</h2>
-    <p>Fixy conecta el recorrido de los pedidos Same Day en CABA: recepción, organización, seguimiento, entrega, cobro QR contraentrega cuando corresponde y prueba de entrega.</p></div>
-    <ul class="flist" style="max-width:760px">
-      <li>Cut-off 12:30 h · despacho desde las 13:00 · entrega asegurada antes de las 21:00.</li>
-      <li>Los pedidos posteriores al corte pasan automáticamente a Next Day.</li>
-      <li>2 intentos de entrega incluidos y resguardo hasta 5 días para reprogramar.</li>
-      <li>Prueba de entrega profesional: foto, DNI y geolocalización.</li>
-      <li>Se apoya en <a href="../../servicios/fixyfull" style="color:var(--blue);font-weight:700">FixyFull</a> para preparar los pedidos a tiempo.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="como">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Cómo funciona</div><h2>Seguí una venta, no una colección de mensajes.</h2></div>
-    <div class="steps">
-      <div class="stp"><div class="num">1</div><h4>Pedido recibido</h4><p>Ingresa antes del corte de las 12:30 h.</p></div>
-      <div class="stp"><div class="num">2</div><h4>Organización y ruteo</h4><p>Listo en depósito Same Day y ruteado.</p></div>
-      <div class="stp"><div class="num">3</div><h4>En camino</h4><p>Seguimiento disponible durante el recorrido.</p></div>
-      <div class="stp"><div class="num">4</div><h4>Entrega + cobro</h4><p>Cobro QR contraentrega cuando aplica.</p></div>
-      <div class="stp"><div class="num">5</div><h4>Evidencia y cierre</h4><p>Foto + DNI + geo. Estado resuelto.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="encaje" style="background:var(--paper)">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Encaje operativo</div><h2>Same Day tiene que tener sentido para tu operación.</h2></div>
-    <div class="fit-grid">
-      <div class="fit fit-yes"><h4>Puede tener sentido si…</h4><ul>
-        <li>Vendés productos que no deberían esperar al día siguiente.</li>
-        <li>Necesitás atender pedidos prioritarios en CABA.</li>
-        <li>Querés sumar cobro contraentrega.</li>
-        <li>Necesitás seguimiento y evidencia.</li>
-      </ul></div>
-      <div class="fit fit-no"><h4>Puede no ser la modalidad si…</h4><ul>
-        <li>No preparás los pedidos dentro de la ventana necesaria.</li>
-        <li>Tus destinos están fuera de CABA.</li>
-        <li>El producto requiere condiciones no compatibles.</li>
-        <li>Necesitás otra promesa de entrega.</li>
-      </ul></div>
-    </div>
-    <div class="legal">Cobertura Same Day en CABA. Cada operación se valida por origen, destino, volumen, preparación y condiciones comerciales. Requiere preparar los pedidos con FixyFull para cumplir la ventana.</div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Preguntas frecuentes</div><h2>Lo que conviene definir antes de empezar.</h2></div>
-    <div style="max-width:820px">
-      <details><summary>¿Qué significa Same Day?</summary><p>Es una modalidad para que un pedido se entregue dentro del mismo día, sujeta a cobertura, preparación y condiciones operativas.</p></details>
-      <details><summary>¿En qué zona está disponible?</summary><p>Same Day opera en CABA. Cada operación se valida según origen, destino, volumen y condiciones.</p></details>
-      <details><summary>¿Hay un horario de corte?</summary><p>Sí, 12:30 h. Los pedidos posteriores pasan automáticamente a Next Day.</p></details>
-      <details><summary>¿Puedo cobrar contraentrega?</summary><p>Sí, en operaciones habilitadas con FixyPay podés cobrar mediante QR al entregar.</p></details>
-      <details><summary>¿Qué comprobantes quedan disponibles?</summary><p>Según la modalidad: estado, fecha y hora, foto, DNI, geolocalización y confirmación de cobro.</p></details>
-      <details><summary>¿Cómo se cotiza?</summary><p>Revisamos cobertura, volumen, preparación y necesidad de cobro antes de proponer una tarifa. No publicamos precios en la web.</p></details>
-    </div>
-  </div>
-</section>
-
-<section id="contacto" class="convert">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Revisemos tu caso</div><h2>Veamos si Same Day cierra más de tu operación dentro de hoy.</h2><p>Revisamos volumen, cobertura y condiciones antes de recomendar una modalidad.</p></div>
-    <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · Entregas de lunes a viernes</div>
-    <div class="agenda-strip"><div><strong>¿Preferís hablar?</strong> Agendá 15 minutos con el equipo.</div><a class="btn btn-yellow" href="#" data-ev="svc_schedule">Agendar 15 min →</a></div>
-    <div class="form-card">
-      <input type="hidden" id="origen" value="sameday">
-      <div class="form-grid">
-        <div class="field"><label for="n">Nombre completo</label><input id="n" placeholder="Tu nombre"></div>
-        <div class="field"><label for="t">Teléfono</label><input id="t" placeholder="+54 9 11 ..."></div>
-        <div class="field"><label for="e">Correo</label><input id="e" placeholder="tu@email.com"></div>
-        <div class="field"><label for="s">Solución</label><select id="s"><option selected>Same Day</option><option>Combinar con FixyPay</option><option>Quiero asesoramiento</option></select></div>
-        <div class="field"><label for="v">Envíos por mes</label><select id="v"><option>Seleccioná</option><option>Menos de 100</option><option>100 a 500</option><option>500 a 1.000</option><option>Más de 1.000</option></select></div>
-        <div class="field"><label for="z">Zona</label><select id="z"><option selected>CABA</option><option>Otra (a validar)</option></select></div>
-        <div class="field full"><label for="m">Mensaje</label><textarea id="m" rows="3" placeholder="Contanos qué necesitás entregar en el día."></textarea></div>
-        <div class="field full" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-          <button class="btn btn-primary" data-ev="svc_form_submit">Quiero que me contacten →</button>
-          <a class="btn btn-wa" href="https://wa.me/5491150069182?text=Hola%20Fixy%2C%20quiero%20evaluar%20Same%20Day%20en%20CABA." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
-          <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
+<main class="sd-main">
+  <section id="cierre-operativo" class="sd-section sd-close">
+    <div class="wrap">
+      <div class="sd-intro">
+        <div class="sd-eyebrow">Cerrar la venta</div>
+        <h2>Entregar hoy no siempre significa terminar hoy.</h2>
+        <p>Una entrega puede haberse realizado y, aun así, dejar trabajo pendiente: validar un pago, encontrar evidencia, entender el estado final o reconstruir una incidencia. Same Day tiene sentido cuando la entrega y el cierre operativo avanzan dentro del mismo recorrido.</p>
+      </div>
+      <div class="sd-close-flow" aria-label="De una entrega realizada a una operación cerrada">
+        <div class="sd-close-state sd-close-delivered">
+          <span class="sd-state-label">Entrega realizada</span>
+          <strong>El paquete llegó y el recorrido terminó.</strong>
         </div>
+        <div class="sd-close-state sd-close-open">
+          <span class="sd-state-label">Operación todavía abierta</span>
+          <ul>
+            <li>Pago por verificar</li>
+            <li>Evidencia por buscar</li>
+            <li>Incidencia sin contexto</li>
+            <li>Equipo consultando mensajes</li>
+          </ul>
+        </div>
+        <div class="sd-close-state sd-close-resolved">
+          <span class="sd-state-label">Same Day Fixy</span>
+          <strong>Entrega + cobro + evidencia + estado</strong>
+          <p>La venta puede cerrar dentro del mismo recorrido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mas-que-velocidad" class="sd-section sd-pillars">
+    <div class="wrap">
+      <div class="sd-intro">
+        <div class="sd-eyebrow">Más que rapidez</div>
+        <h2>Una venta prioritaria necesita algo más que velocidad.</h2>
+        <p>Same Day conecta las partes que permiten comprender y cerrar una entrega prioritaria en CABA, sin separar el recorrido de su resultado.</p>
+      </div>
+      <ol class="sd-pillar-flow">
+        <li><span>01</span><h3>Entrega en el día</h3><p>El pedido avanza dentro de una ventana operativa definida.</p></li>
+        <li><span>02</span><h3>Seguimiento</h3><p>El equipo puede comprender en qué etapa se encuentra la venta.</p></li>
+        <li><span>03</span><h3>Cobro cuando corresponde</h3><p>La entrega puede conectarse con FixyPay según la modalidad acordada.</p></li>
+        <li><span>04</span><h3>Evidencia</h3><p>El cierre no depende únicamente de mensajes o recuerdos aislados.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="como" class="sd-section sd-how">
+    <div class="wrap">
+      <div class="sd-intro">
+        <div class="sd-eyebrow">Cómo funciona</div>
+        <h2>Seguí una venta, no una colección de mensajes.</h2>
+      </div>
+      <ol class="sd-operation-flow">
+        <li><span class="sd-step">1</span><h3>Pedido incorporado</h3><p>El pedido ingresa antes del corte de las 12:30 h.</p></li>
+        <li><span class="sd-step">2</span><h3>Organización y ruteo</h3><p>Queda listo en depósito Same Day y se asigna al recorrido definido.</p></li>
+        <li><span class="sd-step">3</span><h3>Seguimiento</h3><p>La venta avanza con un estado disponible durante el recorrido.</p></li>
+        <li><span class="sd-step">4</span><h3>Entrega y cobro</h3><p>Se entrega y, cuando aplica, se procesa el cobro QR con FixyPay.</p></li>
+        <li><span class="sd-step">5</span><h3>Evidencia y cierre</h3><p>Queda registro de lo ocurrido según la modalidad acordada.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="evidencia" class="sd-section sd-evidence">
+    <div class="wrap sd-split">
+      <div class="sd-intro">
+        <div class="sd-eyebrow">Evidencia</div>
+        <h2>Una entrega no debería depender de la memoria de quien la siguió.</h2>
+        <p>La evidencia disponible acompaña al pedido para que el equipo no tenga que reconstruir después qué ocurrió, cuándo, dónde y bajo qué condición.</p>
+      </div>
+      <div>
+        <ul class="sd-evidence-line" aria-label="Registros que pueden quedar disponibles">
+          <li><span>01</span>Fecha y hora</li>
+          <li><span>02</span>Fotografía</li>
+          <li><span>03</span>DNI</li>
+          <li><span>04</span>Geolocalización</li>
+          <li><span>05</span>Confirmación de cobro</li>
+        </ul>
+        <p class="sd-note">Los registros disponibles dependen de la modalidad y de la configuración acordada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="incidencias" class="sd-section sd-incident">
+    <div class="wrap sd-split">
+      <div class="sd-intro">
+        <div class="sd-eyebrow">Contexto</div>
+        <h2>El problema no debería empezar con: “¿Alguien sabe qué pasó?”</h2>
+      </div>
+      <p>Cuando una entrega cambia, la operación necesita contexto. Saber en qué etapa ocurrió, qué registro quedó y qué acción corresponde evita reconstruir todo desde mensajes aislados.</p>
+    </div>
+  </section>
+
+  <section id="ventana" class="sd-section sd-window">
+    <div class="wrap">
+      <div class="sd-intro sd-intro-wide">
+        <div class="sd-eyebrow">Ventana operativa</div>
+        <h2>“Llega hoy” también exige una ventana clara.</h2>
+        <p>La velocidad no se improvisa después del corte. Para entregar en el día, el pedido necesita ingresar y quedar disponible dentro de la ventana operativa de Same Day.</p>
+      </div>
+      <ol class="sd-timeline">
+        <li><time>12:30 h</time><strong>Corte</strong><p>El pedido debe ingresar antes del horario definido.</p></li>
+        <li><time>Desde 13:00</time><strong>Despacho</strong><p>Comienza el recorrido operativo.</p></li>
+        <li><time>Antes de 21:00</time><strong>Entrega</strong><p>Ventana informada actualmente para Same Day.</p></li>
+        <li><time>Después del corte</time><strong>Next Day</strong><p>Los pedidos posteriores pasan a la modalidad del día siguiente.</p></li>
+      </ol>
+      <p class="sd-note">La cobertura y la ventana se validan según origen, destino, volumen, preparación y condiciones comerciales.</p>
+    </div>
+  </section>
+
+  <section id="entrega-no-completada" class="sd-section sd-unfinished">
+    <div class="wrap sd-split">
+      <div class="sd-intro">
+        <div class="sd-eyebrow">Cuando algo cambia</div>
+        <h2>Cuando la entrega no puede cerrarse en el primer intento.</h2>
+      </div>
+      <div>
+        <p>La modalidad contempla dos intentos de entrega y resguardo por hasta cinco días para reprogramar.</p>
+        <p class="sd-note">La reprogramación se define según las condiciones acordadas para cada operación.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="encaje" class="sd-section sd-fit">
+    <div class="wrap">
+      <div class="sd-intro">
+        <div class="sd-eyebrow">Encaje operativo</div>
+        <h2>Same Day tiene que tener sentido para tu operación.</h2>
+      </div>
+      <div class="sd-fit-groups">
+        <div><h3>Puede tener sentido si…</h3><ul>
+          <li>Vendés productos que no deberían esperar al día siguiente.</li>
+          <li>Tenés pedidos prioritarios dentro de la cobertura.</li>
+          <li>Necesitás seguimiento y evidencia.</li>
+          <li>Querés integrar cobro contraentrega.</li>
+          <li>Necesitás cerrar la operación dentro del mismo día.</li>
+        </ul></div>
+        <div><h3>Conviene evaluar otra modalidad si…</h3><ul>
+          <li>No podés preparar dentro de la ventana operativa.</li>
+          <li>Los destinos están fuera de cobertura.</li>
+          <li>El producto requiere condiciones especiales.</li>
+          <li>Una modalidad Next Day resulta más adecuada.</li>
+        </ul></div>
+      </div>
+      <div class="legal">Cobertura Same Day en CABA. Cada operación se valida por origen, destino, volumen, preparación y condiciones comerciales. La configuración actual del proyecto requiere preparar los pedidos con <a href="../../servicios/fixyfull">FixyFull</a> para cumplir la ventana.</div>
+    </div>
+  </section>
+
+<section id="contacto" class="contact-premium-home">
+  <div class="wrap contact-premium-layout">
+    <div class="contact-premium-info">
+      <div class="sec-head">
+        <div class="eyebrow">Revisemos tu caso</div>
+        <h2>Veamos si Same Day cierra más de tu operación dentro de hoy.</h2>
+        <p>Revisamos volumen, cobertura y condiciones antes de recomendar una modalidad.</p>
+      </div>
+      <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · Entregas de lunes a viernes</div>
+      <div class="card contact-agenda" id="agenda">
+        <div><strong>¿Preferís hablar?</strong> <span>Agendá 15 minutos con el equipo.</span></div>
+        <a class="btn btn-yellow" href="#" data-ev="svc_schedule">Agendar 15 min →</a>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/5491150069182?text=Hola%20Fixy%2C%20quiero%20evaluar%20Same%20Day%20en%20CABA." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
+        <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
+      </div>
+    </div>
+    <div class="card contact-form-panel is-kommo-loading">
+      <div id="home-kommo-form" class="home-kommo-form" aria-live="polite">
+        <p class="home-kommo-loading" role="status">Cargando formulario seguro…</p>
+        <script>
+        !function(a,m,o,c,r,m){
+          a[o+c]=a[o+c]||{
+            setMeta:function(p){
+              this.params=(this.params||[]).concat([p])
+            }
+          },
+          a[o+r]=a[o+r]||function(f){
+            a[o+r].f=(a[o+r].f||[]).concat([f])
+          },
+          a[o+r]({
+            id:"1722124",
+            hash:"bac0460089f9a11281de3ccda3fde8c7",
+            locale:"es"
+          }),
+          a[o+m]=a[o+m]||function(f,k){
+            a[o+m].f=(a[o+m].f||[]).concat([[f,k]])
+          }
+        }(window,0,"amo_forms_","params","load","loaded");
+
+        window.amo_forms_loaded(function(params){
+          if (Number(params && params.form_id) !== 1722124 ||
+              !window.amo_forms_params ||
+              typeof window.amo_forms_params.onFormSubmit !== "function") {
+            return;
+          }
+
+          window.amo_forms_params.onFormSubmit(function(result){
+            console.log("[Kommo form submission]", JSON.stringify({
+              form_id: result && result.form_id,
+              status: result && result.status,
+              timestamp: new Date().toISOString()
+            }));
+          }, 1722124);
+        }, 1722124);
+        </script>
+
+        <script
+          id="amoforms_script_1722124"
+          async="async"
+          charset="utf-8"
+          src="https://forms.kommo.com/forms/assets/js/amoforms.js?1785802851">
+        </script>
       </div>
     </div>
   </div>
 </section>
+
+  <section id="faq" class="sd-section sd-faq">
+    <div class="wrap">
+      <div class="sd-intro"><div class="sd-eyebrow">Preguntas frecuentes</div><h2>Lo que conviene definir antes de empezar.</h2></div>
+      <div class="sd-faq-list">
+        <details><summary>¿En qué zonas opera Same Day?</summary><p>Same Day opera en CABA. Cada operación se valida según origen, destino, volumen y condiciones.</p></details>
+        <details><summary>¿Cuál es el horario de corte?</summary><p>El horario de corte informado actualmente es 12:30 h, sujeto a la validación de las condiciones de cada operación.</p></details>
+        <details><summary>¿Qué sucede con los pedidos posteriores al corte?</summary><p>Los pedidos posteriores al corte pasan automáticamente a Next Day.</p></details>
+        <details><summary>¿Se puede cobrar al momento de la entrega?</summary><p>Sí, en operaciones habilitadas con FixyPay se puede cobrar mediante QR al entregar.</p></details>
+        <details><summary>¿Qué evidencia queda disponible?</summary><p>Según la modalidad y configuración acordada: estado, fecha y hora, foto, DNI, geolocalización y confirmación de cobro.</p></details>
+        <details><summary>¿Necesito operar con FixyFull?</summary><p>La configuración actual del servicio en este proyecto requiere que los pedidos se preparen con FixyFull para cumplir la ventana operativa de Same Day.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="site-footer">
   <div class="footer-top">
@@ -258,6 +394,7 @@
 
 <div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Evaluar mi operación</a><a href="https://wa.me/5491150069182" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a></div>
 
+<script src="../../js/home-kommo.js?v=1" defer></script>
 <script>
   function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'sameday'}); }
   document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });

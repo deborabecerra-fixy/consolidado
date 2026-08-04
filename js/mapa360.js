@@ -8,10 +8,22 @@
    En desktop se permite tener más de una etapa abierta a la vez
    (por ejemplo, para comparar dos etapas contiguas).
    ============================================================ */
-document.querySelectorAll('.map-rail details.map-acc').forEach(dt => {
+const mapDetails = [...document.querySelectorAll('.map-rail details.map-acc')];
+const desktopMap = window.matchMedia('(min-width:901px)');
+
+function syncMapDetails() {
+  mapDetails.forEach(dt => {
+    dt.open = desktopMap.matches;
+  });
+}
+
+syncMapDetails();
+desktopMap.addEventListener('change', syncMapDetails);
+
+mapDetails.forEach(dt => {
   dt.addEventListener('toggle', () => {
     if (dt.open && window.matchMedia('(max-width:700px)').matches) {
-      document.querySelectorAll('.map-rail details.map-acc').forEach(o => { if (o !== dt) o.open = false; });
+      mapDetails.forEach(o => { if (o !== dt) o.open = false; });
     }
   });
 });

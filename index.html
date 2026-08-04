@@ -10,10 +10,11 @@
 <meta property="og:title" content="Logística para e-commerce en Argentina | Fixy">
 <meta property="og:description" content="Fulfillment, envíos, puntos de retiro y cobros para tu e-commerce. Fixy conecta decisiones, no solo servicios.">
 <meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta property="og:url" content="https://www.fixy.com.ar/"><meta name="theme-color" content="#008FC3">
-<link rel="icon" type="image/png" href="./assets/img/favicon.png">
+<link rel="icon" type="image/png" href="./img/isologo-azul.png">
 <!-- Estilos: base de marca compartida + componentes propios del home -->
 <link rel="stylesheet" href="./css/brand.css">
-<link rel="stylesheet" href="./css/home.css">
+<link rel="stylesheet" href="./css/home.css?v=20260728-4">
+<link rel="stylesheet" href="./css/contact-premium-shared.css?v=1">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://www.fixy.com.ar/#org","name":"Fixy","legalName":"RENATA ARG SRL","url":"https://www.fixy.com.ar/","logo":"https://www.fixy.com.ar/assets/img/fixy-logo-5-04.png","slogan":"Enviamos soluciones.","sameAs":["https://www.instagram.com/fixylogistica/","https://www.facebook.com/FIXYLOGISTICA/","https://www.linkedin.com/company/fixylogistica/"]},
@@ -31,11 +32,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.fixy.com.ar/assets/img/og-fixy.png">
 <link rel="stylesheet" href="./css/app-mobile.css?v=11">
-<link rel="stylesheet" href="./css/app-professional-v9.css?v=11">
-<link rel="stylesheet" href="./css/navigation.css?v=20260728-4">
+<link rel="stylesheet" href="./css/app-professional-v9.css?v=12">
+<link rel="stylesheet" href="./css/navigation.css?v=20260731-1">
 <script src="./js/navigation.js?v=20260728-4" defer></script>
-<script src="./js/app-shell.js?v=12" defer></script>
-<link rel="stylesheet" href="./css/footer-shared.css?v=20260728-4">
+<script src="./js/app-shell.js?v=13" defer></script>
+<link rel="stylesheet" href="./css/footer-shared.css?v=20260728-5">
 </head>
 <body class="has-sticky">
 <a href="#contenido" class="skip">Saltar al contenido</a>
@@ -197,13 +198,13 @@
 <!-- ============================================================
      CONSTRUCTOR DE OPERACIÓN — conversión primaria
      ============================================================ -->
-<section style="border-top:0;padding-top:0">
+<section id="marcas-exterior" class="market-entry-section">
   <div class="wrap">
-    <div style="background:linear-gradient(135deg,var(--blue),#00719c);color:#fff;border-radius:20px;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
-      <div style="max-width:640px">
-        <div class="eyebrow" style="color:var(--yellow)">Marcas del exterior</div>
-        <h2 style="color:#fff;font-size:clamp(22px,3vw,30px)">¿Tu marca quiere vender en Argentina?</h2>
-        <p style="color:#d5eefa;margin-top:10px">Somos tu operación local: fulfillment, entrega, cobro contraentrega y devoluciones — desde que tu mercadería está en el país.</p>
+    <div class="market-entry-card">
+      <div class="market-entry-copy">
+        <div class="eyebrow">Marcas del exterior</div>
+        <h2>¿Tu marca quiere vender en Argentina?</h2>
+        <p>Somos tu operación local: fulfillment, entrega, cobro contraentrega y devoluciones — desde que tu mercadería está en el país.</p>
       </div>
       <a href="./operar-en-argentina" class="btn btn-yellow" data-ev="home_market_entry">Operá en Argentina →</a>
     </div>
@@ -612,20 +613,52 @@
         <a class="btn btn-yellow" href="#" data-ev="schedule_click">Agendar 15 min →</a>
       </div>
     </div>
-    <div class="card contact-form-panel">
-      <div id="prefill-banner" class="note" style="display:none">Cargamos tu hipótesis del constructor. Revisá y completá tus datos.</div>
-      <input type="hidden" id="lead-class">
-      <input type="hidden" id="origen" value="home">
-      <input type="hidden" id="lead-servicios">
-      <div class="form-grid">
-        <div class="field"><label>Nombre completo</label><input placeholder="Tu nombre"></div>
-        <div class="field"><label>Teléfono</label><input placeholder="+54 9 11 ..."></div>
-        <div class="field"><label>Correo</label><input placeholder="tu@email.com"></div>
-        <div class="field"><label>¿Qué solución buscás?</label><select id="f-sol"><option>Seleccioná</option><option>FixyFull</option><option>Flex</option><option>Same Day</option><option>Next Day</option><option>FixyPoints</option><option>FixyPay</option><option>Envíos al Interior</option><option>Operar en Argentina</option><option>Quiero asesoramiento</option></select></div>
-        <div class="field"><label>Envíos por mes</label><select id="f-vol"><option>Seleccioná</option><option>Menos de 100</option><option>100 a 500</option><option>500 a 1.000</option><option>1.000 a 5.000</option><option>Más de 5.000</option></select></div>
-        <div class="field"><label>Zona</label><select id="f-zona"><option>Seleccioná</option><option>CABA</option><option>GBA</option><option>AMBA</option><option>Interior / Nacional</option></select></div>
-        <div class="field full"><label>Mensaje</label><textarea id="f-msg" rows="3" placeholder="Contanos brevemente qué necesitás."></textarea></div>
-        <div class="field full"><button class="btn btn-primary">Quiero que me contacten →</button></div>
+    <div class="card contact-form-panel is-kommo-loading">
+      <div id="home-kommo-form" class="home-kommo-form" aria-live="polite">
+        <p class="home-kommo-loading" role="status">Cargando formulario seguro…</p>
+        <script>
+        !function(a,m,o,c,r,m){
+          a[o+c]=a[o+c]||{
+            setMeta:function(p){
+              this.params=(this.params||[]).concat([p])
+            }
+          },
+          a[o+r]=a[o+r]||function(f){
+            a[o+r].f=(a[o+r].f||[]).concat([f])
+          },
+          a[o+r]({
+            id:"1722124",
+            hash:"bac0460089f9a11281de3ccda3fde8c7",
+            locale:"es"
+          }),
+          a[o+m]=a[o+m]||function(f,k){
+            a[o+m].f=(a[o+m].f||[]).concat([[f,k]])
+          }
+        }(window,0,"amo_forms_","params","load","loaded");
+
+        window.amo_forms_loaded(function(params){
+          if (Number(params && params.form_id) !== 1722124 ||
+              !window.amo_forms_params ||
+              typeof window.amo_forms_params.onFormSubmit !== "function") {
+            return;
+          }
+
+          window.amo_forms_params.onFormSubmit(function(result){
+            console.log("[Kommo form submission]", JSON.stringify({
+              form_id: result && result.form_id,
+              status: result && result.status,
+              timestamp: new Date().toISOString()
+            }));
+          }, 1722124);
+        }, 1722124);
+        </script>
+
+        <script
+          id="amoforms_script_1722124"
+          async="async"
+          charset="utf-8"
+          src="https://forms.kommo.com/forms/assets/js/amoforms.js?1785802851">
+        </script>
       </div>
     </div>
   </div>
@@ -702,6 +735,7 @@
 <script src="./js/constructor.js?v=11"></script>
 <script src="./js/coverage-maps.js" defer></script>
 <script src="./js/metrics.js" defer></script>
-<script src="./js/mapa360.js" defer></script>
+<script src="./js/mapa360.js?v=20260728-2" defer></script>
+<script src="./js/home-kommo.js?v=1" defer></script>
 </body>
 </html>

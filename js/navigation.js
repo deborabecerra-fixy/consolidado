@@ -76,7 +76,7 @@
       </a>
       <a class="fixy-whatsapp-button" href="${whatsappUrl}" target="_blank" rel="noopener noreferrer"
         aria-label="Hablar con Fixy por WhatsApp" title="Hablar con Fixy por WhatsApp">
-        ${icon("whatsapp", "fixy-utility-icon")}
+        <img class="fixy-utility-icon" src="${root}img/whatsapp-white.png" alt="" width="25" height="25">
       </a>
     </header>
     <nav class="fixy-mobile-bottom-navigation" aria-label="Navegación principal móvil">
