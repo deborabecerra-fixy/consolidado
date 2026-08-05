@@ -10,6 +10,25 @@
   gtag('config', 'G-BZMFYZZVYX');
 </script>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '925439470114576');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recursos para tu e-commerce | Fixy</title>
@@ -209,7 +228,7 @@
 </footer>
 
 <script>
-  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'recursos'}); if(window.gtag) gtag('event', ev, {value: val||'', fixy_page:'recursos'}); }
+  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'recursos'}); if(window.gtag) gtag('event', ev, {value: val||'', fixy_page:'recursos'}); if(window.fbq){ if(ev.indexOf('whatsapp')>-1) fbq('track','Contact',{content_name:'recursos'}); else fbq('trackCustom', ev, {value: val||'', fixy_page:'recursos'}); } }
   document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
   const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
   if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded',o); });

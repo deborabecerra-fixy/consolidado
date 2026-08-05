@@ -122,6 +122,10 @@ function showConsMsg() {
 function track(ev, val) {
   if (window.dataLayer) window.dataLayer.push({ event: ev, value: val || '', page: 'home' });
   if (window.gtag) gtag('event', ev, { value: val || '', fixy_page: 'home' });
+  if (window.fbq) {
+    if (ev.indexOf('whatsapp') > -1) fbq('track', 'Contact', { content_name: 'home' });
+    else fbq('trackCustom', ev, { value: val || '', fixy_page: 'home' });
+  }
 }
 
 /* ---------- Wiring de chips de desktop (single/multi según data-single) ---------- */
