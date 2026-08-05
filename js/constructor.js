@@ -121,6 +121,7 @@ function showConsMsg() {
 /* ---------- Medición (gancho único listo para GTM/dataLayer) ---------- */
 function track(ev, val) {
   if (window.dataLayer) window.dataLayer.push({ event: ev, value: val || '', page: 'home' });
+  if (window.gtag) gtag('event', ev, { value: val || '', fixy_page: 'home' });
 }
 
 /* ---------- Wiring de chips de desktop (single/multi según data-single) ---------- */
@@ -358,7 +359,7 @@ function build() {
 
   /* ----- Opciones secundarias (WhatsApp / agenda) — menor jerarquía ----- */
   h += '<div class="hyp-secondary">';
-  if (nx.primary === 'agenda') h += '<a href="/consolidado/reservas/" data-ev="hyp_schedule">Agendar 15 min</a><span class="sep">·</span>';
+  if (nx.primary === 'agenda') h += '<a href="reservas/" data-ev="hyp_schedule">Agendar 15 min</a><span class="sep">·</span>';
   h += '<a id="wa" href="#" target="_blank" rel="noopener" data-ev="hyp_whatsapp">Seguir por WhatsApp</a>';
   h += '</div>';
 

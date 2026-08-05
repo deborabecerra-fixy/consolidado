@@ -4,7 +4,7 @@ const services=[
  {id:'fulfillment',title:'FixyFull',detail:'Stock, preparación y despacho para tu e-commerce.',duration:15},
  {id:'envios',title:'Envíos y distribución',detail:'Same Day, Next Day, Flex e interior.',duration:15}
 ];
-const advisors={gonzalo:{id:'gonzalo',name:'Gonzalo Jácome',role:'Ejecutivo de cuentas',image:'assets/gonzalo.png?v=2'},micaela:{id:'micaela',name:'Micaela Pucheta',role:'Ejecutiva de cuentas',image:'assets/micaela.png?v=2'}};
+const advisors={gonzalo:{id:'gonzalo',name:'Gonzalo Jácome',role:'Ejecutivo de cuentas',image:'assets/gonzalo.webp?v=2'},micaela:{id:'micaela',name:'Micaela Pucheta',role:'Ejecutiva de cuentas',image:'assets/micaela.webp?v=2'}};
 function businessDays(){const out=[],d=new Date();while(out.length<4){if(![0,6].includes(d.getDay()))out.push(new Date(d));d.setDate(d.getDate()+1)}return out}
 function iso(d){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Argentina/Buenos_Aires'}).format(d)}
 const dates=businessDays();
@@ -32,5 +32,5 @@ function render(){progress();const service=selectedService();
  panel.querySelectorAll('[data-next]').forEach(b=>b.onclick=()=>!b.disabled&&go(Number(b.dataset.next)));
  const form=panel.querySelector('#booking-form');if(form)form.onsubmit=book;
 }
-async function book(e){e.preventDefault();state.loading=true;state.error='';render();const f=new FormData(e.target);try{const r=await fetch(`${API}/book`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({advisor:state.advisor,start:state.slot.start,duration:selectedService().duration,service:selectedService().title,name:f.get('name'),company:f.get('company'),whatsapp:f.get('whatsapp'),email:f.get('email')})});const data=await r.json();if(!r.ok)throw new Error(data.error);state.result=data}catch(err){state.error=err.message||'No pudimos confirmar la reunión.'}finally{state.loading=false;render()}}
+async function book(e){e.preventDefault();state.loading=true;state.error='';render();const f=new FormData(e.target);try{const r=await fetch(`${API}/book`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({advisor:state.advisor,start:state.slot.start,duration:selectedService().duration,service:selectedService().title,name:f.get('name'),company:f.get('company'),whatsapp:f.get('whatsapp'),email:f.get('email')})});const data=await r.json();if(!r.ok)throw new Error(data.error);state.result=data;if(window.gtag)gtag('event','booking_confirmed',{value:selectedService().title,fixy_page:'reservas'})}catch(err){state.error=err.message||'No pudimos confirmar la reunión.'}finally{state.loading=false;render()}}
 render();

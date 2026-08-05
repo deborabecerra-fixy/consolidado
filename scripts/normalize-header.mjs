@@ -6,7 +6,7 @@ const files = [];
 
 const header = `<header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="/"><img src="/img/Logo%20Fixy.png" alt="Fixy Logística" width="606" height="188"></a>
+    <a class="brand" href="/"><img src="/img/Logo-Fixy.webp" alt="Fixy Logística" width="606" height="188"></a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav-links" aria-label="Navegación principal">
       <a href="/#mapa" data-nav="como">Cómo funciona</a>

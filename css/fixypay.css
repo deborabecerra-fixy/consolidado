@@ -85,7 +85,7 @@ body.fixypay-page:not(.route-home)>section.convert{
     width:146px;
     height:auto;
     max-height:36px;
-    content:url("../assets/img/fixypay-logo.png");
+    content:url("../assets/img/fixypay-logo.webp");
     filter:brightness(0) invert(1);
   }
   .fixypay-page .fixy-mobile-bottom-navigation{

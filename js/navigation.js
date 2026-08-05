@@ -82,11 +82,11 @@
   const mobileMarkup = `<div class="fixy-mobile-navigation">
     <header class="fixy-mobile-topbar">
       <a class="fixy-site-logo" href="${homeUrl}" aria-label="Fixy Logística, inicio">
-        <img src="${root}img/Logo%20Fixy.png" alt="" width="606" height="188">
+        <img src="${root}img/Logo-Fixy.webp" alt="" width="606" height="188">
       </a>
       <a class="fixy-whatsapp-button" href="${whatsappUrl}" target="_blank" rel="noopener noreferrer"
         aria-label="Hablar con Fixy por WhatsApp" title="Hablar con Fixy por WhatsApp">
-        <img class="fixy-utility-icon" src="${root}img/whatsapp-white.png" alt="" width="25" height="25">
+        <img class="fixy-utility-icon" src="${root}img/whatsapp-white.webp" alt="" width="25" height="25">
       </a>
     </header>
     <nav class="fixy-mobile-bottom-navigation" aria-label="Navegación principal móvil">
