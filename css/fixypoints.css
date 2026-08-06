@@ -319,7 +319,7 @@
 }
 .fixypoints-page .fp-flow h3 { margin: 0 0 8px; color: var(--fp-ink); font-size: 1.16rem; }
 .fixypoints-page .fp-flow p { max-width: 440px; margin: 0; color: var(--fp-muted); line-height: 1.55; }
-.fixypoints-page .fp-dropoff { background: var(--fp-ink); color: #fff; }
+.fixypoints-page .fp-dropoff { background: var(--fp-blue); color: #fff; }
 .fixypoints-page .fp-dropoff-grid { display: grid; gap: 38px; }
 .fixypoints-page .fp-dropoff .eyebrow,
 .fixypoints-page .fp-dropoff h2 { color: #fff; }
@@ -328,7 +328,7 @@
 .fixypoints-page .fp-dropoff-flow { margin-top: 0; }
 .fixypoints-page .fp-dropoff-flow::before { background: rgba(255, 255, 255, .22); }
 .fixypoints-page .fp-dropoff-flow li { position: relative; min-height: 64px; display: flex; align-items: flex-start; color: #fff; font-weight: 800; }
-.fixypoints-page .fp-dropoff-flow li::before { content: ""; position: absolute; left: -29px; top: 4px; width: 12px; height: 12px; border: 3px solid var(--fp-ink); border-radius: 50%; background: var(--fp-yellow); box-shadow: 0 0 0 1px rgba(255, 255, 255, .3); }
+.fixypoints-page .fp-dropoff-flow li::before { content: ""; position: absolute; left: -29px; top: 4px; width: 12px; height: 12px; border: 3px solid var(--fp-blue); border-radius: 50%; background: var(--fp-yellow); box-shadow: 0 0 0 1px rgba(255, 255, 255, .3); }
 
 /* Encaje y FAQ permanecen abiertos, sin convertir todo en cards. */
 .fixypoints-page .fp-fit { background: var(--fp-paper); }
