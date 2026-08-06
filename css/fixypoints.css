@@ -33,6 +33,14 @@
   font-size: 1rem;
   line-height: 1.72;
 }
+.fixypoints-page .fp-routine-side { display: flex; flex-direction: column; gap: 28px; }
+.fixypoints-page .fp-routine-side p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--fp-muted);
+  font-size: 1rem;
+  line-height: 1.72;
+}
 
 /* Coincidencia: una raíz y dos desenlaces, sin tarjetas enfrentadas. */
 .fixypoints-page .fp-coincidence { background: var(--fp-paper); }
@@ -540,7 +548,7 @@
   .fixypoints-page .fp-branch-pickup li:nth-child(1)::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008fc3' stroke-width='1.85' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E"); }
   .fixypoints-page .fp-branch-pickup li:nth-child(2)::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008fc3' stroke-width='1.85' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8a6 6 0 0 1 12 0c0 4 1.5 6 2 7H4c.5-1 2-3 2-7Z'/%3E%3Cpath d='M10 19a2 2 0 0 0 4 0'/%3E%3C/svg%3E"); }
   .fixypoints-page .fp-branch-pickup li:nth-child(3)::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008fc3' stroke-width='1.85' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3.5 2'/%3E%3C/svg%3E"); }
-  .fixypoints-page .fp-routine-grid { grid-template-columns: .78fr 1.22fr; align-items: end; gap: 80px; }
+  .fixypoints-page .fp-routine-grid { grid-template-columns: .78fr 1.22fr; align-items: center; gap: 80px; }
   .fixypoints-page .fp-daily-route { grid-template-columns: repeat(5, 1fr); align-items: start; padding: 0; }
   /* Recorrido del día escalonado: cada parada a una altura distinta, unidas por una línea punteada en zigzag. */
   .fixypoints-page .fp-daily-route::before {
