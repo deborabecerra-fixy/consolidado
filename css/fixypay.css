@@ -59,6 +59,7 @@ body.fixypay-page:not(.route-home)>section.hero::before{
 }
 .fixypay-page .hero .trust .star{color:#F3F3F2}
 .fixypay-page .hero .friction{color:#F3F3F2}
+.fixypay-page .contact-premium-info .trust{color:#6F43AD}
 .fixypay-page .guia{
   border:0;
   box-shadow:0 24px 60px rgba(46,31,71,.24);
