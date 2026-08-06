@@ -212,7 +212,12 @@
       event.preventDefault();
       const topbar = document.querySelector(".fixy-mobile-topbar");
       const offset = topbar && mobileQuery.matches ? topbar.getBoundingClientRect().height : 0;
-      const targetTop = contactoTarget.getBoundingClientRect().top + window.scrollY - offset;
+      // Además del offset del topbar, adelantamos un poco más el salto en
+      // mobile: con solo el offset del topbar, el CTA de WhatsApp quedaba
+      // pegado al borde inferior y el formulario no asomaba nada. Este
+      // extra deja ya visible el arranque del formulario sin gesto adicional.
+      const extraReveal = mobileQuery.matches ? 320 : 0;
+      const targetTop = contactoTarget.getBoundingClientRect().top + window.scrollY - offset + extraReveal;
       window.scrollTo({ top: Math.max(0, targetTop), left: 0, behavior: "instant" });
       history.replaceState(null, "", "#contacto");
       setActive();
