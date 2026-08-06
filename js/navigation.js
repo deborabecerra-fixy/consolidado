@@ -27,12 +27,14 @@
   const homeUrl = `${root}index.html`;
 
   const services = [
-    ["fixyFull", "fixyfull", "FixyFull", "Stock, preparación y despacho.", "warehouse"],
-    ["flex", "flex", "Flex", "Operación para entregas Flex.", "route"],
-    ["sameDay", "same-day", "Same Day", "Entregas prioritarias en el día.", "bolt"],
-    ["nextDay", "next-day", "Next Day", "Entregas al día siguiente.", "calendar"],
-    ["fixyPoints", "fixypoints", "FixyPoints", "Puntos de retiro y despacho.", "points"],
-    ["fixyPay", "fixypay", "FixyPay", "Cobro QR contraentrega.", "qr"]
+    ["fixyFull", "servicios/fixyfull", "FixyFull", "Stock, preparación y despacho.", "warehouse"],
+    ["flex", "servicios/flex", "Flex", "Operación para entregas Flex.", "route"],
+    ["sameDay", "servicios/same-day", "Same Day", "Entregas prioritarias en el día.", "bolt"],
+    ["nextDay", "servicios/next-day", "Next Day", "Entregas al día siguiente.", "calendar"],
+    ["fixyPoints", "servicios/fixypoints", "FixyPoints", "Puntos de retiro y despacho.", "points"],
+    ["fixyPay", "servicios/fixypay", "FixyPay", "Cobro QR contraentrega.", "qr"],
+    ["interior", "servicios/interior", "Envíos al Interior", "Cobertura a todo el país.", "map-pin"],
+    ["operarArgentina", "operar-en-argentina", "Operá en Argentina", "Logística local para marcas del exterior.", "globe"]
   ];
   const whatsappMessages = {
     home: "Hola Fixy, quiero evaluar mi operación logística.",
@@ -49,9 +51,9 @@
       <use href="${iconFile}#${name}"></use>
     </svg>`;
 
-  const serviceList = services.map(([key, serviceSlug, name, description, iconName]) => `
+  const serviceList = services.map(([key, servicePath, name, description, iconName]) => `
     <li>
-      <a class="fixy-service-link" href="${root}servicios/${serviceSlug}/"${pageKey === key ? ' aria-current="page"' : ""}>
+      <a class="fixy-service-link" href="${root}${servicePath}/"${pageKey === key ? ' aria-current="page"' : ""}>
         ${icon(iconName, "fixy-service-icon")}
         <span class="fixy-service-copy"><strong>${name}</strong><small>${description}</small></span>
         ${icon("arrow", "fixy-service-icon fixy-service-arrow")}
