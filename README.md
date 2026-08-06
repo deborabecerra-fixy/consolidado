@@ -20,7 +20,7 @@ assets/fonts/         → (colocar acá los .woff2 de Filson Pro)
 1. Doble clic en `SUBIR-A-GITHUB.bat` (requiere Git instalado).
 2. Cuando GitHub pida login, iniciá sesión.
 3. En GitHub: **Settings → Pages → Source: Deploy from a branch → Branch: `main` → `/ (root)` → Save.**
-4. Esperá 1-2 min. URL: https://maximilianosaavedra-fixy.github.io/Fixy-pagina/
+4. Esperá 1-2 min. URL: https://deborabecerra-fixy.github.io/consolidado/
 
 ### Opción manual (web)
 Subí el **contenido** de esta carpeta (no la carpeta en sí) a la raíz del repo:
