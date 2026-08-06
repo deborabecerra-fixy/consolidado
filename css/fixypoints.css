@@ -541,8 +541,19 @@
   .fixypoints-page .fp-branch-pickup li:nth-child(2)::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008fc3' stroke-width='1.85' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8a6 6 0 0 1 12 0c0 4 1.5 6 2 7H4c.5-1 2-3 2-7Z'/%3E%3Cpath d='M10 19a2 2 0 0 0 4 0'/%3E%3C/svg%3E"); }
   .fixypoints-page .fp-branch-pickup li:nth-child(3)::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008fc3' stroke-width='1.85' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3.5 2'/%3E%3C/svg%3E"); }
   .fixypoints-page .fp-routine-grid { grid-template-columns: .78fr 1.22fr; align-items: end; gap: 80px; }
-  .fixypoints-page .fp-daily-route { grid-template-columns: repeat(5, 1fr); padding: 0; }
-  .fixypoints-page .fp-daily-route::before { left: 0; right: 0; top: 13px; bottom: auto; width: auto; height: 1px; }
+  .fixypoints-page .fp-daily-route { grid-template-columns: repeat(5, 1fr); align-items: start; padding: 0; }
+  /* Recorrido del día escalonado: cada parada a una altura distinta, unidas por una línea punteada en zigzag. */
+  .fixypoints-page .fp-daily-route::before {
+    left: 0; right: 0; top: 0; bottom: auto; width: auto; height: 56px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 56' preserveAspectRatio='none'%3E%3Cpolyline points='0,6 100,32 200,14 300,48 400,20' fill='none' stroke='%23bdd0d6' stroke-width='2' stroke-linecap='round' stroke-dasharray='1 8' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .fixypoints-page .fp-daily-route li:nth-child(1) { margin-top: 0; }
+  .fixypoints-page .fp-daily-route li:nth-child(2) { margin-top: 26px; }
+  .fixypoints-page .fp-daily-route li:nth-child(3) { margin-top: 8px; }
+  .fixypoints-page .fp-daily-route li:nth-child(4) { margin-top: 42px; }
+  .fixypoints-page .fp-daily-route li:nth-child(5) { margin-top: 14px; }
   .fixypoints-page .fp-daily-route li { grid-template-columns: 1fr; align-content: start; min-height: 132px; padding: 34px 14px 0; border-bottom: 0; border-left: 1px solid rgba(16, 47, 58, .08); }
   .fixypoints-page .fp-daily-route li::before { left: 7px; top: 7px; }
   .fixypoints-page .fp-daily-route .is-point::before { left: 4px; top: 4px; }
