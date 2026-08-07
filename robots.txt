@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /pages/admin/
 
-Sitemap: https://www.fixy.com.ar/sitemap.xml
+Sitemap: https://fixy.com.ar/sitemap.xml
