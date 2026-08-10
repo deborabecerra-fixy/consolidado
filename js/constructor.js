@@ -119,12 +119,14 @@ function showConsMsg() {
 }
 
 /* ---------- Medición (gancho único listo para GTM/dataLayer) ---------- */
-function track(ev, val) {
-  if (window.dataLayer) window.dataLayer.push({ event: ev, value: val || '', page: 'home' });
-  if (window.gtag) gtag('event', ev, { value: val || '', fixy_page: 'home' });
+var SERVICE = 'home';
+function track(ev, val, ctaLocation) {
+  var params = { service: SERVICE, cta_location: ctaLocation || '', value: val || '', fixy_page: SERVICE };
+  if (window.dataLayer) window.dataLayer.push(Object.assign({ event: ev }, params));
+  if (window.gtag) gtag('event', ev, params);
   if (window.fbq) {
-    if (ev.indexOf('whatsapp') > -1) fbq('track', 'Contact', { content_name: 'home' });
-    else fbq('trackCustom', ev, { value: val || '', fixy_page: 'home' });
+    if (ev.indexOf('whatsapp') > -1) fbq('track', 'Contact', { content_name: SERVICE });
+    else fbq('trackCustom', ev, params);
   }
 }
 
@@ -141,7 +143,7 @@ document.querySelectorAll('#constructor .builder-desktop .chips').forEach(g => {
 /* ---------- Clicks con data-ev → tracking automático ---------- */
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-ev]');
-  if (t) track(t.dataset.ev, t.dataset.evval || '');
+  if (t) track(t.dataset.ev, t.dataset.evval || '', t.dataset.cta || '');
 });
 
 /* ---------- Navbar: menú mobile + sombra al scrollear + link activo ---------- */

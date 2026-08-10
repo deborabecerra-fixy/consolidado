@@ -124,8 +124,8 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
       <span class="yellowbar"></span>
       <p class="sub">Fixy conecta stock, preparación, distribución y gestión operativa para marcas internacionales que quieren empezar o expandir sus ventas en Argentina — con capacidades que ya tenemos.</p>
       <div class="cta-row">
-        <a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary">Evaluar mi entrada a Argentina →</a>
-        <a href="#configurador" class="btn btn-ghost" data-ev="svc_cta_configurador">Probá el configurador</a>
+        <a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary" data-cta="hero">Evaluar mi entrada a Argentina →</a>
+        <a href="#configurador" class="btn btn-ghost" data-ev="svc_cta_configurador" data-cta="hero">Probá el configurador</a>
       </div>
       <div class="trust"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · +150 clientes activos</div>
       <div class="friction">
@@ -287,10 +287,10 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
       <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · +10 integraciones</div>
       <div class="card contact-agenda" id="agenda">
         <div><strong>¿Preferís hablar?</strong> <span>Agendá 15 minutos con el equipo.</span></div>
-        <a class="btn btn-yellow" href="../reservas/" data-ev="svc_schedule">Agendar 15 min →</a>
+        <a class="btn btn-yellow" href="../reservas/" data-ev="svc_schedule" data-cta="contacto">Agendar 15 min →</a>
       </div>
       <div class="cta-row">
-        <a class="btn btn-wa" href="https://wa.me/5491125426386?text=Hola%20Fixy%2C%20somos%20una%20marca%20del%20exterior%20y%20queremos%20operar%20en%20Argentina." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
+        <a class="btn btn-wa" href="https://wa.me/5491125426386?text=Hola%20Fixy%2C%20somos%20una%20marca%20del%20exterior%20y%20queremos%20operar%20en%20Argentina." target="_blank" rel="noopener" data-ev="svc_whatsapp" data-cta="contacto">Consultar por WhatsApp</a>
         <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
       </div>
     </div>
@@ -404,11 +404,18 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
   </div>
 </footer>
 
-<div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Evaluar mi entrada</a><a href="https://wa.me/5491125426386" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a></div>
+<div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary" data-cta="sticky">Evaluar mi entrada</a><a href="https://wa.me/5491125426386" class="btn btn-wa" target="_blank" rel="noopener" data-ev="svc_whatsapp" data-cta="sticky">WhatsApp</a></div>
 
 <script>
-  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'internacional'}); if(window.gtag) gtag('event', ev, {value: val||'', fixy_page:'internacional'}); if(window.fbq){ if(ev.indexOf('whatsapp')>-1) fbq('track','Contact',{content_name:'internacional'}); else fbq('trackCustom', ev, {value: val||'', fixy_page:'internacional'}); } }
-  document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
+  var SERVICE = 'operar';
+  function track(ev, meta){
+    meta = meta || {};
+    var params = { service: SERVICE, cta_location: meta.cta_location || '', fixy_page: SERVICE };
+    if (window.dataLayer) window.dataLayer.push(Object.assign({ event: ev }, params));
+    if (window.gtag) gtag('event', ev, params);
+    if (window.fbq) { ev.indexOf('whatsapp') > -1 ? fbq('track','Contact',{ content_name: SERVICE }) : fbq('trackCustom', ev, params); }
+  }
+  document.addEventListener('click', function(e){ var t = e.target.closest('[data-ev]'); if (t) track(t.dataset.ev, { cta_location: t.dataset.cta || '' }); });
   const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
   if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded',o); });
     nl.querySelectorAll('a:not(.dd-toggle)').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));

@@ -76,7 +76,7 @@
   // personalizan con el mismo mensaje por página que ya usa el botón mobile,
   // para no repetir el texto en cada archivo por separado.
   const footerWhatsapp = document.querySelector('.site-footer a[href*="wa.me"]');
-  if (footerWhatsapp) footerWhatsapp.href = whatsappUrl;
+  if (footerWhatsapp) { footerWhatsapp.href = whatsappUrl; footerWhatsapp.setAttribute('data-ev','svc_whatsapp'); footerWhatsapp.setAttribute('data-cta','footer'); }
   const stickyWhatsapp = document.querySelector(".sticky-cta .btn-wa");
   if (stickyWhatsapp) stickyWhatsapp.href = whatsappUrl;
 
@@ -86,7 +86,7 @@
       <a class="fixy-site-logo" href="${homeUrl}" aria-label="Fixy Logística, inicio">
         <img src="${root}img/Logo-Fixy.webp" alt="" width="606" height="188">
       </a>
-      <a class="fixy-whatsapp-button" href="${whatsappUrl}" target="_blank" rel="noopener noreferrer"
+      <a class="fixy-whatsapp-button" href="${whatsappUrl}" data-ev="svc_whatsapp" data-cta="floating" target="_blank" rel="noopener noreferrer"
         aria-label="Hablar con Fixy por WhatsApp" title="Hablar con Fixy por WhatsApp">
         <img class="fixy-utility-icon" src="${root}img/whatsapp-white.webp" alt="" width="25" height="25">
       </a>

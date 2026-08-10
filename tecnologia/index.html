@@ -143,8 +143,8 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
       <span class="yellowbar"></span>
       <p class="sub">Conectá tu tienda o sistema con una API REST/JSON: cotización, guías, tracking y stock por SKU, automáticos. Y cambios de estado por webhook, sin hacer polling.</p>
       <div class="cta-row">
-        <a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary">Hablar con el equipo →</a>
-        <a href="../developers" class="btn btn-ghost" data-ev="svc_cta_docs">Ver documentación →</a>
+        <a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary" data-cta="hero">Hablar con el equipo →</a>
+        <a href="../developers" class="btn btn-ghost" data-ev="svc_cta_docs" data-cta="hero">Ver documentación →</a>
       </div>
       <div class="trust"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · +10 integraciones</div>
       <div class="friction">
@@ -290,10 +290,10 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
       <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Fixy · 4,8 en +15.000 reseñas · +10 integraciones</div>
       <div class="card contact-agenda" id="agenda">
         <div><strong>¿Preferís hablar?</strong> <span>Agendá 15 minutos con el equipo.</span></div>
-        <a class="btn btn-yellow" href="../reservas/" data-ev="svc_schedule">Agendar 15 min →</a>
+        <a class="btn btn-yellow" href="../reservas/" data-ev="svc_schedule" data-cta="contacto">Agendar 15 min →</a>
       </div>
       <div class="cta-row">
-        <a class="btn btn-wa" href="https://wa.me/5491125426386?text=Hola%20Fixy%2C%20quiero%20integrar%20mi%20tienda%20con%20su%20tecnolog%C3%ADa." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
+        <a class="btn btn-wa" href="https://wa.me/5491125426386?text=Hola%20Fixy%2C%20quiero%20integrar%20mi%20tienda%20con%20su%20tecnolog%C3%ADa." target="_blank" rel="noopener" data-ev="svc_whatsapp" data-cta="contacto">Consultar por WhatsApp</a>
         <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
       </div>
     </div>
@@ -407,11 +407,18 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
   </div>
 </footer>
 
-<div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Hablar con el equipo</a><a href="https://wa.me/5491125426386" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a></div>
+<div class="sticky-cta"><a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary" data-cta="sticky">Hablar con el equipo</a><a href="https://wa.me/5491125426386" class="btn btn-wa" target="_blank" rel="noopener" data-ev="svc_whatsapp" data-cta="sticky">WhatsApp</a></div>
 
 <script>
-  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'tecnologia'}); if(window.gtag) gtag('event', ev, {value: val||'', fixy_page:'tecnologia'}); if(window.fbq){ if(ev.indexOf('whatsapp')>-1) fbq('track','Contact',{content_name:'tecnologia'}); else fbq('trackCustom', ev, {value: val||'', fixy_page:'tecnologia'}); } }
-  document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
+  var SERVICE = 'tecnologia';
+  function track(ev, meta){
+    meta = meta || {};
+    var params = { service: SERVICE, cta_location: meta.cta_location || '', fixy_page: SERVICE };
+    if (window.dataLayer) window.dataLayer.push(Object.assign({ event: ev }, params));
+    if (window.gtag) gtag('event', ev, params);
+    if (window.fbq) { ev.indexOf('whatsapp') > -1 ? fbq('track','Contact',{ content_name: SERVICE }) : fbq('trackCustom', ev, params); }
+  }
+  document.addEventListener('click', function(e){ var t = e.target.closest('[data-ev]'); if (t) track(t.dataset.ev, { cta_location: t.dataset.cta || '' }); });
   const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
   if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded',o); });
     nl.querySelectorAll('a:not(.dd-toggle)').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));

@@ -142,8 +142,8 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
       <span class="yellowbar"></span>
       <p class="sub">Cuando la entrega y el pago viajan por circuitos separados, el paquete termina su recorrido antes que la operación. FixyPay los conecta.</p>
       <div class="cta-row">
-        <a href="#contacto" class="btn btn-yellow" data-ev="svc_cta_primary">Evaluar mi operación →</a>
-        <a href="#como" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)" data-ev="svc_cta_secondary">Ver cómo funciona</a>
+        <a href="#contacto" class="btn btn-yellow" data-ev="svc_cta_primary" data-cta="hero">Evaluar mi operación →</a>
+        <a href="#como" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)" data-ev="svc_cta_secondary" data-cta="hero">Ver cómo funciona</a>
       </div>
       <div class="trust"><span class="star">★</span> Respaldado por Fixy · 4,8 en +15.000 reseñas · 98% de efectividad</div>
       <div class="friction">
@@ -308,10 +308,10 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
       <div class="trust" style="margin-bottom:18px"><span class="star">★</span> Respaldado por Fixy · 4,8 en +15.000 reseñas · Activación en 24–48 h</div>
       <div class="card contact-agenda" id="agenda">
         <div><strong>¿Preferís hablar?</strong> <span>Agendá 15 minutos con el equipo.</span></div>
-        <a class="btn btn-yellow" href="../../reservas/" data-ev="svc_schedule">Agendar 15 min →</a>
+        <a class="btn btn-yellow" href="../../reservas/" data-ev="svc_schedule" data-cta="contacto">Agendar 15 min →</a>
       </div>
       <div class="cta-row">
-        <a class="btn btn-wa" href="https://wa.me/5491125426386?text=Hola%20Fixy%2C%20quiero%20evaluar%20FixyPay%20para%20mi%20operaci%C3%B3n%20contraentrega." target="_blank" rel="noopener" data-ev="svc_whatsapp">Consultar por WhatsApp</a>
+        <a class="btn btn-wa" href="https://wa.me/5491125426386?text=Hola%20Fixy%2C%20quiero%20evaluar%20FixyPay%20para%20mi%20operaci%C3%B3n%20contraentrega." target="_blank" rel="noopener" data-ev="svc_whatsapp" data-cta="contacto">Consultar por WhatsApp</a>
         <span class="muted" style="font-size:12.5px">Te respondemos a la brevedad.</span>
       </div>
     </div>
@@ -446,13 +446,20 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 </footer>
 
 <div class="sticky-cta">
-  <a href="#contacto" class="btn btn-primary" data-ev="sticky_cta">Evaluar mi operación</a>
-  <a href="https://wa.me/5491125426386" class="btn btn-wa" target="_blank" rel="noopener" data-ev="sticky_wa">WhatsApp</a>
+  <a href="#contacto" class="btn btn-primary" data-ev="svc_cta_primary" data-cta="sticky">Evaluar mi operación</a>
+  <a href="https://wa.me/5491125426386" class="btn btn-wa" target="_blank" rel="noopener" data-ev="svc_whatsapp" data-cta="sticky">WhatsApp</a>
 </div>
 
 <script>
-  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'fixypay'}); if(window.gtag) gtag('event', ev, {value: val||'', fixy_page:'fixypay'}); if(window.fbq){ if(ev.indexOf('whatsapp')>-1) fbq('track','Contact',{content_name:'fixypay'}); else fbq('trackCustom', ev, {value: val||'', fixy_page:'fixypay'}); } }
-  document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
+  var SERVICE = 'pay';
+  function track(ev, meta){
+    meta = meta || {};
+    var params = { service: SERVICE, cta_location: meta.cta_location || '', fixy_page: SERVICE };
+    if (window.dataLayer) window.dataLayer.push(Object.assign({ event: ev }, params));
+    if (window.gtag) gtag('event', ev, params);
+    if (window.fbq) { ev.indexOf('whatsapp') > -1 ? fbq('track','Contact',{ content_name: SERVICE }) : fbq('trackCustom', ev, params); }
+  }
+  document.addEventListener('click', function(e){ var t = e.target.closest('[data-ev]'); if (t) track(t.dataset.ev, { cta_location: t.dataset.cta || '' }); });
   // menú mobile
   const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
   if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded', o); });
