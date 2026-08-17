@@ -4,11 +4,19 @@
    Compartida por el home y las páginas de servicio.
    ============================================================ */
 
-/* Filson Pro (marca). Coloca los .woff2 en assets/fonts/ y renderiza; si no, usa la fuente del sistema. */
-@font-face{font-family:"Filson Pro";src:url("../assets/fonts/FilsonPro-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Filson Pro";src:url("../assets/fonts/FilsonPro-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:"Filson Pro";src:url("../assets/fonts/FilsonPro-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"Filson Pro";src:url("../assets/fonts/FilsonPro-Heavy.woff2") format("woff2");font-weight:800;font-display:swap}
+/* ---------- Tipografía ----------
+   Poppins en títulos + DM Sans en cuerpo. Ambas son gratuitas (Open Font License).
+
+   Reemplazan a Filson Pro, la tipografía del Manual de Marca: usarla en la web
+   requiere una licencia webfont que no está disponible en el repo, y los cuatro
+   .woff2 que este archivo pedía antes no existían (4 pedidos 404 por visita).
+   Decisión tomada el 17/8/2026.
+
+   Se cargan con <link> en el <head> de cada página. Para autoalojarlas —más
+   rápido y sin pedirle nada a un tercero— ver assets/fonts/README.txt.
+
+   Si algún día llega la licencia de Filson Pro, alcanza con agregar sus @font-face
+   acá y poner "Filson Pro" al principio de las dos variables de abajo. */
 
 /* Texto presente en el DOM (lo leen buscadores y lectores de pantalla) pero
    invisible en pantalla: se usa para reforzar el H1 semántico de cada página
@@ -21,12 +29,16 @@
   --grey:#9EA3A5; --paper:#F3F3F2;
   --ink:#20303a; --ink-soft:#5b6b73; --white:#fff; --line:#e2e6e7;
   --radius:16px; --maxw:1140px; --shadow:0 18px 44px rgba(0,50,70,.10);
+  --font-body:"DM Sans","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --font-head:"Poppins","DM Sans","Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--white);color:var(--ink);font-family:"Filson Pro","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font-body);line-height:1.55;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 h1,h2,h3{margin:0;line-height:1.13;letter-spacing:-.01em}
+/* Los títulos van en la tipografía de display; el resto hereda la de cuerpo. */
+h1,h2,h3,h4,.eyebrow,.metric-number{font-family:var(--font-head)}
 a{color:inherit}
 section{padding:76px 0;border-top:1px solid var(--line)}
 .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:14px}

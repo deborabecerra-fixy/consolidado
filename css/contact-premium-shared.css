@@ -25,7 +25,7 @@
 .contact-form-panel::after{position:absolute;content:"";right:-90px;top:-90px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(0,143,195,.13),transparent 68%);pointer-events:none}
 .contact-form-panel>*{position:relative;z-index:1}
 .home-kommo-form{position:relative;width:100%;min-height:698px}
-.home-kommo-loading{position:absolute;inset:0;display:grid;place-items:center;margin:0;color:var(--ink-soft);font:600 14px/1.5 "Filson Pro",Arial,sans-serif;text-align:center}
+.home-kommo-loading{position:absolute;inset:0;display:grid;place-items:center;margin:0;color:var(--ink-soft);font:600 14px/1.5 var(--font-body);text-align:center}
 .contact-form-panel.is-kommo-ready .home-kommo-form{min-height:0}
 .contact-form-panel.is-kommo-ready .home-kommo-loading{display:none}
 .home-kommo-form iframe.amoforms_iframe{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent}
@@ -34,7 +34,7 @@
 .contact-form-panel.is-kommo-error .home-kommo-form{min-height:0}
 .contact-form-panel.is-kommo-error .home-kommo-loading{display:none}
 .home-kommo-fallback{padding:32px 24px;text-align:center}
-.home-kommo-fallback-msg{margin:0 0 20px;color:#8b2e2e;font:600 15px/1.55 "Filson Pro",Arial,sans-serif}
+.home-kommo-fallback-msg{margin:0 0 20px;color:#8b2e2e;font:600 15px/1.55 var(--font-body)}
 .home-kommo-fallback-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 .home-kommo-fallback-actions .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
 @media(max-width:1000px){.contact-premium-layout{grid-template-columns:1fr;gap:28px;align-items:start}.contact-premium-info .sec-head,.contact-agenda{max-width:none}}
