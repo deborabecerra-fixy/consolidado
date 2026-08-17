@@ -41,7 +41,7 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 <!-- Estilos: base de marca compartida + componentes propios del home -->
 <link rel="stylesheet" href="./css/brand.css">
 <link rel="stylesheet" href="./css/home.css?v=20260728-4">
-<link rel="stylesheet" href="./css/contact-premium-shared.css?v=1">
+<link rel="stylesheet" href="./css/contact-premium-shared.css?v=2">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://fixy.com.ar/#org","name":"Fixy","legalName":"RENATA ARG SRL","url":"https://fixy.com.ar/","logo":"https://fixy.com.ar/assets/img/fixy-logo-5-04.png","slogan":"Enviamos soluciones.","sameAs":["https://www.instagram.com/fixylogistica/","https://www.facebook.com/FIXYLOGISTICA/","https://www.linkedin.com/company/fixylogistica/"]},
@@ -679,6 +679,7 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
               status: result && result.status,
               timestamp: new Date().toISOString()
             }));
+            if (window.fixyKommoTrack) window.fixyKommoTrack("form_submitted", (result && result.status) || "");
           }, 1722124);
         }, 1722124);
         </script>
@@ -766,6 +767,6 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 <script src="./js/coverage-maps.js" defer></script>
 <script src="./js/metrics.js" defer></script>
 <script src="./js/mapa360.js?v=20260728-2" defer></script>
-<script src="./js/home-kommo.js?v=1" defer></script>
+<script src="./js/home-kommo.js?v=2" defer></script>
 </body>
 </html>

@@ -29,9 +29,16 @@
 .contact-form-panel.is-kommo-ready .home-kommo-form{min-height:0}
 .contact-form-panel.is-kommo-ready .home-kommo-loading{display:none}
 .home-kommo-form iframe.amoforms_iframe{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent}
-.contact-form-panel.is-kommo-error .home-kommo-loading{padding:28px;color:#8b2e2e}
+/* Estado de error: el panel deja de reservar 698px vacíos y muestra el fallback
+   con los canales de contacto que ya existen en la propia página. */
+.contact-form-panel.is-kommo-error .home-kommo-form{min-height:0}
+.contact-form-panel.is-kommo-error .home-kommo-loading{display:none}
+.home-kommo-fallback{padding:32px 24px;text-align:center}
+.home-kommo-fallback-msg{margin:0 0 20px;color:#8b2e2e;font:600 15px/1.55 "Filson Pro",Arial,sans-serif}
+.home-kommo-fallback-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.home-kommo-fallback-actions .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
 @media(max-width:1000px){.contact-premium-layout{grid-template-columns:1fr;gap:28px;align-items:start}.contact-premium-info .sec-head,.contact-agenda{max-width:none}}
-@media(max-width:700px){.contact-premium-home::before{font-size:110px;top:14%}.contact-form-panel{padding:12px 8px 6px;border-radius:22px}.contact-form-panel::before{left:20px;right:20px}.contact-agenda{align-items:flex-start;flex-direction:column}.contact-agenda .btn{width:100%;text-align:center}.home-kommo-form iframe.amoforms_iframe{min-width:0!important}}
+@media(max-width:700px){.contact-premium-home::before{font-size:110px;top:14%}.contact-form-panel{padding:12px 8px 6px;border-radius:22px}.contact-form-panel::before{left:20px;right:20px}.contact-agenda{align-items:flex-start;flex-direction:column}.contact-agenda .btn{width:100%;text-align:center}.home-kommo-form iframe.amoforms_iframe{min-width:0!important}.home-kommo-fallback{padding:26px 16px}.home-kommo-fallback-actions{flex-direction:column}.home-kommo-fallback-actions .btn{width:100%}}
 @media(max-width:900px){
   .contact-premium-home{background:#eef7fa!important}
   .contact-premium-home::before,
