@@ -213,7 +213,15 @@ function pickScenario(v) {
 function pickPain(f) {
   track('pain_select', f);
   addChip('fric', f);
-  build();
+  /* Antes acá se llamaba a build(): un solo toque generaba la hipótesis completa,
+     armada con un único dato. En GA4 se veían 2,27 pain_select por usuario —
+     la gente tocaba varias frases y cada toque le devolvía un informe nuevo.
+     Ahora la frase sólo PRESELECCIONA la fricción y lleva al constructor, igual
+     que pickScenario, para que la persona complete situación y zona y la
+     hipótesis se arme con más de un dato. La fricción admite varias opciones,
+     así que se pueden seguir sumando desde los chips del propio constructor. */
+  if (window.matchMedia('(max-width:700px)').matches && typeof window.wizOpen === 'function') window.wizOpen(0);
+  document.getElementById('constructor').scrollIntoView({ behavior: 'smooth' });
 }
 
 /* ============================================================
