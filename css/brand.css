@@ -65,7 +65,31 @@ header.nav.scrolled{box-shadow:0 6px 22px rgba(0,50,70,.08)}
 .nav-links>a,.dd-toggle{display:inline-flex;align-items:center;gap:5px;color:var(--ink-soft);text-decoration:none;padding:8px 12px;border:0;border-radius:10px;background:transparent;font:inherit;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}
 .nav-links>a:hover,.dd-toggle:hover,.dd:hover .dd-toggle,.dd:focus-within .dd-toggle{background:var(--blue-100);color:var(--blue)}
 .nav-links>a.active,.dd-toggle.active{color:#006f96;background:var(--blue-100)}
-.nav .btn-wa{flex:0 0 auto;margin-left:6px}
+/* WhatsApp del header de escritorio: pastilla con el ícono dentro de un
+   círculo blanco, según el prototipo de Marketing. Sólo afecta al del header;
+   los otros .btn-wa (contacto, footer, barra fija de mobile) quedan igual. */
+.nav .btn-wa{
+  flex:0 0 auto;margin-left:6px;
+  display:inline-flex;align-items:center;gap:9px;
+  padding:9px 18px 9px 15px;
+  border-radius:12px;
+  font-size:14px;
+  /* app-core.css impone min-height:var(--app-control) = 52px a todo .btn: la
+     pastilla quedaba tan alta como el botón viejo. Acá el alto lo da el
+     círculo del ícono (28px) más el padding: 40px. */
+  min-height:0;
+  /* Etiqueta en blanco, como el prototipo. OJO: 1,98:1 de contraste sobre el
+     verde de WhatsApp, muy por debajo del 4,5:1 de WCAG. Alternativas que
+     mantienen la pastilla: dejar el texto en #062012 (8,66:1) o bajar el verde
+     a #0D8237 con texto blanco (4,92:1). Decisión de marca. */
+  color:#fff;
+  box-shadow:0 2px 10px rgba(37,211,102,.26);
+}
+/* El ícono es el glifo blanco calado del .btn-wa base (máscara pintada con
+   currentColor): sin disco blanco detrás. Sólo se agranda, porque el base lo
+   deja en 1em = 14px y en la pastilla se veía chico. */
+.nav .btn-wa::before{width:20px;height:20px}
+.nav .btn-wa:hover{background:#1fbe5b;box-shadow:0 4px 14px rgba(37,211,102,.34)}
 
 /* Dropdown (escritorio): se abre con hover o con foco de teclado, sin depender de JS */
 .dd{position:relative}
