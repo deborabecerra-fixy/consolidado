@@ -104,6 +104,11 @@
         <img class="fixy-utility-icon" src="${root}img/whatsapp-white.webp" alt="" width="25" height="25">
       </a>
     </header>
+    <!-- El dock mobile tiene 4 destinos y no 5: "Recursos" se quitó el 18/8/2026
+         para priorizar el camino a la venta en el celular. La página sigue
+         existiendo, el footer de las 19 páginas la enlaza y la navegación de
+         escritorio la conserva, así que no se pierde acceso ni enlazado interno.
+         A validar con el evento nav_click, agregado en el commit anterior. -->
     <nav class="fixy-mobile-bottom-navigation" aria-label="Navegación principal móvil">
       ${mobileLink("inicio", homeUrl, "Inicio", "Inicio", "home")}
       ${mobileLink("tecnologia", `${root}tecnologia/`, "Tecnología", "Tecnología", "technology")}
@@ -114,7 +119,6 @@
         <span class="fixy-navigation-services__orb">${icon("network")}</span>
         <span class="fixy-navigation-label">Soluciones</span>
       </button>
-      ${mobileLink("recursos", `${root}recursos/`, "Recursos", "Recursos", "resources")}
       ${mobileLink("contacto", "#contacto", "Contacto", "Contacto", "contact")}
     </nav>
     <div class="fixy-sheet-layer" id="fixy-sheet-layer" hidden>
