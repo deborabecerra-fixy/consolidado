@@ -686,33 +686,14 @@ a.hyp-svc:hover{text-decoration:underline}
   .wiz-opt,.wiz-cta,.wiz-progress-fill,.wiz-iconbtn,.chip{transition:none}
 }
 
-/* --- HERO: imagen decorativa alternativa solo en móvil --- */
-/* Por defecto (desktop): imagen mobile oculta, tarjeta desktop visible */
-.hero-img-mobile{display:none}
+/* --- HERO en móvil ---
+   Las reglas de .hero-img-mobile / .hero-img-desktop se quitaron el 18/8/2026:
+   eran para la etiqueta decorativa (img/etiqueta-web.webp) y la tarjeta
+   "Pedido #1842" del hero anterior, que el hero con imagen de fondo reemplazó.
+   Ninguna de las dos clases existe ya en el HTML. */
 @media(max-width:700px){
-  /* Contenedor del hero como referencia de posicionamiento */
   .hero{position:relative;overflow:hidden}
-  /* Ocultar la tarjeta/imagen desktop */
-  .hero-img-desktop{display:none}
-  /* Mostrar la etiqueta decorativa, superpuesta detrás del título */
-  .hero-img-mobile{
-    display:block;
-    position:absolute;
-    top:72px;
-    right:-35px;
-    width:240px;
-    max-width:64%;
-    height:auto;
-    opacity:.72;
-    transform:rotate(4deg);
-    pointer-events:none;
-    z-index:0;
-  }
-  /* El texto siempre por delante y legible */
   .hero-copy{position:relative;z-index:1}
-}
-@media(max-width:400px){
-  .hero-img-mobile{width:165px;top:84px;right:-30px}
 }
 
 /* --- CLIENTES / TESTIMONIOS: carrusel de cards solo en móvil --- */

@@ -1,0 +1,18 @@
+# ── Archivos de trabajo que no van al sitio ──
+
+# Masters de las imágenes del hero. De acá salen los .webp que sí se publican
+# (img/header1-web-*.webp y img/header1-mobile-*.webp). Se conservan localmente
+# para poder regenerar los WebP en otros tamaños si hace falta.
+img/header1-web.png
+img/header1-mobile.png
+img/header1-web (2).png
+
+# Copia suelta del logo. El que usa el schema es assets/img/fixy-logo-512.png
+img/512x512.png
+
+# Documentación técnica del agendador, pendiente de revisión
+agendador-reservas-documentacion-tecnica.md
+
+# Carpeta temporal para archivos que hay que borrar a mano. Se puede borrar
+# entera desde el explorador de Windows.
+_a_borrar/
