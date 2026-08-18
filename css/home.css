@@ -736,3 +736,173 @@ a.hyp-svc:hover{text-decoration:underline}
     scroll-snap-align:center;
   }
 }
+
+
+/* ============================================================
+   HERO CON IMAGEN DE FONDO — PRUEBA del 17/8/2026, SIN COMMITEAR.
+   La imagen ocupa todo el fondo de la sección y el texto va encima.
+   Reemplaza la tarjeta "Pedido #1842" del hero anterior.
+
+   Assets: img/header1-web-*.webp y img/header1-mobile-*.webp, generados
+   desde los PNG originales (1,79 MB -> 94 KB y 1,60 MB -> 79 KB).
+   El encuadre aprovecha que ambos renders tienen el edificio a un lado
+   (derecha en el de escritorio, abajo en el de mobile) y aire liso del
+   otro: ahí es donde cae el texto.
+
+   Para deshacer TODO: git checkout -- index.html css/home.css
+   ============================================================ */
+.hero.hero-visual{
+  position:relative;
+  overflow:hidden;
+  min-height:auto;
+  background:#eef3f8;
+  color:var(--ink);
+}
+/* app-core.css usa ::before para una forma decorativa oscura y ::after para
+   una barrita amarilla de 120x8px. Sobre la imagen ninguna de las dos tiene
+   sentido, así que se desactivan. El velo va en .hero-media::after, un
+   pseudo-elemento sin reglas heredadas: al ponerlo en .hero::after heredaba
+   el width/height/border-radius de la barrita y quedaba una pastilla diminuta. */
+.hero.hero-visual::before,
+.hero.hero-visual::after{display:none}
+
+.hero-visual .hero-media{position:absolute;inset:0;z-index:0}
+.hero-visual .hero-media picture{display:block;width:100%;height:100%}
+.hero-visual .hero-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:100% 50%;
+}
+
+/* Velo de legibilidad: no es decoración, es lo que garantiza el contraste
+   del texto sobre la foto. Va del lado donde está el texto. */
+.hero-visual .hero-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,
+    rgba(238,243,248,.99) 0%,
+    rgba(238,243,248,.97) 38%,
+    rgba(238,243,248,.88) 53%,
+    rgba(238,243,248,.48) 66%,
+    rgba(238,243,248,0) 84%);
+}
+.hero-visual .wrap{position:relative;z-index:2}
+
+.hero.hero-visual .eyebrow{color:var(--blue)}
+.hero.hero-visual h1{color:var(--blue-d)}
+/* "Vendiste." en el amarillo de marca, como en el mockup.
+   OJO: 1,47:1 de contraste sobre el fondo claro de la imagen, por debajo
+   del mínimo 3:1 de WCAG para texto grande.
+   Alternativas accesibles: var(--ink) 11,90:1 o var(--blue) 3,22:1. */
+.hero.hero-visual h1 .hl-y{color:var(--yellow);display:block}
+.hero.hero-visual p.sub{color:var(--ink-soft)}
+.hero.hero-visual .cta-big.primary{background:var(--blue);color:#fff}
+.hero.hero-visual .cta-big.primary small{color:#d8effa}
+/* Borde amarillo en el CTA secundario, como en el mockup */
+.hero.hero-visual .cta-big.secondary{background:#fff;border:1.5px solid var(--yellow);color:var(--ink)}
+.hero.hero-visual .cta-big.secondary small{color:var(--ink-soft)}
+.hero-visual .sub-mobile{display:none}
+
+@media(min-width:901px){
+  /* La imagen va EN FLUJO y define el alto de la sección: así se ve completa,
+     sin recorte. El texto se superpone en el aire liso de la izquierda.
+     (Con object-fit:cover y alto fijo, el render quedaba ampliado y cortado.) */
+  /* Imagen y texto comparten la MISMA celda de grid: así se superponen sin
+     posicionamiento absoluto, y el alto de la sección es el mayor de los dos.
+     Con .wrap en position:absolute, si el texto crecía más que la imagen
+     quedaba recortado por el overflow:hidden. */
+  .hero.hero-visual{padding:0;display:grid;min-height:0}
+  .hero-visual .hero-media{grid-area:1/1;position:relative;inset:auto;width:100%}
+  .hero-visual .hero-media img{height:auto}
+  .hero-visual .wrap{
+    grid-area:1/1;
+    align-self:start;
+    width:100%;
+    /* Offset proporcional al alto del hero (que es 100vw/1,78 por la
+       proporción de la imagen): deja el texto siempre cerca del 14% de arriba,
+       en vez de centrado, que en pantallas grandes lo empujaba al 29%. */
+    padding-top:clamp(36px,8vw,170px);
+  }
+  .hero-visual .hero-grid{grid-template-columns:minmax(0,1fr);gap:0;width:100%}
+  /* app-core.css tiene .route-home .hero-copy{max-width:670px} y
+     .hero h1{max-width:780px}; hacen falta selectores más específicos. */
+  .hero.hero-visual .hero-copy{max-width:min(47%,650px);padding:0}
+  /* "Vendiste." solo en la primera línea, como en el mockup. Se resuelve con
+     display:block en vez de meter un <br> en el título: así no se toca el copy
+     y el salto no depende del ancho exacto de la fuente. */
+  .hero.hero-visual h1 .hl-y{display:block}
+  /* Más chico que el hero anterior: con el título gigante el salto de línea
+     partía "Vendiste. Ahora" y se comía la mitad de la imagen. */
+  /* Escala con el viewport en vez de topar a 44px: en pantallas grandes el
+     título quedaba chico frente a la imagen. */
+  .hero.hero-visual .hero-copy h1{max-width:100%;font-size:clamp(32px,3.5vw,60px);line-height:1.08}
+  .hero.hero-visual .hero-copy p.sub{font-size:clamp(16px,1.2vw,20px);line-height:1.6;margin:20px 0 30px;max-width:100%}
+  /* Los dos CTA en una sola línea dentro de la columna angosta: .cta-big trae
+     min-width:215px de home.css y entre los dos no entraban. */
+  .hero.hero-visual .cta-row{flex-wrap:nowrap;gap:10px}
+  .hero.hero-visual .cta-big{min-width:0;padding:14px 22px}
+  .hero.hero-visual .cta-big strong{font-size:clamp(15px,1.05vw,17px);white-space:nowrap}
+  .hero.hero-visual .cta-big small{font-size:clamp(11.5px,.82vw,13px)}
+  .hero.hero-visual .eyebrow{margin-bottom:14px;font-size:clamp(12px,.88vw,14px)}
+  /* Con la imagen completa, el aire liso de la izquierda ya da contraste:
+     alcanza un velo más suave. */
+  .hero-visual .hero-media::after{
+    background:linear-gradient(90deg,
+      rgba(238,243,248,.92) 0%,
+      rgba(238,243,248,.84) 30%,
+      rgba(238,243,248,.55) 44%,
+      rgba(238,243,248,.12) 58%,
+      rgba(238,243,248,0) 70%);
+  }
+}
+
+@media(max-width:900px){
+  /* Mismo esquema que en escritorio: la imagen va EN FLUJO —se ve completa,
+     sin recorte, y define el alto de la sección— y el texto se superpone
+     arriba, sobre el aire liso del render. Antes iba con object-fit:cover y
+     un padding-bottom fijo: el render quedaba ampliado y cortado. */
+  .hero.hero-visual{padding:0;display:grid;min-height:0}
+  .hero-visual .hero-media{grid-area:1/1;position:relative;inset:auto;width:100%}
+  .hero-visual .hero-media img{height:auto;object-fit:fill}
+  .hero-visual .wrap{
+    grid-area:1/1;
+    align-self:start;
+    width:100%;
+    padding-top:clamp(20px,5.5vw,44px);
+  }
+  .hero-visual .hero-grid{grid-template-columns:1fr;gap:0}
+  .hero.hero-visual .hero-copy{max-width:none}
+  /* app-core.css lo deja en 46,8px a 390px de ancho: más grande que la
+     referencia y llegaba casi al borde. */
+  .hero.hero-visual .hero-copy h1{font-size:clamp(28px,9.4vw,40px);line-height:1.1}
+  .hero.hero-visual .hero-copy p.sub{font-size:clamp(15px,4.1vw,17px);line-height:1.55;margin:14px 0 22px}
+  /* Velo más corto que antes: el párrafo termina cerca del 45%, así que a
+     partir de ahí se deja ver el edificio. */
+  .hero-visual .hero-media::after{
+    background:linear-gradient(180deg,
+      rgba(238,243,248,.97) 0%,
+      rgba(238,243,248,.93) 38%,
+      rgba(238,243,248,.5) 50%,
+      rgba(238,243,248,.12) 63%,
+      rgba(238,243,248,0) 76%);
+  }
+  /* Los dos CTA lado a lado, en columnas iguales. */
+  .hero.hero-visual .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+  .hero.hero-visual .cta-big{
+    min-width:0;
+    padding:11px 12px;
+    justify-content:center;
+    text-align:center;
+  }
+  .hero.hero-visual .cta-big strong{font-size:13px;line-height:1.25;white-space:normal}
+  .hero.hero-visual .cta-big small{font-size:10.5px;line-height:1.3}
+}
+
+@media(max-width:700px){
+  .hero-visual .sub-desktop{display:none}
+  .hero-visual .sub-mobile{display:block}
+}
