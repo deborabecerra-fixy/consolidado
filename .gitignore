@@ -5,6 +5,8 @@
 # para poder regenerar los WebP en otros tamaños si hace falta.
 img/header1-web.png
 img/header1-mobile.png
+img/mobile-index.png
+img/mobile-index-recorte-nuevo.png
 img/header1-web (2).png
 
 # Copia suelta del logo. El que usa el schema es assets/img/fixy-logo-512.png

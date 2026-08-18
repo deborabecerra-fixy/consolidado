@@ -853,7 +853,10 @@ a.hyp-svc:hover{text-decoration:underline}
     grid-area:1/1;
     align-self:start;
     width:100%;
-    padding-top:clamp(20px,5.5vw,44px);
+    /* El bloque de texto arranca más abajo: el render tiene aire de sobra
+       arriba, y bajarlo acerca el texto al edificio sin cambiar el alto del
+       hero ni tocar la imagen. */
+    padding-top:clamp(45px,15.5vw,72px)
   }
   .hero-visual .hero-grid{grid-template-columns:1fr;gap:0}
   .hero.hero-visual .hero-copy{max-width:none}
@@ -872,18 +875,49 @@ a.hyp-svc:hover{text-decoration:underline}
       rgba(238,243,248,0) 76%);
   }
   /* Los dos CTA lado a lado, en columnas iguales. */
-  .hero.hero-visual .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+  .hero.hero-visual .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;width:100%}
   .hero.hero-visual .cta-big{
     min-width:0;
-    padding:11px 12px;
+    padding:11px 8px;
     justify-content:center;
     text-align:center;
   }
-  .hero.hero-visual .cta-big strong{font-size:13px;line-height:1.25;white-space:normal}
-  .hero.hero-visual .cta-big small{font-size:10.5px;line-height:1.3}
+  /* Dos líneas por botón: etiqueta arriba, bajada abajo. La etiqueta más larga
+     ("Ver cómo lo resolvemos →") mide 167px a 13px en Poppins, y el ancho útil
+     de cada botón es ancho_de_pantalla/2 - 35px; el cuerpo se calcula para que
+     entre en una sola línea con ~3% de margen. A propósito SIN nowrap: si la
+     tipografía no llega a cargar y la de reemplazo es más ancha, la etiqueta
+     pasa a dos líneas en vez de desbordar el botón. */
+  .hero.hero-visual .cta-big strong{font-size:min(calc(3.78vw - 2.65px),13px);line-height:1.25;white-space:normal}
+  .hero.hero-visual .cta-big small{font-size:min(calc(3.05vw - 2.1px),11px);line-height:1.3}
 }
 
 @media(max-width:700px){
   .hero-visual .sub-desktop{display:none}
   .hero-visual .sub-mobile{display:block}
+}
+
+/* ── Hero en teléfonos: render vertical propio (img/mobile-index.png) ─────
+   El asset de teléfono es el render vertical que hizo Marketing, completo y
+   sin recortar: ya trae arriba el aire con su grilla y sus pines, así que el
+   texto se apoya sobre el fondo del propio render y no hace falta velo.
+   Tope 700px: el mismo del <source> del asset de teléfono en index.html. */
+@media(max-width:700px){
+  .hero-visual .hero-media img{
+    /* Proporción del render (852x1846): define el alto antes de que la imagen
+       cargue, así no hay salto de layout (CLS). */
+    aspect-ratio:852/1846;
+    /* Tope de alto para pantallas anchas, donde la proporción del render daría
+       un hero desmedido: la escena desde el techo del edificio mide 1,28 x el
+       ancho y arriba alcanzan 360px de aire para el bloque de texto. Hasta
+       ~405px de ancho (o sea todos los teléfonos comunes) no recorta nada.
+       object-fit:cover anclado abajo: si algo se recorta es aire de arriba,
+       nunca la escena. */
+    max-height:calc(100vw * 1.2793 + 360px);
+    object-fit:cover;
+    object-position:50% 100%;
+  }
+  /* Sin velo: aclarar la mitad de arriba partía el hero en dos zonas de
+     distinto tono. El render ya da el fondo liso donde va el texto. */
+  .hero-visual .hero-media::after{display:none}
 }
