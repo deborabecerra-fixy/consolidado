@@ -75,7 +75,8 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Puedo usar Flex y Full al mismo tiempo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es habitual usar Full para el volumen de Mercado Libre y una operación propia con Flex para otros canales o para la entrega local premium."}}, {"@type": "Question", "name": "¿Flex es un servicio de Fixy?", "acceptedAnswer": {"@type": "Answer", "text": "No. Flex es una modalidad de Mercado Libre. Lo que hace Fixy es organizar tus entregas Flex para que escalen sin fricción."}}, {"@type": "Question", "name": "¿Necesito depósito propio para hacer Flex?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. Con FixyFull tu stock y preparación quedan resueltos, y desde ahí se organizan las entregas Flex."}}]}
 </script>
 <link rel="stylesheet" href="../../css/app-core.css?v=20260805-1">
-<script src="../../js/navigation.js?v=20260810-1" defer></script>
+<script src="../../js/navigation.js?v=20260818-1" defer></script>
+<script src="../../js/scroll-depth.js?v=2" defer></script>
 <script src="../../js/app-shell.js?v=13" defer></script>
 <link rel="stylesheet" href="../../css/footer-shared.css?v=20260728-5">
 </head>
@@ -231,8 +232,8 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 </footer>
 
 <script>
-  function track(ev,val){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',page:'art-flex-vs-full'}); if(window.gtag) gtag('event', ev, {value: val||'', fixy_page:'art-flex-vs-full'}); if(window.fbq){ if(ev.indexOf('whatsapp')>-1) fbq('track','Contact',{content_name:'art-flex-vs-full'}); else fbq('trackCustom', ev, {value: val||'', fixy_page:'art-flex-vs-full'}); } }
-  document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev); });
+  function track(ev,val,ctaLocation){ if(window.dataLayer) window.dataLayer.push({event:ev,value:val||'',cta_location:ctaLocation||'',page:'art-flex-vs-full'}); if(window.gtag) gtag('event', ev, {value: val||'', cta_location:ctaLocation||'', fixy_page:'art-flex-vs-full'}); if(window.fbq){ if(ev.indexOf('whatsapp')>-1) fbq('track','Contact',{content_name:'art-flex-vs-full'}); else fbq('trackCustom', ev, {value: val||'', fixy_page:'art-flex-vs-full'}); } }
+  document.addEventListener('click',e=>{ const t=e.target.closest('[data-ev]'); if(t) track(t.dataset.ev, t.dataset.evval||'', t.dataset.cta||''); });
   const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
   if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded',o); });
     nl.querySelectorAll('a:not(.dd-toggle)').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));

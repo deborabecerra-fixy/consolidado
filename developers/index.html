@@ -102,7 +102,8 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://fixy.com.ar/assets/img/og-fixy.png">
 <link rel="stylesheet" href="../css/app-core.css?v=20260805-1">
-<script src="../js/navigation.js?v=20260810-1" defer></script>
+<script src="../js/navigation.js?v=20260818-1" defer></script>
+<script src="../js/scroll-depth.js?v=2" defer></script>
 <script src="../js/app-shell.js?v=13" defer></script>
 <link rel="stylesheet" href="../css/footer-shared.css?v=20260728-5">
 </head>
@@ -468,12 +469,12 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
   var SERVICE = 'developers';
   function track(ev, meta){
     meta = meta || {};
-    var params = { service: SERVICE, cta_location: meta.cta_location || '', fixy_page: SERVICE };
+    var params = { service: SERVICE, cta_location: meta.cta_location || '', value: meta.value || '', fixy_page: SERVICE };
     if (window.dataLayer) window.dataLayer.push(Object.assign({ event: ev }, params));
     if (window.gtag) gtag('event', ev, params);
     if (window.fbq) { ev.indexOf('whatsapp') > -1 ? fbq('track','Contact',{ content_name: SERVICE }) : fbq('trackCustom', ev, params); }
   }
-  document.addEventListener('click', function(e){ var t = e.target.closest('[data-ev]'); if (t) track(t.dataset.ev, { cta_location: t.dataset.cta || '' }); });
+  document.addEventListener('click', function(e){ var t = e.target.closest('[data-ev]'); if (t) track(t.dataset.ev, { cta_location: t.dataset.cta || '', value: t.dataset.evval || '' }); });
   const nt=document.querySelector('.nav-toggle'), nl=document.querySelector('.nav-links');
   if(nt){ nt.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); nt.setAttribute('aria-expanded',o); });
     nl.querySelectorAll('a:not(.dd-toggle)').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));

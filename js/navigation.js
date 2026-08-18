@@ -53,7 +53,7 @@
 
   const serviceList = services.map(([key, servicePath, name, description, iconName]) => `
     <li>
-      <a class="fixy-service-link" href="${root}${servicePath}/"${pageKey === key ? ' aria-current="page"' : ""}>
+      <a class="fixy-service-link" href="${root}${servicePath}/" data-ev="nav_click" data-evval="${key}" data-cta="menu_soluciones"${pageKey === key ? ' aria-current="page"' : ""}>
         ${icon(iconName, "fixy-service-icon")}
         <span class="fixy-service-copy"><strong>${name}</strong><small>${description}</small></span>
         ${icon("arrow", "fixy-service-icon fixy-service-arrow")}
@@ -64,7 +64,8 @@
     const extra = accessibleLabel !== label
       ? ` aria-label="${accessibleLabel}" title="${accessibleLabel}"`
       : "";
-    return `<a class="fixy-navigation-item" href="${href}" data-fixy-nav="${key}"${extra}>
+    return `<a class="fixy-navigation-item" href="${href}" data-fixy-nav="${key}"
+      data-ev="nav_click" data-evval="${key}" data-cta="dock_mobile"${extra}>
       ${icon(iconName)}<span>${label}</span>
     </a>`;
   };
@@ -79,6 +80,18 @@
   if (footerWhatsapp) { footerWhatsapp.href = whatsappUrl; footerWhatsapp.setAttribute('data-ev','svc_whatsapp'); footerWhatsapp.setAttribute('data-cta','footer'); }
   const stickyWhatsapp = document.querySelector(".sticky-cta .btn-wa");
   if (stickyWhatsapp) stickyWhatsapp.href = whatsappUrl;
+
+  // La navegación de escritorio está escrita a mano en el HTML de cada página,
+  // así que no se le puede poner data-ev desde acá al generarla. Se la decora
+  // en runtime — mismo criterio que el WhatsApp del footer, unas líneas arriba.
+  // Sin esto no había forma de saber cómo navega la gente el sitio: ni el
+  // header de escritorio ni el dock mobile registraban un solo clic.
+  document.querySelectorAll("header.nav a[data-nav]").forEach((link) => {
+    if (link.dataset.ev) return;
+    link.dataset.ev = "nav_click";
+    link.dataset.evval = link.dataset.nav;
+    link.dataset.cta = "header_desktop";
+  });
 
   const servicesCurrent = isSolutions ? ' aria-current="page"' : "";
   const mobileMarkup = `<div class="fixy-mobile-navigation">
@@ -96,7 +109,8 @@
       ${mobileLink("tecnologia", `${root}tecnologia/`, "Tecnología", "Tecnología", "technology")}
       <button class="fixy-navigation-item fixy-navigation-services${isSolutions ? " is-current" : ""}"
         id="fixy-mobile-services-trigger" type="button" aria-expanded="false"
-        aria-controls="fixy-services-sheet" data-fixy-nav="soluciones"${servicesCurrent}>
+        aria-controls="fixy-services-sheet" data-fixy-nav="soluciones"
+        data-ev="nav_click" data-evval="soluciones" data-cta="dock_mobile"${servicesCurrent}>
         <span class="fixy-navigation-services__orb">${icon("network")}</span>
         <span class="fixy-navigation-label">Soluciones</span>
       </button>
