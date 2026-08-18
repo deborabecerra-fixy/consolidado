@@ -1743,7 +1743,12 @@ body:not(.route-home)>section.convert .trust{
     position:fixed!important;z-index:1020;right:max(10px,env(safe-area-inset-right));
     bottom:max(8px,env(safe-area-inset-bottom));left:max(10px,env(safe-area-inset-left));
     min-height:var(--fixy-dock-height);padding:7px 7px calc(7px + env(safe-area-inset-bottom));
-    display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));align-items:center;
+    /* Columnas automáticas, una por item: el dock tenía repeat(5,...) fijo y al
+       pasar a 4 destinos quedaba una columna vacía a la derecha. Así se reparte
+       solo, sea cual sea la cantidad de accesos.
+       OJO: app-core.css es un BUNDLE generado (app-mobile + app-professional-v9 +
+       navigation). El mismo cambio está en css/navigation.css, que es el fuente. */
+    display:grid!important;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:center;
     border:1px solid var(--fixy-nav-border);border-radius:24px;background:rgba(255,255,255,.97);
     box-shadow:var(--fixy-nav-shadow);visibility:visible!important;opacity:1;
     transform:none;transition:opacity .18s,transform .22s
