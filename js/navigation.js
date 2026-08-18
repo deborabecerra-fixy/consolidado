@@ -100,7 +100,7 @@
         <img src="${root}img/Logo-Fixy.webp" alt="" width="606" height="188">
       </a>
       <div class="fixy-topbar-actions">
-        <a class="fixy-whatsapp-button fixy-track-button" href="https://fixy.epresis.com/seguimiento"
+        <a class="fixy-whatsapp-button fixy-track-button" href="https://argentina.fixylogistica.com/seguimiento"
           data-ev="track_shipment" data-evval="seguimiento" data-cta="topbar_mobile" target="_blank" rel="noopener noreferrer"
           aria-label="Seguí tu envío" title="Seguí tu envío">
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
