@@ -1739,6 +1739,14 @@ body:not(.route-home)>section.convert .trust{
   .fixy-whatsapp-button:hover{background:#20bd5a;box-shadow:0 8px 20px rgba(37,211,102,.3)}
   .fixy-whatsapp-button:active{transform:scale(.97)}
   .fixy-whatsapp-button .fixy-utility-icon{width:25px;height:25px;stroke-width:1.95}
+  /* "Seguí tu envío" en la barra superior de mobile, al lado de WhatsApp.
+     No va al dock de abajo: ese quedó con 4 destinos para el camino a la venta
+     y seguimiento es soporte, no venta. Reutiliza la geometría del botón de
+     WhatsApp y sólo cambia el color. */
+  .fixy-topbar-actions{display:flex;align-items:center;gap:10px}
+  .fixy-track-button{background:#fff;border-color:var(--fixy-nav-border);color:var(--fixy-blue,#008FC3);box-shadow:0 4px 12px rgba(0,50,70,.10)}
+  .fixy-track-button:hover{background:#eaf6fb;box-shadow:0 6px 16px rgba(0,50,70,.14)}
+  .fixy-track-button svg{width:23px;height:23px;display:block}
   .fixy-mobile-bottom-navigation{
     position:fixed!important;z-index:1020;right:max(10px,env(safe-area-inset-right));
     bottom:max(8px,env(safe-area-inset-bottom));left:max(10px,env(safe-area-inset-left));

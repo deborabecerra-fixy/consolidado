@@ -65,6 +65,29 @@ header.nav.scrolled{box-shadow:0 6px 22px rgba(0,50,70,.08)}
 .nav-links>a,.dd-toggle{display:inline-flex;align-items:center;gap:5px;color:var(--ink-soft);text-decoration:none;padding:8px 12px;border:0;border-radius:10px;background:transparent;font:inherit;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}
 .nav-links>a:hover,.dd-toggle:hover,.dd:hover .dd-toggle,.dd:focus-within .dd-toggle{background:var(--blue-100);color:var(--blue)}
 .nav-links>a.active,.dd-toggle.active{color:#006f96;background:var(--blue-100)}
+/* "Seguí tu envío" en el header de escritorio. Es una TAREA, no una sección
+   del sitio, así que va con los botones de utilidad (al lado de WhatsApp) y no
+   entre los links de navegación. Chip celeste de marca: presente sin competir
+   con el verde de WhatsApp ni con el CTA del hero. Lleva al seguimiento de
+   Epresis, que es un sitio aparte, así que abre en otra pestaña. */
+.nav .btn-track{
+  --track-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 8.5v7a1.5 1.5 0 0 1-.8 1.33l-7 3.72a1.5 1.5 0 0 1-1.4 0l-7-3.72A1.5 1.5 0 0 1 3 15.5v-7a1.5 1.5 0 0 1 .8-1.33l7-3.72a1.5 1.5 0 0 1 1.4 0l7 3.72A1.5 1.5 0 0 1 21 8.5z'/%3E%3Cpath d='M3.3 7.6 12 12l8.7-4.4M12 12v8.7'/%3E%3C/g%3E%3C/svg%3E");
+  display:inline-flex;align-items:center;gap:8px;
+  min-height:0;padding:9px 16px;border-radius:12px;
+  background:var(--blue-100);color:#006f96;
+  font-size:14px;font-weight:700;text-decoration:none;
+  margin-left:14px;flex:0 0 auto;
+  transition:background .15s,color .15s;
+}
+.nav .btn-track::before{
+  content:"";width:19px;height:19px;flex:0 0 auto;background-color:currentColor;
+  -webkit-mask-image:var(--track-icon);mask-image:var(--track-icon);
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+  -webkit-mask-size:contain;mask-size:contain;
+}
+.nav .btn-track:hover{background:#cfeaf6;color:var(--blue-d)}
+
 /* WhatsApp del header de escritorio: pastilla con el ícono dentro de un
    círculo blanco, según el prototipo de Marketing. Sólo afecta al del header;
    los otros .btn-wa (contacto, footer, barra fija de mobile) quedan igual. */
@@ -251,7 +274,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 @media(max-width:860px){
   .nav-toggle{display:block;margin-left:auto}
-  .nav .btn-wa{display:none}/* en mobile el WhatsApp vive en la barra fija inferior; evitamos duplicarlo */
+  .nav .btn-wa,.nav .btn-track{display:none}/* en mobile ambos viven en la barra superior de la navegación mobile; evitamos duplicarlos */
   .nav-links{position:absolute;top:70px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 16px;display:none;box-shadow:var(--shadow);max-height:calc(100vh - 70px);overflow-y:auto}
   .nav-links.open{display:flex}
   .nav-links>a,.dd-toggle{padding:14px 8px;border-bottom:1px solid var(--line);width:100%;border-radius:0}

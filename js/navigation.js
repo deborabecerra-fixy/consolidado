@@ -99,10 +99,20 @@
       <a class="fixy-site-logo" href="${homeUrl}" aria-label="Fixy Logística, inicio">
         <img src="${root}img/Logo-Fixy.webp" alt="" width="606" height="188">
       </a>
-      <a class="fixy-whatsapp-button" href="${whatsappUrl}" data-ev="svc_whatsapp" data-cta="floating" target="_blank" rel="noopener noreferrer"
-        aria-label="Hablar con Fixy por WhatsApp" title="Hablar con Fixy por WhatsApp">
-        <img class="fixy-utility-icon" src="${root}img/whatsapp-white.webp" alt="" width="25" height="25">
-      </a>
+      <div class="fixy-topbar-actions">
+        <a class="fixy-whatsapp-button fixy-track-button" href="https://fixy.epresis.com/seguimiento"
+          data-ev="track_shipment" data-evval="seguimiento" data-cta="topbar_mobile" target="_blank" rel="noopener noreferrer"
+          aria-label="Seguí tu envío" title="Seguí tu envío">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 8.5v7a1.5 1.5 0 0 1-.8 1.33l-7 3.72a1.5 1.5 0 0 1-1.4 0l-7-3.72A1.5 1.5 0 0 1 3 15.5v-7a1.5 1.5 0 0 1 .8-1.33l7-3.72a1.5 1.5 0 0 1 1.4 0l7 3.72A1.5 1.5 0 0 1 21 8.5z"/>
+            <path d="M3.3 7.6 12 12l8.7-4.4M12 12v8.7"/>
+          </svg>
+        </a>
+        <a class="fixy-whatsapp-button" href="${whatsappUrl}" data-ev="svc_whatsapp" data-cta="floating" target="_blank" rel="noopener noreferrer"
+          aria-label="Hablar con Fixy por WhatsApp" title="Hablar con Fixy por WhatsApp">
+          <img class="fixy-utility-icon" src="${root}img/whatsapp-white.webp" alt="" width="25" height="25">
+        </a>
+      </div>
     </header>
     <!-- El dock mobile tiene 4 destinos y no 5: "Recursos" se quitó el 18/8/2026
          para priorizar el camino a la venta en el celular. La página sigue
