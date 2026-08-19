@@ -107,6 +107,7 @@
             <path d="M21 8.5v7a1.5 1.5 0 0 1-.8 1.33l-7 3.72a1.5 1.5 0 0 1-1.4 0l-7-3.72A1.5 1.5 0 0 1 3 15.5v-7a1.5 1.5 0 0 1 .8-1.33l7-3.72a1.5 1.5 0 0 1 1.4 0l7 3.72A1.5 1.5 0 0 1 21 8.5z"/>
             <path d="M3.3 7.6 12 12l8.7-4.4M12 12v8.7"/>
           </svg>
+          <span class="fixy-track-label">Seguí tu envío</span>
         </a>
         <a class="fixy-whatsapp-button" href="${whatsappUrl}" data-ev="svc_whatsapp" data-cta="floating" target="_blank" rel="noopener noreferrer"
           aria-label="Hablar con Fixy por WhatsApp" title="Hablar con Fixy por WhatsApp">

@@ -95,9 +95,23 @@
      y seguimiento es soporte, no venta. Reutiliza la geometría del botón de
      WhatsApp y sólo cambia el color. */
   .fixy-topbar-actions{display:flex;align-items:center;gap:10px}
-  .fixy-track-button{background:#fff;border-color:var(--fixy-nav-border);color:var(--fixy-blue,#008FC3);box-shadow:0 4px 12px rgba(0,50,70,.10)}
-  .fixy-track-button:hover{background:#eaf6fb;box-shadow:0 6px 16px rgba(0,50,70,.14)}
-  .fixy-track-button svg{width:23px;height:23px;display:block}
+  /* Pastilla con etiqueta, no un ícono solo: una caja sola no dice qué hace.
+     Mismo lenguaje que el chip de escritorio (celeste de marca, esquinas de
+     12px) y misma leyenda, "Seguí tu envío", para no inventar copy nuevo. */
+  .fixy-track-button{
+    width:auto;height:48px;padding:0 12px 0 9px;border-radius:12px;
+    display:inline-flex;align-items:center;gap:7px;
+    background:var(--blue-100);border-color:transparent;color:#006f96;
+    box-shadow:none;
+  }
+  .fixy-track-button:hover{background:#cfeaf6;box-shadow:none}
+  .fixy-track-button svg{width:21px;height:21px;display:block;flex:0 0 auto}
+  .fixy-track-label{font-size:11.5px;font-weight:700;line-height:1.15;white-space:nowrap}
+  /* Abajo de 375px la etiqueta no entra sin apretar el logo: vuelve al círculo. */
+  @media(max-width:374px){
+    .fixy-track-button{width:48px;padding:0;border-radius:50%;justify-content:center;background:#fff;border-color:var(--fixy-nav-border);box-shadow:0 4px 12px rgba(0,50,70,.10)}
+    .fixy-track-label{display:none}
+  }
   .fixy-mobile-bottom-navigation{
     position:fixed!important;z-index:1020;right:max(10px,env(safe-area-inset-right));
     bottom:max(8px,env(safe-area-inset-bottom));left:max(10px,env(safe-area-inset-left));
