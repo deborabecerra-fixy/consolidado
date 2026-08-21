@@ -196,7 +196,6 @@ document.addEventListener('click', e => {
   }
 })();
 
-track('page_view');
 
 /* ---------- Ruteo desde escenarios y banda "¿Te suena?" hacia el constructor ---------- */
 function addChip(group, val) {
