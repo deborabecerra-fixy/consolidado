@@ -18,18 +18,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'G-BZMFYZZVYX');
 </script>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code - carga diferida -->
+<!-- El stub de fbq se define de inmediato y encola init, PageView y todos los
+     eventos custom de la pagina. fbevents.js (402 KB) se baja recien despues
+     del evento load, o en cuanto la persona interactua, lo que pase primero.
+     Al cargar, fbevents.js drena fbq.queue y dispara todo en orden.
+     Ver claude/performance-mobile-operar-en-argentina.md -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+n.queue=[]}(window, document,'script');
 fbq('init', '925439470114576');
 fbq('track', 'PageView');
+(function(){
+  var pedido = false;
+  var eventos = ['pointerdown','touchstart','keydown','scroll','mousemove'];
+  function cargar(){
+    if (pedido) return;
+    pedido = true;
+    eventos.forEach(function(e){ window.removeEventListener(e, cargar); });
+    var t = document.createElement('script');
+    t.async = true;
+    t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+    document.head.appendChild(t);
+  }
+  eventos.forEach(function(e){ window.addEventListener(e, cargar, {passive:true}); });
+  function alTerminar(){ setTimeout(cargar, 1200); }
+  if (document.readyState === 'complete') alTerminar();
+  else window.addEventListener('load', alTerminar);
+})();
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
@@ -44,7 +63,6 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 <link rel="canonical" href="https://fixy.com.ar/operar-en-argentina/">
 <meta property="og:title" content="Vender en Argentina — Logística local para tu marca | Fixy"><meta property="og:description" content="Vendé en Argentina con una operación logística local: fulfillment, entrega, cobro contraentrega y devoluciones, sin construir todo desde cero."><meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta property="og:url" content="https://fixy.com.ar/operar-en-argentina/"><meta name="theme-color" content="#008FC3">
 <link rel="icon" type="image/png" href="../img/isologo-azul.png">
-<link rel="preconnect" href="https://connect.facebook.net">
 <link rel="preconnect" href="https://forms.kommo.com">
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/DMSans-Regular.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Poppins-Bold.woff2" crossorigin>
