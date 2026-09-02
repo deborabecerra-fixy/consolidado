@@ -1,0 +1,19 @@
+/* Tipografías autoalojadas — Poppins (títulos) y DM Sans (cuerpo).
+   Subset latino + latin-ext, WOFF2. Métricas idénticas a los originales de
+   Google Fonts (upm 1000, asc/desc sin cambios): no hay corrimiento de layout.
+   Reemplaza el <link> a fonts.googleapis.com. Ver assets/fonts/README.txt. */
+
+/* ---------- DM Sans — var(--font-body) ---------- */
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/DMSans-Regular.woff2") format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:500;font-display:swap;src:url("../assets/fonts/DMSans-Medium.woff2") format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:600;font-display:swap;src:url("../assets/fonts/DMSans-SemiBold.woff2") format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/DMSans-Bold.woff2") format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:800;font-display:swap;src:url("../assets/fonts/DMSans-ExtraBold.woff2") format("woff2")}
+
+/* ---------- Poppins — var(--font-head) ---------- */
+@font-face{font-family:"Poppins";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/Poppins-Regular.woff2") format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:500;font-display:swap;src:url("../assets/fonts/Poppins-Medium.woff2") format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:600;font-display:swap;src:url("../assets/fonts/Poppins-SemiBold.woff2") format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/Poppins-Bold.woff2") format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:800;font-display:swap;src:url("../assets/fonts/Poppins-ExtraBold.woff2") format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:900;font-display:swap;src:url("../assets/fonts/Poppins-Black.woff2") format("woff2")}
