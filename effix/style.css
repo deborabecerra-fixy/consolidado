@@ -80,3 +80,13 @@ h1,h2,h3,p{margin-top:0}h1,h2{letter-spacing:-.055em;line-height:.96}h1{font-siz
 .contact-copy>p:not(.eyebrow){color:rgba(255,255,255,.78)}
 
 @media(max-width:980px){.main-nav{background:#007eae;box-shadow:0 30px 70px rgba(3,53,78,.38)}}
+
+/* Contacto en el pie — reemplaza el bloque directo de la sección Contacto,
+   para que junto al agendador no compita otro camino de contacto. */
+.footer-contact{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:14px 40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.09)}
+.footer-contact a{display:grid;gap:4px}
+.footer-contact small{font-size:.52rem;letter-spacing:.16em;color:rgba(255,255,255,.35)}
+.footer-contact strong{font-size:.82rem;color:#fff}
+.footer-contact a:hover strong{color:var(--yellow)}
+.footer-grid .footer-contact + small{border-top:0;padding-top:14px}
+@media(max-width:980px){.footer-contact{order:4}.footer-grid>small{order:5}}
