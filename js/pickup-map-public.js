@@ -25,7 +25,14 @@
 
   var map = L.map(mapEl, { scrollWheelZoom: false, minZoom: 7 }).setView([-34.62, -58.6], 9);
 
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  // CARTO exige API key para los basemaps raster desde 2026. Sin key el mapa
+  // funciona igual pero sale con la marca de agua "API KEY REQUIRED".
+  // Pedila gratis en https://carto.com/basemaps/apikey (5M tiles/mes) y pegala aca:
+  var CARTO_KEY = "cb1_341m_1_99338cb3667e22f772ec5b3d";
+  var cartoTiles = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+                 + (CARTO_KEY ? "?key=" + CARTO_KEY : "");
+
+  L.tileLayer(cartoTiles, {
     maxZoom: 19,
     subdomains: "abcd",
     attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
