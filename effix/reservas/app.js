@@ -265,6 +265,8 @@ function render() {
 }
 
 function selectModality(modality) {
+  // Micro-conversion: arranco el flujo de agendamiento. Sirve para medir abandono por paso.
+  if (window.fixyTrack) window.fixyTrack('booking_start', { cta_location: 'agendador', value: modality });
   state.modality = modality;
   state.service = modality === 'in_person' ? 'effix' : 'evaluate';
   state.date = modality === 'in_person' ? inPersonDateKeys[0] : (virtualDateKeys()[0] ?? '');
@@ -376,6 +378,9 @@ async function submitBooking(event) {
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || 'No pudimos confirmar la reunión.');
     state.result = data;
+    // Conversion principal de esta landing. Meta recibe el evento estandar Schedule.
+    if (window.fixyTrack) window.fixyTrack('booking_confirmed', { cta_location: 'agendador', value: state.modality });
+    if (window.fbq) fbq('track', 'Schedule', { content_name: selectedService().id, fixy_page: 'effix', modality: state.modality });
   } catch (error) {
     state.error = error.message || 'No pudimos confirmar la reunión.';
   } finally {

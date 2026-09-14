@@ -166,6 +166,33 @@
     }
   });
 
+  // ---- Medicion (Meta Pixel + dataLayer) ----
+  // Mismo contrato que el resto del sitio: parametros service / cta_location / value / fixy_page.
+  // Taxonomia completa en claude/eventos-de-medicion.md
+  const SERVICE = 'effix';
+  window.fixyTrack = function (ev, meta) {
+    meta = meta || {};
+    const params = {
+      service: SERVICE,
+      cta_location: meta.cta_location || '',
+      value: meta.value || '',
+      fixy_page: SERVICE
+    };
+    if (window.dataLayer) window.dataLayer.push(Object.assign({ event: ev }, params));
+    if (window.gtag) window.gtag('event', ev, params);
+    if (window.fbq) {
+      if (ev.indexOf('whatsapp') > -1 || ev.indexOf('email') > -1) {
+        fbq('track', 'Contact', { content_name: SERVICE, fixy_page: SERVICE, cta_location: params.cta_location });
+      } else {
+        fbq('trackCustom', ev, params);
+      }
+    }
+  };
+  document.addEventListener('click', event => {
+    const target = event.target.closest('[data-ev]');
+    if (target) window.fixyTrack(target.dataset.ev, { cta_location: target.dataset.cta || '', value: target.dataset.evval || '' });
+  });
+
   $('[data-year]').textContent = new Date().getFullYear();
 
   if (!reducedMotion && window.matchMedia('(min-width: 900px)').matches) {

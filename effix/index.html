@@ -2,6 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <!-- Meta Pixel Code - carga diferida -->
+  <!-- Mismo pixel que el resto del sitio (925439470114576). El stub de fbq se define
+       de inmediato y encola init, PageView y todos los eventos custom de la pagina.
+       fbevents.js (402 KB) se baja recien despues del evento load, o en cuanto la
+       persona interactua, lo que pase primero. Al cargar, drena fbq.queue en orden.
+       Mismo patron que /operar-en-argentina/ — ver claude/performance-mobile-operar-en-argentina.md -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[]}(window, document,'script');
+  fbq('init', '925439470114576');
+  fbq('track', 'PageView', { fixy_page: 'effix' });
+  (function(){
+    var pedido = false;
+    var eventos = ['pointerdown','touchstart','keydown','scroll','mousemove'];
+    function cargar(){
+      if (pedido) return;
+      pedido = true;
+      eventos.forEach(function(e){ window.removeEventListener(e, cargar); });
+      var t = document.createElement('script');
+      t.async = true;
+      t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      document.head.appendChild(t);
+    }
+    eventos.forEach(function(e){ window.addEventListener(e, cargar, {passive:true}); });
+    function alTerminar(){ setTimeout(cargar, 1200); }
+    if (document.readyState === 'complete') alTerminar();
+    else window.addEventListener('load', alTerminar);
+  })();
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Vendé en Argentina | Operación logística local con Fixy</title>
   <meta name="description" content="Convertí tu marca en una operación local. Fixy conecta fulfillment, entregas, seguimiento, cobros contra entrega y devoluciones en Argentina.">
@@ -31,7 +68,7 @@
       <a class="brand" href="#inicio" aria-label="Fixy, volver al inicio"><img src="media/images/fixy-logo.webp" width="162" height="50" alt="Fixy Logística"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">Abrir menú</span><span></span><span></span></button>
       <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a href="#como-funciona">Cómo funciona</a><a href="#servicios">Servicios</a><a href="#argentina">Argentina</a><a href="#contacto">Contacto</a></nav>
-      <a class="button button--small nav-cta" href="#contacto">Evaluá tu operación <span aria-hidden="true">↗</span></a>
+      <a class="button button--small nav-cta" href="#contacto" data-ev="svc_cta_primary" data-cta="header_desktop">Evaluá tu operación <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -44,7 +81,7 @@
           <h1 id="hero-title">¿Querés vender<br>en <em>Argentina?</em></h1>
           <p class="hero-lead">Convertí tu marca en una operación local.</p>
           <p class="hero-detail">Fixy resuelve la logística necesaria para operar dentro del mercado argentino.</p>
-          <div class="hero-actions"><a class="button button--yellow" href="#contacto">Evaluá tu operación <span aria-hidden="true">↗</span></a><a class="text-link text-link--light" href="#como-funciona">Descubrí cómo funciona <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-actions"><a class="button button--yellow" href="#contacto" data-ev="cta_hero_primary" data-cta="hero">Evaluá tu operación <span aria-hidden="true">↗</span></a><a class="text-link text-link--light" href="#como-funciona" data-ev="svc_scroll_cta" data-cta="hero">Descubrí cómo funciona <span aria-hidden="true">↓</span></a></div>
         </div>
         <div class="hero-stage" aria-label="Recorrido de una marca desde Latinoamérica hacia una operación local en Argentina">
           <div class="stage-label stage-label--origin"><small>01 · ORIGEN</small><strong>Tu marca</strong><span>LATAM</span></div>
@@ -109,7 +146,7 @@
         <div class="operation-builder reveal" data-builder>
           <div class="builder-source"><small>ORIGEN</small><strong>Tu marca / ecommerce</strong><span class="live-dot"></span></div><div class="builder-line" aria-hidden="true"></div>
           <button class="builder-module is-active" type="button" aria-pressed="true"><span>01</span><b>FixyFull</b><small>Stock + preparación</small><i></i></button><button class="builder-module is-active" type="button" aria-pressed="true"><span>02</span><b>Same / Next Day</b><small>Distribución AMBA</small><i></i></button><button class="builder-module is-active" type="button" aria-pressed="true"><span>03</span><b>Interior</b><small>Cobertura nacional</small><i></i></button><button class="builder-module" type="button" aria-pressed="false"><span>04</span><b>FixyPoints</b><small>Pick Up / Drop Off</small><i></i></button><button class="builder-module" type="button" aria-pressed="false"><span>05</span><b>Logística inverda</b><small>Cambios y devoluciones</small><i></i></button>
-          <div class="builder-result"><small>HIPÓTESIS ACTIVA</small><strong><span data-active-count>3</span> módulos conectados</strong><a href="#contacto">Evaluar esta operación ↗</a></div>
+          <div class="builder-result"><small>HIPÓTESIS ACTIVA</small><strong><span data-active-count>3</span> módulos conectados</strong><a href="#contacto" data-ev="constructor_build" data-cta="acordeon">Evaluar esta operación ↗</a></div>
         </div>
       </div>
     </section>
@@ -134,7 +171,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="section-shell footer-grid"><a class="brand brand--footer" href="#inicio"><img src="media/images/fixy-logo.webp" width="150" height="47" alt="Fixy Logística"></a><p>Infraestructura operativa local para ecommerce en Argentina.</p><nav aria-label="Enlaces del pie"><a href="#como-funciona">Cómo funciona</a><a href="#servicios">Servicios</a><a href="#argentina">Argentina</a><a href="#contacto">Contacto</a></nav><div class="footer-contact"><a href="https://wa.me/5491125426386" target="_blank" rel="noopener"><small>WHATSAPP</small><strong>+54 9 11 2542-6386</strong></a><a href="mailto:ventas@fixy.com.ar"><small>EMAIL</small><strong>ventas@fixy.com.ar</strong></a></div><small>© <span data-year></span> Fixy. Buenos Aires, Argentina.</small></div></footer>
+  <footer class="site-footer"><div class="section-shell footer-grid"><a class="brand brand--footer" href="#inicio"><img src="media/images/fixy-logo.webp" width="150" height="47" alt="Fixy Logística"></a><p>Infraestructura operativa local para ecommerce en Argentina.</p><nav aria-label="Enlaces del pie"><a href="#como-funciona">Cómo funciona</a><a href="#servicios">Servicios</a><a href="#argentina">Argentina</a><a href="#contacto">Contacto</a></nav><div class="footer-contact"><a href="https://wa.me/5491125426386" target="_blank" rel="noopener" data-ev="svc_whatsapp" data-cta="footer"><small>WHATSAPP</small><strong>+54 9 11 2542-6386</strong></a><a href="mailto:ventas@fixy.com.ar" data-ev="svc_email" data-cta="footer"><small>EMAIL</small><strong>ventas@fixy.com.ar</strong></a></div><small>© <span data-year></span> Fixy. Buenos Aires, Argentina.</small></div></footer>
   <script src="script.js" defer></script>
   <script src="reservas/config.js"></script>
   <script src="reservas/app.js"></script>
