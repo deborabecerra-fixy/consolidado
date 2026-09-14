@@ -14,6 +14,11 @@
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
   n.queue=[]}(window, document,'script');
+  // Apaga la configuracion automatica del pixel SOLO en esta landing: evita el evento
+  // SubscribedButtonClick duplicado en cada CTA y el PageView extra al cambiar el hash.
+  // Sin costo: "Coincidencias automaticas del sitio web" ya esta desactivado a nivel de
+  // pixel (verificado 14/9/2026). No afecta a las otras paginas del sitio.
+  fbq('set', 'autoConfig', false, '925439470114576');
   fbq('init', '925439470114576');
   fbq('track', 'PageView', { fixy_page: 'effix' });
   (function(){
@@ -146,7 +151,7 @@
         <div class="operation-builder reveal" data-builder>
           <div class="builder-source"><small>ORIGEN</small><strong>Tu marca / ecommerce</strong><span class="live-dot"></span></div><div class="builder-line" aria-hidden="true"></div>
           <button class="builder-module is-active" type="button" aria-pressed="true"><span>01</span><b>FixyFull</b><small>Stock + preparación</small><i></i></button><button class="builder-module is-active" type="button" aria-pressed="true"><span>02</span><b>Same / Next Day</b><small>Distribución AMBA</small><i></i></button><button class="builder-module is-active" type="button" aria-pressed="true"><span>03</span><b>Interior</b><small>Cobertura nacional</small><i></i></button><button class="builder-module" type="button" aria-pressed="false"><span>04</span><b>FixyPoints</b><small>Pick Up / Drop Off</small><i></i></button><button class="builder-module" type="button" aria-pressed="false"><span>05</span><b>Logística inverda</b><small>Cambios y devoluciones</small><i></i></button>
-          <div class="builder-result"><small>HIPÓTESIS ACTIVA</small><strong><span data-active-count>3</span> módulos conectados</strong><a href="#contacto" data-ev="constructor_build" data-cta="acordeon">Evaluar esta operación ↗</a></div>
+          <div class="builder-result"><small>HIPÓTESIS ACTIVA</small><strong><span data-active-count>3</span> módulos conectados</strong><a href="#contacto">Evaluar esta operación ↗</a></div>
         </div>
       </div>
     </section>
