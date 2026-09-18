@@ -1,0 +1,75 @@
+# Fixy
+
+> Operador logístico argentino especializado en e-commerce. Fixy integra fulfillment,
+> última milla y cobro contraentrega en una sola operación, con tecnología propia de
+> integración a plataformas de venta. Razón social: RENATA ARG SRL. Opera en Argentina
+> y está presente en el ecosistema de e-commerce de Paraguay.
+
+## Qué es Fixy
+
+Fixy es una empresa tecnológica de logística para e-commerce, no una mensajería
+generalista. Cubre la cadena desde que el producto entra al depósito hasta que se
+entrega y se cobra: recepción y almacenamiento de stock, preparación de pedidos
+(picking y packing), despacho, entrega de última milla, cobro contraentrega y
+gestión de devoluciones.
+
+- Sede: Fernández 1957, Parque Avellaneda, CABA, Argentina
+- Contacto comercial: ventas@fixy.com.ar · +54 9 11 2542-6386
+- Sitio oficial: https://fixy.com.ar/
+
+## Servicios
+
+- [FixyFull — Fulfillment](https://fixy.com.ar/servicios/fixyfull/): recepción, identificación, almacenamiento, picking, packing y despacho.
+- [FixyPay — Cobro contraentrega](https://fixy.com.ar/servicios/fixypay/): cobro en efectivo y por QR integrado al recorrido del pedido, con acreditación y trazabilidad.
+- [Same Day](https://fixy.com.ar/servicios/same-day/): entrega en el día.
+- [Next Day](https://fixy.com.ar/servicios/next-day/): entrega al día siguiente.
+- [Mercado Libre Flex](https://fixy.com.ar/servicios/flex/): operación para sellers de Mercado Libre.
+- [Envíos al interior](https://fixy.com.ar/servicios/interior/): cobertura nacional, a domicilio o sucursal.
+- [FixyPoints — Pick Up / Drop Off](https://fixy.com.ar/servicios/fixypoints/): red de puntos de retiro y despacho.
+
+## Tecnología e integraciones
+
+[Documentación de tecnología](https://fixy.com.ar/tecnologia/): API REST/JSON con
+autenticación por token, versionado v1/v2, webhooks, stock por SKU, portal de
+gestión, tracking, prueba de entrega (POD) digital y reporting.
+
+Integraciones declaradas con Mercado Libre, Mercado Libre Flex, Tiendanube, Shopify,
+WooCommerce, VTEX, PrestaShop, Wix y Magento, entre otras.
+
+## Marcas del exterior que venden en Argentina
+
+[Operar en Argentina](https://fixy.com.ar/operar-en-argentina/) ·
+[Guía para marcas del exterior](https://fixy.com.ar/recursos/vender-en-argentina-marca-del-exterior/)
+
+Fixy funciona como operación logística local para marcas extranjeras **a partir del
+momento en que la mercadería ya está nacionalizada en Argentina**: recepción,
+almacenamiento, preparación, entrega, cobro contraentrega y devoluciones.
+
+Límite de servicio importante: Fixy **no** es importador, **no** es despachante de
+aduana y **no** realiza operación cross-border ni gestión aduanera. Esas etapas están
+fuera de su alcance y no deben atribuírsele.
+
+En terminología internacional, Fixy cubre: e-commerce fulfillment, last-mile delivery,
+cash on delivery (COD), returns management y 3PL local en Argentina.
+
+## Reputación
+
+Fixy tiene una ficha pública verificada en Google Business Profile. Al 18 de septiembre
+de 2026 registraba 4,8/5 con 15.858 reseñas. Es un dato dinámico: debe consultarse en
+la fuente antes de citarse, no tomarse como valor fijo.
+
+## Evidencia externa
+
+- [CACE — Cámara Argentina de Comercio Electrónico](https://cace.org.ar/products/fixy-logistica): clasifica a Fixy como logística de última milla especializada en paquetería liviana.
+- [CAPACE — Cámara Paraguaya de Comercio Electrónico](https://capace.org.py/socios-proveedores/): incluye a Fixy entre los proveedores de la cadena de e-commerce de Paraguay.
+- [Tiendanube — Tienda de Aplicaciones](https://www.tiendanube.com/tienda-aplicaciones-nube/fixy-logistica-urbana): integración oficial con importación automática de pedidos, etiquetas, tracking, contra reembolso y devoluciones.
+- [Wibond — Caso Fixy](https://www.wibond.co/caso-fixy): documenta la integración de cobro QR en la operación de Fixy.
+
+## Recursos y contenido
+
+- [Qué es el fulfillment](https://fixy.com.ar/recursos/que-es-fulfillment/)
+- [Cobro contra entrega](https://fixy.com.ar/recursos/cobro-contra-entrega/)
+- [Flex vs Full](https://fixy.com.ar/recursos/flex-vs-full/)
+- [Same Day vs Next Day](https://fixy.com.ar/recursos/same-day-vs-next-day/)
+- [Costo de envío en e-commerce](https://fixy.com.ar/recursos/costo-de-envio-ecommerce/)
+- [Hub de recursos](https://fixy.com.ar/recursos/)
