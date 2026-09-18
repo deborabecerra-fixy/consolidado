@@ -74,6 +74,37 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 .pr-play::after{content:"";position:absolute;left:53%;top:50%;transform:translate(-50%,-50%);
   border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #fff}
 .pr-card:hover .pr-play{background:var(--blue)}
+
+/* Hero de prensa: el espacio lo ocupa la evidencia, no la decoracion.
+   El template de articulo trae padding pensado para titulares largos. */
+.pr-hero{padding:clamp(44px,6vw,72px) 0 clamp(40px,5vw,60px)}
+.pr-hero::after{display:none}
+.pr-hero .eyebrow{color:var(--yellow);margin-bottom:10px}
+.pr-hero h1{color:#fff;font-size:clamp(30px,6vw,52px);letter-spacing:-.03em;margin-bottom:14px}
+.pr-lead{color:#cfe1ea;font-size:clamp(15.5px,2.2vw,18px);line-height:1.6;max-width:56ch;margin:0}
+
+.pr-stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+.pr-stat{flex:1 1 150px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;padding:14px 16px}
+.pr-stat strong{display:block;font-family:var(--font-head);color:#fff;
+  font-size:clamp(22px,4.2vw,30px);line-height:1.1;letter-spacing:-.02em}
+.pr-stat span{display:block;color:#a9c4d1;font-size:13px;margin-top:3px}
+
+.pr-strip-t{color:#8fb0c1;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:700;margin:28px 0 10px}
+.pr-strip{list-style:none;display:flex;flex-wrap:wrap;gap:8px 10px;margin:0;padding:0}
+.pr-strip li{font-family:var(--font-head);font-weight:700;color:#e6f1f6;font-size:14px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);
+  padding:7px 12px;border-radius:999px}
+
+.pr-jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pr-jump a{color:#fff;text-decoration:none;font-weight:700;font-size:14px;
+  border:1px solid rgba(255,255,255,.34);border-radius:999px;padding:9px 15px;
+  min-height:44px;display:inline-flex;align-items:center;transition:.15s}
+.pr-jump a:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.pr-jump a:first-child{background:var(--yellow);border-color:var(--yellow);color:#3a2c00}
+.pr-jump a:first-child:hover{background:var(--yellow-d);border-color:var(--yellow-d)}
+h2[id]{scroll-margin-top:92px}
 </style>
 <link rel="stylesheet" href="../../css/app-core.css?v=20260819-1">
 <script src="../../js/navigation.js?v=20260819-1" defer></script>
@@ -151,17 +182,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<section id="contenido" tabindex="-1" class="hero" style="border-top:0;padding-bottom:18px">
-  <div class="wrap"><div class="prose">
-    <p class="meta">Prensa</p>
-    <h1 style="font-size:clamp(26px,4vw,38px)">Fixy en los medios</h1>
-    <span class="yellowbar"></span>
-    <p class="lead">Cobertura period&iacute;stica y columnas de opini&oacute;n sobre log&iacute;stica, e-commerce y la operaci&oacute;n de Fixy. Cada art&iacute;culo se abre en el sitio del medio que lo public&oacute;.</p>
-  </div></div>
+<section id="contenido" tabindex="-1" class="hero pr-hero">
+  <div class="wrap">
+    <p class="eyebrow">Prensa</p>
+    <h1>Fixy en los medios</h1>
+    <p class="pr-lead">Cobertura period&iacute;stica, entrevistas y columnas de opini&oacute;n sobre log&iacute;stica y e-commerce. Cada pieza se abre en el sitio del medio que la public&oacute;.</p>
+
+    <div class="pr-stats">
+      <div class="pr-stat"><strong>17</strong><span>apariciones</span></div>
+      <div class="pr-stat"><strong>12</strong><span>medios y canales</span></div>
+      <div class="pr-stat"><strong>2024&ndash;2026</strong><span>de trayectoria p&uacute;blica</span></div>
+    </div>
+
+    <p class="pr-strip-t">Publicado en</p>
+    <ul class="pr-strip">
+      <li>iProfesional</li><li>&Aacute;mbito</li><li>Perfil</li><li>La Prensa</li>
+      <li>Fortuna</li><li>La Capital</li><li>Urgente24</li><li>Agarr&aacute; La Pala</li>
+      <li>4Semanas</li><li>Novo Tecnolog&iacute;a</li><li>LatamNoticias</li>
+    </ul>
+
+    <nav class="pr-jump" aria-label="Secciones de prensa">
+      <a href="#cobertura">Cobertura</a>
+      <a href="#videos">Videos y entrevistas</a>
+      <a href="#columnas">Columnas</a>
+      <a href="#contacto-prensa">Contacto de prensa</a>
+    </nav>
+  </div>
 </section>
 
 <section style="padding-top:6px">
-  <div class="wrap"><div class="prose"><h2>Cobertura</h2></div>
+  <div class="wrap"><div class="prose"><h2 id="cobertura">Cobertura</h2></div>
     <div class="pr-grid">
       <a class="pr-card" href="https://www.iprofesional.com/negocios/436097-empezo-pelando-papas-y-hoy-lidera-empresa-de-logistica-fixy" target="_blank" rel="noopener" data-ev="prensa_nota">
         <div class="pr-cov">
@@ -289,7 +339,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <section style="padding-top:6px">
-  <div class="wrap"><div class="prose"><h2>Videos y entrevistas</h2></div>
+  <div class="wrap"><div class="prose"><h2 id="videos">Videos y entrevistas</h2></div>
     <div class="pr-grid">
       <a class="pr-card" href="https://www.youtube.com/watch?v=02GNz8hQMoM" target="_blank" rel="noopener" data-ev="prensa_video">
         <div class="pr-cov">
@@ -335,7 +385,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <section style="padding-top:6px">
-  <div class="wrap"><div class="prose"><h2>Columnas de opini&oacute;n</h2>
+  <div class="wrap"><div class="prose"><h2 id="columnas">Columnas de opini&oacute;n</h2>
     <p>Art&iacute;culos firmados por Maximiliano Saavedra, fundador y CEO de Fixy.</p></div>
     <div class="pr-grid">
       <a class="pr-card" href="https://www.perfil.com/noticias/opinion/el-costo-invisible-de-mover-el-mundo-por-maximiliano-saavedra.phtml" target="_blank" rel="noopener" data-ev="prensa_columna">
@@ -392,7 +442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section style="padding-top:6px;padding-bottom:40px">
   <div class="wrap"><article class="prose">
-    <h2>Contacto de prensa</h2>
+    <h2 id="contacto-prensa">Contacto de prensa</h2>
     <p>Entrevistas, datos de la compa&ntilde;&iacute;a o material institucional: <a href="mailto:marketing@fixy.com.ar">marketing@fixy.com.ar</a></p>
     <h2>Datos institucionales</h2>
     <ul>
