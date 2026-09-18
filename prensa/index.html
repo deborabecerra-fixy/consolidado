@@ -40,10 +40,10 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prensa y novedades | Fixy</title>
-<meta name="description" content="Fixy en los medios: cobertura period&iacute;stica, columnas de opini&oacute;n y novedades de la compa&ntilde;&iacute;a. Contacto de prensa y datos institucionales.">
+<meta name="description" content="Fixy en los medios: cobertura period&iacute;stica y columnas de opini&oacute;n sobre log&iacute;stica y e-commerce. Contacto de prensa y datos institucionales.">
 <link rel="canonical" href="https://fixy.com.ar/prensa/">
 <meta property="og:title" content="Prensa y novedades | Fixy">
-<meta property="og:description" content="Fixy en los medios: cobertura period&iacute;stica, columnas de opini&oacute;n y novedades de la compa&ntilde;&iacute;a. Contacto de prensa y datos institucionales.">
+<meta property="og:description" content="Fixy en los medios: cobertura period&iacute;stica y columnas de opini&oacute;n sobre log&iacute;stica y e-commerce. Contacto de prensa y datos institucionales.">
 <meta property="og:type" content="article"><meta property="og:locale" content="es_AR"><meta property="og:url" content="https://fixy.com.ar/prensa/"><meta name="theme-color" content="#008FC3">
 <meta property="og:image" content="https://fixy.com.ar/assets/img/og-fixy.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -74,9 +74,37 @@ src="https://www.facebook.com/tr?id=925439470114576&ev=PageView&noscript=1"
 <script src="../../js/scroll-depth.js?v=2" defer></script>
 <script src="../../js/app-shell.js?v=13" defer></script>
 <link rel="stylesheet" href="../../css/footer-shared.css?v=20260728-5">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://fixy.com.ar/prensa/#page","url":"https://fixy.com.ar/prensa/","name":"Prensa y novedades — Fixy","inLanguage":"es-AR","description":"Cobertura periodística y columnas de opinión sobre Fixy.","about":{"@id":"https://fixy.com.ar/#org"},"isPartOf":{"@id":"https://fixy.com.ar/#site"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://www.iprofesional.com/negocios/436097-empezo-pelando-papas-y-hoy-lidera-empresa-de-logistica-fixy","name":"Empezó pelando papas y hoy lidera una empresa de logística"},{"@type":"ListItem","position":2,"url":"https://fortuna.perfil.com/noticias/economia/del-carrito-al-timbre-como-el-e-commerce-y-la-logistica-urbana-mueven-la-economia-argentina.phtml","name":"Del carrito al timbre: cómo el e-commerce y la logística urbana mueven la economía argentina"},{"@type":"ListItem","position":3,"url":"https://www.laprensa.com.ar/De-pelar-papas-a-liderar-una-empresa-de-logistica-claves-para-emprender-y-crecer-570909.note.aspx","name":"De pelar papas a liderar una empresa de logística: claves para emprender y crecer"},{"@type":"ListItem","position":4,"url":"https://www.laprensa.com.ar/Expertos-advierten-que-el-conflicto-en-Medio-Oriente-impacta-directamente-en-los-costos-de-la-logistica-local-569829.note.aspx","name":"El conflicto en Medio Oriente impacta directamente en los costos de la logística local"},{"@type":"ListItem","position":5,"url":"https://novotecnologia.net/fixy-soluciones-logisticas-para-el-e-commerce-en-pymes-y-comercios/","name":"Fixy: soluciones logísticas para el e-commerce en pymes y comercios"},{"@type":"ListItem","position":6,"url":"https://latamnoticias.com/business/fixy-llega-a-paraguay-innovacion-logistica-para-el-e-commerce-regional/","name":"Fixy llega a Paraguay: innovación logística para el e-commerce regional"},{"@type":"ListItem","position":7,"url":"https://www.perfil.com/noticias/opinion/el-costo-invisible-de-mover-el-mundo-por-maximiliano-saavedra.phtml","name":"El costo invisible de mover el mundo"}]}}</script>
+<style>
+/* Prensa — tarjetas con portada tipografica. Solo paleta de marca, sin assets de terceros. */
+.pr-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:22px}
+@media(min-width:680px){.pr-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.pr-grid{grid-template-columns:repeat(3,1fr)}}
+.pr-card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;text-decoration:none;color:inherit;
+  transition:transform .18s ease,box-shadow .18s ease}
+@media(hover:hover){.pr-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}}
+.pr-card:active{transform:scale(.99)}
+.pr-cov{position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+  padding:18px;text-align:center;background:var(--blue)}
+.pr-cov.v2{background:var(--ink)}
+.pr-cov.v3{background:var(--blue-d)}
+.pr-medio{font-family:var(--font-head);font-weight:700;color:#fff;line-height:1.1;
+  font-size:clamp(20px,3.4vw,27px);letter-spacing:-.01em}
+.pr-cov::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--yellow)}
+.pr-tipo{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.16);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 9px;border-radius:999px}
+.pr-bd{padding:20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.pr-bd h3{font-size:18px;line-height:1.28}
+.pr-bd p{margin:0;color:var(--ink-soft);font-size:14.5px;line-height:1.55}
+.pr-pie{margin-top:auto;padding-top:6px;display:flex;justify-content:space-between;
+  align-items:center;gap:10px;flex-wrap:wrap}
+.pr-fecha{color:var(--ink-soft);font-size:13px}
+.pr-go{color:var(--blue);font-weight:700;font-size:14px}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://fixy.com.ar/prensa/#page","url":"https://fixy.com.ar/prensa/","name":"Prensa y novedades — Fixy","inLanguage":"es-AR","description":"Cobertura periodística y columnas de opinión sobre Fixy.","about":{"@id":"https://fixy.com.ar/#org"},"isPartOf":{"@id":"https://fixy.com.ar/#site"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://www.iprofesional.com/negocios/436097-empezo-pelando-papas-y-hoy-lidera-empresa-de-logistica-fixy","name":"Empezó pelando papas y hoy lidera una empresa de logística"},{"@type":"ListItem","position":2,"url":"https://www.laprensa.com.ar/Las-importaciones-impulsan-el-boom-del-e-commerce-555791.note.aspx","name":"Las importaciones impulsan el boom del e-commerce"},{"@type":"ListItem","position":3,"url":"https://fortuna.perfil.com/noticias/economia/del-carrito-al-timbre-como-el-e-commerce-y-la-logistica-urbana-mueven-la-economia-argentina.phtml","name":"Del carrito al timbre: cómo el e-commerce y la logística urbana mueven la economía argentina"},{"@type":"ListItem","position":4,"url":"https://urgente24.com/dinero/guerra-medio-oriente-el-inevitable-traslado-costos-logisticos-precios-argentina-n620785","name":"El traslado de costos logísticos a precios en Argentina"},{"@type":"ListItem","position":5,"url":"https://www.lacapital.com.ar/negocios/cyber-monday-como-se-preparan-las-empresas-posicionarse-online-y-vender-mas-n10227331.html","name":"Cyber Monday: cómo se preparan las empresas para posicionarse online y vender más"},{"@type":"ListItem","position":6,"url":"https://www.4semanas.com/ia-en-argentina-41-de-las-pymes-la-usa-pero-la-mitad-esta-atrapada-en-la-fase-experimental/","name":"IA en Argentina: el 41% de las PyMEs la usa, pero la mitad sigue en fase experimental"},{"@type":"ListItem","position":7,"url":"https://www.laprensa.com.ar/Expertos-advierten-que-el-conflicto-en-Medio-Oriente-impacta-directamente-en-los-costos-de-la-logistica-local-569829.note.aspx","name":"El conflicto en Medio Oriente impacta directamente en los costos de la logística local"},{"@type":"ListItem","position":8,"url":"https://www.laprensa.com.ar/De-pelar-papas-a-liderar-una-empresa-de-logistica-claves-para-emprender-y-crecer-570909.note.aspx","name":"De pelar papas a liderar una empresa de logística: claves para emprender y crecer"},{"@type":"ListItem","position":9,"url":"https://novotecnologia.net/fixy-soluciones-logisticas-para-el-e-commerce-en-pymes-y-comercios/","name":"Fixy: soluciones logísticas para el e-commerce en pymes y comercios"},{"@type":"ListItem","position":10,"url":"https://latamnoticias.com/business/fixy-llega-a-paraguay-innovacion-logistica-para-el-e-commerce-regional/","name":"Fixy llega a Paraguay: innovación logística para el e-commerce regional"},{"@type":"ListItem","position":11,"url":"https://www.perfil.com/noticias/opinion/el-costo-invisible-de-mover-el-mundo-por-maximiliano-saavedra.phtml","name":"El costo invisible de mover el mundo"},{"@type":"ListItem","position":12,"url":"https://www.ambito.com/opiniones/de-la-tienda-online-la-ultima-milla-el-nuevo-rostro-del-emprendedor-digital-argentino-n6113416","name":"De la tienda online a la última milla: el nuevo rostro del emprendedor digital argentino"},{"@type":"ListItem","position":13,"url":"https://www.ambito.com/opiniones/lo-que-nadie-te-dice-cuando-compras-afuera-guia-clave-evitar-errores-y-que-todo-llegue-bien-n6178257","name":"Lo que nadie te dice cuando comprás afuera: guía para evitar errores y que todo llegue bien"},{"@type":"ListItem","position":14,"url":"https://www.ambito.com/lifestyle/compras-ultimo-momento-el-dia-del-padre-cinco-tips-elegir-bien-y-recibir-el-regalo-tiempo-n6155967","name":"Compras de último momento: cinco tips para elegir bien y recibir el regalo a tiempo"}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://fixy.com.ar/"},{"@type":"ListItem","position":2,"name":"Prensa","item":"https://fixy.com.ar/prensa/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"NewsArticle","headline":"Empezó pelando papas y hoy lidera una empresa de logística","url":"https://www.iprofesional.com/negocios/436097-empezo-pelando-papas-y-hoy-lidera-empresa-de-logistica-fixy","publisher":{"@type":"Organization","name":"iProfesional"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-08-30"},{"@type":"NewsArticle","headline":"Del carrito al timbre: cómo el e-commerce y la logística urbana mueven la economía argentina","url":"https://fortuna.perfil.com/noticias/economia/del-carrito-al-timbre-como-el-e-commerce-y-la-logistica-urbana-mueven-la-economia-argentina.phtml","publisher":{"@type":"Organization","name":"Fortuna — Perfil"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-09-01"},{"@type":"NewsArticle","headline":"De pelar papas a liderar una empresa de logística: claves para emprender y crecer","url":"https://www.laprensa.com.ar/De-pelar-papas-a-liderar-una-empresa-de-logistica-claves-para-emprender-y-crecer-570909.note.aspx","publisher":{"@type":"Organization","name":"La Prensa"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2026-04-16"},{"@type":"NewsArticle","headline":"El conflicto en Medio Oriente impacta directamente en los costos de la logística local","url":"https://www.laprensa.com.ar/Expertos-advierten-que-el-conflicto-en-Medio-Oriente-impacta-directamente-en-los-costos-de-la-logistica-local-569829.note.aspx","publisher":{"@type":"Organization","name":"La Prensa"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2026-03-15"},{"@type":"NewsArticle","headline":"Fixy: soluciones logísticas para el e-commerce en pymes y comercios","url":"https://novotecnologia.net/fixy-soluciones-logisticas-para-el-e-commerce-en-pymes-y-comercios/","publisher":{"@type":"Organization","name":"Novo Tecnología"},"about":{"@id":"https://fixy.com.ar/#org"}},{"@type":"NewsArticle","headline":"Fixy llega a Paraguay: innovación logística para el e-commerce regional","url":"https://latamnoticias.com/business/fixy-llega-a-paraguay-innovacion-logistica-para-el-e-commerce-regional/","publisher":{"@type":"Organization","name":"LatamNoticias"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2024-11-29"},{"@type":"NewsArticle","headline":"El costo invisible de mover el mundo","url":"https://www.perfil.com/noticias/opinion/el-costo-invisible-de-mover-el-mundo-por-maximiliano-saavedra.phtml","publisher":{"@type":"Organization","name":"Perfil"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2026-03-14"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"NewsArticle","headline":"Empezó pelando papas y hoy lidera una empresa de logística","url":"https://www.iprofesional.com/negocios/436097-empezo-pelando-papas-y-hoy-lidera-empresa-de-logistica-fixy","publisher":{"@type":"Organization","name":"iProfesional"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-08-30"},{"@type":"NewsArticle","headline":"Las importaciones impulsan el boom del e-commerce","url":"https://www.laprensa.com.ar/Las-importaciones-impulsan-el-boom-del-e-commerce-555791.note.aspx","publisher":{"@type":"Organization","name":"La Prensa"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-02-09"},{"@type":"NewsArticle","headline":"Del carrito al timbre: cómo el e-commerce y la logística urbana mueven la economía argentina","url":"https://fortuna.perfil.com/noticias/economia/del-carrito-al-timbre-como-el-e-commerce-y-la-logistica-urbana-mueven-la-economia-argentina.phtml","publisher":{"@type":"Organization","name":"Fortuna"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-09-01"},{"@type":"NewsArticle","headline":"El traslado de costos logísticos a precios en Argentina","url":"https://urgente24.com/dinero/guerra-medio-oriente-el-inevitable-traslado-costos-logisticos-precios-argentina-n620785","publisher":{"@type":"Organization","name":"Urgente24"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2026-03-13"},{"@type":"NewsArticle","headline":"Cyber Monday: cómo se preparan las empresas para posicionarse online y vender más","url":"https://www.lacapital.com.ar/negocios/cyber-monday-como-se-preparan-las-empresas-posicionarse-online-y-vender-mas-n10227331.html","publisher":{"@type":"Organization","name":"La Capital"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-11-02"},{"@type":"NewsArticle","headline":"IA en Argentina: el 41% de las PyMEs la usa, pero la mitad sigue en fase experimental","url":"https://www.4semanas.com/ia-en-argentina-41-de-las-pymes-la-usa-pero-la-mitad-esta-atrapada-en-la-fase-experimental/","publisher":{"@type":"Organization","name":"4Semanas"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2026-07-31"},{"@type":"NewsArticle","headline":"El conflicto en Medio Oriente impacta directamente en los costos de la logística local","url":"https://www.laprensa.com.ar/Expertos-advierten-que-el-conflicto-en-Medio-Oriente-impacta-directamente-en-los-costos-de-la-logistica-local-569829.note.aspx","publisher":{"@type":"Organization","name":"La Prensa"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2026-03-15"},{"@type":"NewsArticle","headline":"De pelar papas a liderar una empresa de logística: claves para emprender y crecer","url":"https://www.laprensa.com.ar/De-pelar-papas-a-liderar-una-empresa-de-logistica-claves-para-emprender-y-crecer-570909.note.aspx","publisher":{"@type":"Organization","name":"La Prensa"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2026-04-16"},{"@type":"NewsArticle","headline":"Fixy: soluciones logísticas para el e-commerce en pymes y comercios","url":"https://novotecnologia.net/fixy-soluciones-logisticas-para-el-e-commerce-en-pymes-y-comercios/","publisher":{"@type":"Organization","name":"Novo Tecnología"},"about":{"@id":"https://fixy.com.ar/#org"}},{"@type":"NewsArticle","headline":"Fixy llega a Paraguay: innovación logística para el e-commerce regional","url":"https://latamnoticias.com/business/fixy-llega-a-paraguay-innovacion-logistica-para-el-e-commerce-regional/","publisher":{"@type":"Organization","name":"LatamNoticias"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2024-11-29"},{"@type":"NewsArticle","headline":"El costo invisible de mover el mundo","url":"https://www.perfil.com/noticias/opinion/el-costo-invisible-de-mover-el-mundo-por-maximiliano-saavedra.phtml","publisher":{"@type":"Organization","name":"Perfil"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2026-03-14","author":{"@type":"Person","name":"Maximiliano Saavedra"}},{"@type":"NewsArticle","headline":"De la tienda online a la última milla: el nuevo rostro del emprendedor digital argentino","url":"https://www.ambito.com/opiniones/de-la-tienda-online-la-ultima-milla-el-nuevo-rostro-del-emprendedor-digital-argentino-n6113416","publisher":{"@type":"Organization","name":"Ámbito"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-02-16","author":{"@type":"Person","name":"Maximiliano Saavedra"}},{"@type":"NewsArticle","headline":"Lo que nadie te dice cuando comprás afuera: guía para evitar errores y que todo llegue bien","url":"https://www.ambito.com/opiniones/lo-que-nadie-te-dice-cuando-compras-afuera-guia-clave-evitar-errores-y-que-todo-llegue-bien-n6178257","publisher":{"@type":"Organization","name":"Ámbito"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-08-16","author":{"@type":"Person","name":"Maximiliano Saavedra"}},{"@type":"NewsArticle","headline":"Compras de último momento: cinco tips para elegir bien y recibir el regalo a tiempo","url":"https://www.ambito.com/lifestyle/compras-ultimo-momento-el-dia-del-padre-cinco-tips-elegir-bien-y-recibir-el-regalo-tiempo-n6155967","publisher":{"@type":"Organization","name":"Ámbito"},"about":{"@id":"https://fixy.com.ar/#org"},"datePublished":"2025-06-12","author":{"@type":"Person","name":"Maximiliano Saavedra"}}]}</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -119,7 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="meta">Prensa</p>
       <h1 style="font-size:clamp(26px,4vw,38px)">Fixy en los medios</h1>
       <span class="yellowbar"></span>
-      <p class="lead">Cobertura period&iacute;stica, columnas de opini&oacute;n y novedades de la compa&ntilde;&iacute;a. Los art&iacute;culos se abren en el sitio del medio que los public&oacute;.</p>
+      <p class="lead">Cobertura period&iacute;stica y columnas de opini&oacute;n sobre log&iacute;stica, e-commerce y la operaci&oacute;n de Fixy. Cada art&iacute;culo se abre en el sitio del medio que lo public&oacute;.</p>
     </div>
   </div>
 </section>
@@ -127,59 +155,145 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section style="padding-top:6px">
   <div class="wrap">
     <div class="prose"><h2>Cobertura</h2></div>
-    <div class="res-grid">
-      <a class="res-card" href="https://www.iprofesional.com/negocios/436097-empezo-pelando-papas-y-hoy-lidera-empresa-de-logistica-fixy" target="_blank" rel="noopener" data-ev="prensa_nota">
-        <div class="cov"><span class="cat">iProfesional</span></div>
-        <div class="bd">
+    <div class="pr-grid">
+      <a class="pr-card" href="https://www.iprofesional.com/negocios/436097-empezo-pelando-papas-y-hoy-lidera-empresa-de-logistica-fixy" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov">
+          <span class="pr-tipo">Perfil</span>
+          <span class="pr-medio">iProfesional</span>
+        </div>
+        <div class="pr-bd">
           <h3>Empezó pelando papas y hoy lidera una empresa de logística</h3>
-          <p>Perfil del fundador de Fixy: del primer trabajo a los 17 años al armado de una operación logística para e-commerce, el desembarco en Paraguay y el acuerdo con Dropi.</p>
-          <span class="go">Leer en iProfesional &rarr;</span>
-          <p class="meta" style="margin-top:8px;font-size:.85em;opacity:.7">30 de agosto de 2025</p>
+          <p>La historia del fundador de Fixy: del primer trabajo a los 17 años al armado de una operación logística para e-commerce, el desembarco en Paraguay y el acuerdo con Dropi.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">30 ago 2025</span>
+            <span class="pr-go">Leer en iProfesional &rarr;</span>
+          </div>
         </div>
       </a>
-      <a class="res-card" href="https://fortuna.perfil.com/noticias/economia/del-carrito-al-timbre-como-el-e-commerce-y-la-logistica-urbana-mueven-la-economia-argentina.phtml" target="_blank" rel="noopener" data-ev="prensa_nota">
-        <div class="cov"><span class="cat">Fortuna — Perfil</span></div>
-        <div class="bd">
+      <a class="pr-card" href="https://www.laprensa.com.ar/Las-importaciones-impulsan-el-boom-del-e-commerce-555791.note.aspx" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov v2">
+          <span class="pr-tipo">Entrevista</span>
+          <span class="pr-medio">La Prensa</span>
+        </div>
+        <div class="pr-bd">
+          <h3>Las importaciones impulsan el boom del e-commerce</h3>
+          <p>Entrevista a Maximiliano Saavedra sobre el crecimiento del comercio electrónico argentino y su impacto en la operación logística.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">9 feb 2025</span>
+            <span class="pr-go">Leer en La Prensa &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="pr-card" href="https://fortuna.perfil.com/noticias/economia/del-carrito-al-timbre-como-el-e-commerce-y-la-logistica-urbana-mueven-la-economia-argentina.phtml" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov v3">
+          <span class="pr-tipo">Informe</span>
+          <span class="pr-medio">Fortuna</span>
+        </div>
+        <div class="pr-bd">
           <h3>Del carrito al timbre: cómo el e-commerce y la logística urbana mueven la economía argentina</h3>
-          <p>Nota sobre el peso de la logística urbana en el comercio electrónico argentino, con Fixy entre los operadores consultados.</p>
-          <span class="go">Leer en Fortuna — Perfil &rarr;</span>
-          <p class="meta" style="margin-top:8px;font-size:.85em;opacity:.7">Septiembre de 2025</p>
+          <p>El peso de la logística urbana en el comercio electrónico argentino, con Fixy entre los operadores consultados.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">sep 2025</span>
+            <span class="pr-go">Leer en Fortuna &rarr;</span>
+          </div>
         </div>
       </a>
-      <a class="res-card" href="https://www.laprensa.com.ar/De-pelar-papas-a-liderar-una-empresa-de-logistica-claves-para-emprender-y-crecer-570909.note.aspx" target="_blank" rel="noopener" data-ev="prensa_nota">
-        <div class="cov"><span class="cat">La Prensa</span></div>
-        <div class="bd">
+      <a class="pr-card" href="https://urgente24.com/dinero/guerra-medio-oriente-el-inevitable-traslado-costos-logisticos-precios-argentina-n620785" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov">
+          <span class="pr-tipo">Declaraciones</span>
+          <span class="pr-medio">Urgente24</span>
+        </div>
+        <div class="pr-bd">
+          <h3>El traslado de costos logísticos a precios en Argentina</h3>
+          <p>Análisis del impacto de la coyuntura internacional sobre los costos logísticos locales, con Saavedra como fuente principal.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">13 mar 2026</span>
+            <span class="pr-go">Leer en Urgente24 &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="pr-card" href="https://www.lacapital.com.ar/negocios/cyber-monday-como-se-preparan-las-empresas-posicionarse-online-y-vender-mas-n10227331.html" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov v2">
+          <span class="pr-tipo">Declaraciones</span>
+          <span class="pr-medio">La Capital</span>
+        </div>
+        <div class="pr-bd">
+          <h3>Cyber Monday: cómo se preparan las empresas para posicionarse online y vender más</h3>
+          <p>Qué hacen las empresas para llegar preparadas a los picos de demanda del comercio electrónico.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">2 nov 2025</span>
+            <span class="pr-go">Leer en La Capital &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="pr-card" href="https://www.4semanas.com/ia-en-argentina-41-de-las-pymes-la-usa-pero-la-mitad-esta-atrapada-en-la-fase-experimental/" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov v3">
+          <span class="pr-tipo">Declaraciones</span>
+          <span class="pr-medio">4Semanas</span>
+        </div>
+        <div class="pr-bd">
+          <h3>IA en Argentina: el 41% de las PyMEs la usa, pero la mitad sigue en fase experimental</h3>
+          <p>Saavedra entre los referentes consultados sobre la adopción real de inteligencia artificial en las pymes argentinas.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">31 jul 2026</span>
+            <span class="pr-go">Leer en 4Semanas &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="pr-card" href="https://www.laprensa.com.ar/Expertos-advierten-que-el-conflicto-en-Medio-Oriente-impacta-directamente-en-los-costos-de-la-logistica-local-569829.note.aspx" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov">
+          <span class="pr-tipo">Declaraciones</span>
+          <span class="pr-medio">La Prensa</span>
+        </div>
+        <div class="pr-bd">
+          <h3>El conflicto en Medio Oriente impacta directamente en los costos de la logística local</h3>
+          <p>Cómo la coyuntura internacional llega al costo de mover mercadería dentro del país.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">15 mar 2026</span>
+            <span class="pr-go">Leer en La Prensa &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="pr-card" href="https://www.laprensa.com.ar/De-pelar-papas-a-liderar-una-empresa-de-logistica-claves-para-emprender-y-crecer-570909.note.aspx" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov v2">
+          <span class="pr-tipo">Perfil</span>
+          <span class="pr-medio">La Prensa</span>
+        </div>
+        <div class="pr-bd">
           <h3>De pelar papas a liderar una empresa de logística: claves para emprender y crecer</h3>
           <p>La trayectoria del fundador de Fixy y las decisiones que marcaron el crecimiento de la compañía.</p>
-          <span class="go">Leer en La Prensa &rarr;</span>
-          <p class="meta" style="margin-top:8px;font-size:.85em;opacity:.7">16 de abril de 2026</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">16 abr 2026</span>
+            <span class="pr-go">Leer en La Prensa &rarr;</span>
+          </div>
         </div>
       </a>
-      <a class="res-card" href="https://www.laprensa.com.ar/Expertos-advierten-que-el-conflicto-en-Medio-Oriente-impacta-directamente-en-los-costos-de-la-logistica-local-569829.note.aspx" target="_blank" rel="noopener" data-ev="prensa_nota">
-        <div class="cov"><span class="cat">La Prensa</span></div>
-        <div class="bd">
-          <h3>El conflicto en Medio Oriente impacta directamente en los costos de la logística local</h3>
-          <p>Análisis del impacto de la coyuntura internacional sobre los costos logísticos en Argentina.</p>
-          <span class="go">Leer en La Prensa &rarr;</span>
-          <p class="meta" style="margin-top:8px;font-size:.85em;opacity:.7">15 de marzo de 2026</p>
+      <a class="pr-card" href="https://novotecnologia.net/fixy-soluciones-logisticas-para-el-e-commerce-en-pymes-y-comercios/" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov v3">
+          <span class="pr-tipo">Nota</span>
+          <span class="pr-medio">Novo Tecnología</span>
         </div>
-      </a>
-      <a class="res-card" href="https://novotecnologia.net/fixy-soluciones-logisticas-para-el-e-commerce-en-pymes-y-comercios/" target="_blank" rel="noopener" data-ev="prensa_nota">
-        <div class="cov"><span class="cat">Novo Tecnología</span></div>
-        <div class="bd">
+        <div class="pr-bd">
           <h3>Fixy: soluciones logísticas para el e-commerce en pymes y comercios</h3>
-          <p>Cobertura sobre la propuesta de Fixy para pymes y comercios que venden online.</p>
-          <span class="go">Leer en Novo Tecnología &rarr;</span>
-          <p class="meta" style="margin-top:8px;font-size:.85em;opacity:.7">2025</p>
+          <p>La propuesta de Fixy para pymes y comercios que venden online.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">2025</span>
+            <span class="pr-go">Leer en Novo Tecnología &rarr;</span>
+          </div>
         </div>
       </a>
-      <a class="res-card" href="https://latamnoticias.com/business/fixy-llega-a-paraguay-innovacion-logistica-para-el-e-commerce-regional/" target="_blank" rel="noopener" data-ev="prensa_nota">
-        <div class="cov"><span class="cat">LatamNoticias</span></div>
-        <div class="bd">
+      <a class="pr-card" href="https://latamnoticias.com/business/fixy-llega-a-paraguay-innovacion-logistica-para-el-e-commerce-regional/" target="_blank" rel="noopener" data-ev="prensa_nota">
+        <div class="pr-cov">
+          <span class="pr-tipo">Expansión</span>
+          <span class="pr-medio">LatamNoticias</span>
+        </div>
+        <div class="pr-bd">
           <h3>Fixy llega a Paraguay: innovación logística para el e-commerce regional</h3>
           <p>El desembarco de Fixy en Asunción y la apertura de la operación en Paraguay.</p>
-          <span class="go">Leer en LatamNoticias &rarr;</span>
-          <p class="meta" style="margin-top:8px;font-size:.85em;opacity:.7">29 de noviembre de 2024</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">29 nov 2024</span>
+            <span class="pr-go">Leer en LatamNoticias &rarr;</span>
+          </div>
         </div>
       </a>
     </div>
@@ -188,16 +302,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section style="padding-top:6px">
   <div class="wrap">
-    <div class="prose"><h2>Columnas de opini&oacute;n</h2>
-    <p>Art&iacute;culos firmados por Maximiliano Saavedra, fundador y CEO de Fixy.</p></div>
-    <div class="res-grid">
-      <a class="res-card" href="https://www.perfil.com/noticias/opinion/el-costo-invisible-de-mover-el-mundo-por-maximiliano-saavedra.phtml" target="_blank" rel="noopener" data-ev="prensa_columna">
-        <div class="cov"><span class="cat">Perfil</span></div>
-        <div class="bd">
+    <div class="prose">
+      <h2>Columnas de opini&oacute;n</h2>
+      <p>Art&iacute;culos firmados por Maximiliano Saavedra, fundador y CEO de Fixy.</p>
+    </div>
+    <div class="pr-grid">
+      <a class="pr-card" href="https://www.perfil.com/noticias/opinion/el-costo-invisible-de-mover-el-mundo-por-maximiliano-saavedra.phtml" target="_blank" rel="noopener" data-ev="prensa_columna">
+        <div class="pr-cov">
+          <span class="pr-tipo">Columna</span>
+          <span class="pr-medio">Perfil</span>
+        </div>
+        <div class="pr-bd">
           <h3>El costo invisible de mover el mundo</h3>
-          <p>Columna de Maximiliano Saavedra, fundador y CEO de Fixy, sobre los costos que no se ven detrás de cada entrega.</p>
-          <span class="go">Leer en Perfil &rarr;</span>
-          <p class="meta" style="margin-top:8px;font-size:.85em;opacity:.7">14 de marzo de 2026</p>
+          <p>Sobre todo lo que no se ve detrás de cada entrega, y por qué la logística define el precio final.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">14 mar 2026</span>
+            <span class="pr-go">Leer en Perfil &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="pr-card" href="https://www.ambito.com/opiniones/de-la-tienda-online-la-ultima-milla-el-nuevo-rostro-del-emprendedor-digital-argentino-n6113416" target="_blank" rel="noopener" data-ev="prensa_columna">
+        <div class="pr-cov v2">
+          <span class="pr-tipo">Columna</span>
+          <span class="pr-medio">Ámbito</span>
+        </div>
+        <div class="pr-bd">
+          <h3>De la tienda online a la última milla: el nuevo rostro del emprendedor digital argentino</h3>
+          <p>Cómo cambió el perfil de quien vende online en Argentina y qué necesita para sostener el crecimiento.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">16 feb 2025</span>
+            <span class="pr-go">Leer en Ámbito &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="pr-card" href="https://www.ambito.com/opiniones/lo-que-nadie-te-dice-cuando-compras-afuera-guia-clave-evitar-errores-y-que-todo-llegue-bien-n6178257" target="_blank" rel="noopener" data-ev="prensa_columna">
+        <div class="pr-cov v3">
+          <span class="pr-tipo">Columna</span>
+          <span class="pr-medio">Ámbito</span>
+        </div>
+        <div class="pr-bd">
+          <h3>Lo que nadie te dice cuando comprás afuera: guía para evitar errores y que todo llegue bien</h3>
+          <p>Las etapas invisibles de una compra internacional y dónde se rompen los envíos.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">16 ago 2025</span>
+            <span class="pr-go">Leer en Ámbito &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="pr-card" href="https://www.ambito.com/lifestyle/compras-ultimo-momento-el-dia-del-padre-cinco-tips-elegir-bien-y-recibir-el-regalo-tiempo-n6155967" target="_blank" rel="noopener" data-ev="prensa_columna">
+        <div class="pr-cov">
+          <span class="pr-tipo">Columna</span>
+          <span class="pr-medio">Ámbito</span>
+        </div>
+        <div class="pr-bd">
+          <h3>Compras de último momento: cinco tips para elegir bien y recibir el regalo a tiempo</h3>
+          <p>Qué mirar antes de comprar online cuando el tiempo de entrega es lo que más importa.</p>
+          <div class="pr-pie">
+            <span class="pr-fecha">12 jun 2025</span>
+            <span class="pr-go">Leer en Ámbito &rarr;</span>
+          </div>
         </div>
       </a>
     </div>
@@ -208,7 +371,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <article class="prose">
       <h2>Contacto de prensa</h2>
-      <p>Para entrevistas, datos de la compa&ntilde;&iacute;a o material institucional: <a href="mailto:marketing@fixy.com.ar">marketing@fixy.com.ar</a></p>
+      <p>Entrevistas, datos de la compa&ntilde;&iacute;a o material institucional: <a href="mailto:marketing@fixy.com.ar">marketing@fixy.com.ar</a></p>
 
       <h2>Datos institucionales</h2>
       <ul>
@@ -222,7 +385,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><strong>Sitio:</strong> <a href="https://fixy.com.ar/">fixy.com.ar</a> &middot; <a href="../en/">English</a></li>
       </ul>
 
-      <h2>Integraciones y tecnolog&iacute;a</h2>
+      <h2>Tecnolog&iacute;a e integraciones</h2>
       <p>API REST/JSON con autenticaci&oacute;n por token, webhooks, stock por SKU, tracking, prueba de entrega digital y reporting. Integraciones con Mercado Libre, Mercado Libre Flex, Tiendanube, Shopify, WooCommerce, VTEX, PrestaShop, Wix y Magento. Ver <a href="../tecnologia/">Tecnolog&iacute;a</a> y <a href="../developers/">Documentaci&oacute;n de API</a>.</p>
     </article>
   </div>
@@ -247,7 +410,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3 class="footer-title">Institucional</h3>
           <ul>
             <li><a href="../../en-construccion/">Sobre nosotros</a></li>
-            <li><a href="../prensa/">Prensa y novedades</a></li>
+            <li><a href="../../prensa/">Prensa y novedades</a></li>
             <li><a href="mailto:ventas@fixy.com.ar?subject=Trabajar%20en%20Fixy">Trabaja con nosotros</a></li>
           </ul>
         </div>
